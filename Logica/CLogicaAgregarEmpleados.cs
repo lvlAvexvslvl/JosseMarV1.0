@@ -46,7 +46,16 @@ namespace Logica
         }
         public void Prueba()
         {
-            MessageBox.Show("Pruebita...");
+            DialogResult rs = new DialogResult();
+          rs =  MessageBox.Show("Pruebita...","Error",MessageBoxButtons.OKCancel,MessageBoxIcon.Error);
+            if(rs == DialogResult.OK)
+            {
+                Console.WriteLine("Si da esta chingadera");
+            }else if(rs == DialogResult.Cancel)
+            {
+                Console.WriteLine("Salado, no da ...");
+            }
+
         }
         public DataTable cmbEmpleados()
         {
