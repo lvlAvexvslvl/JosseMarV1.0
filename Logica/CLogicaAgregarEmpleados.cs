@@ -44,7 +44,10 @@ namespace Logica
 
             
         }
-
+        public void Prueba()
+        {
+            MessageBox.Show("Pruebita...");
+        }
         public DataTable cmbEmpleados()
         {
 
