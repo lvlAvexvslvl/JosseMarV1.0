@@ -64,7 +64,29 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             }
 
         }
-
+        public static void SoloLetrasONumeros(KeyPressEventArgs pE)
+        {
+            if (Char.IsLetter(pE.KeyChar))
+            {
+                pE.Handled = false;
+            }
+            else if (Char.IsDigit(pE.KeyChar))
+            {
+                pE.Handled = false;
+            }
+            else if (Char.IsControl(pE.KeyChar))
+            {
+                pE.Handled = false;
+            }
+            else if (Char.IsSeparator(pE.KeyChar))
+            {
+                pE.Handled = false;
+            }
+            else
+            {
+                pE.Handled = true;
+            }
+        }
 
 
     }
