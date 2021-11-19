@@ -136,6 +136,12 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
 
         }
 
+        //METODO PARA LLAMAR LA VISTA DE PRODUCTOS EN EXISTENCIA
+        void ProductosE(string a)
+        {
+            DgvSave.DataSource = sql.ConsultaTab("SELECT vs_ProductosExistentes.NombreProducto AS Producto,vs_ProductosExistentes.Descripcion AS Descripción, vs_ProductosExistentes.DescripcionC AS Categoría FROM vs_ProductosExistentes WHERE vs_ProductosExistentes.NombreProducto LIKE'%"+a+"%'");
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
            
@@ -145,7 +151,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
 
             DgvSave.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             DgvSave.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
+            ProductosE("");
             cmbCategorias();
             cmbProveedores();
             cmbUnidadMedida();
@@ -164,9 +170,20 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
 
         private void guna2RadioButton1_CheckedChanged(object sender, EventArgs e)
         {
+            BtnBuscar.Visible = false;
+            TxtBuscar.Visible = false;
+            DgvSave.Visible = false;
+            TxtCategoria.Visible = false;
+
+            CmbCategoria.Visible = true;
+            CmbCategoria.Enabled = true;
+
             CLogicaObtenerFecha fc = new CLogicaObtenerFecha();
             string fecha = fc.ObtenerFechaSinHora();
             DtpFecha.MinDate = Convert.ToDateTime(fecha);
+
+            DtpFecha.MinDate = Convert.ToDateTime(fecha);
+
             DtpCaducidad.MinDate = Convert.ToDateTime(fecha);
             TxtNombreProducto.Enabled = true;
             TxtDescripcion.Enabled = true;
@@ -213,6 +230,40 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             foreach (DataGridViewRow row in DgvCarrito.SelectedRows)
             {
                 DgvCarrito.Rows.RemoveAt(row.Index);
+            }
+            
+        }
+
+        private void TxtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            ProductosE(TxtBuscar.Text);
+        }
+
+        private void ChxExistente_CheckedChanged(object sender, EventArgs e)
+        {
+            TxtNombreProducto.Enabled = false;
+            TxtDescripcion.Enabled = false;
+
+            CmbCategoria.Visible = false;
+            CmbCategoria.Enabled = false;
+
+            TxtCategoria.Visible = true;
+
+            //TxtCategoria.Top = 528;
+            //TxtCategoria.Left = 71;
+
+            TxtBuscar.Visible = true;
+            BtnBuscar.Visible = true;
+            DgvSave.Visible = true;
+        }
+
+        private void DgvSave_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(TxtNombreProducto.Text =="" && TxtDescripcion.Text =="" && TxtCategoria.Text == "")
+            {
+                TxtNombreProducto.Text = Convert.ToString(DgvSave.CurrentRow.Cells[0].Value).Trim();
+                TxtDescripcion.Text = Convert.ToString(DgvSave.CurrentRow.Cells[1].Value).Trim();
+                TxtCategoria.Text = Convert.ToString(DgvSave.CurrentRow.Cells[2].Value).Trim();
             }
             
         }

@@ -191,7 +191,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             // 
             this.pictureLogoPrincipal.BackColor = System.Drawing.Color.White;
             this.pictureLogoPrincipal.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.Logo;
-            this.pictureLogoPrincipal.Location = new System.Drawing.Point(229, 64);
+            this.pictureLogoPrincipal.Location = new System.Drawing.Point(417, 81);
             this.pictureLogoPrincipal.Name = "pictureLogoPrincipal";
             this.pictureLogoPrincipal.ShadowDecoration.Parent = this.pictureLogoPrincipal;
             this.pictureLogoPrincipal.Size = new System.Drawing.Size(376, 332);
