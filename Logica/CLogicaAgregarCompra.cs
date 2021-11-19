@@ -21,22 +21,22 @@ namespace Logica
                 IdUnidadM,  NFactura,  TotalC, IdCategoria,  IdUsuario, CantidadArt,PrecioU,caducidad, marca,Precioventa);
 
 
-            if (result.Trim() == Convert.ToString(0))
-            {
-                MessageBox.Show("Lo sentimos. La compra no se pudo realizar. :(");
-                return result;
-            }
-            else
-            {
-                if (result.Trim() != Convert.ToString(0))
-                {
-                    MessageBox.Show("La compra se agregó con éxito. :)");
-                    return result;
-                }
+            //if (result.Trim() == Convert.ToString(0))
+            //{
+            //    MessageBox.Show("Lo sentimos. La compra no se pudo realizar. :(");
+            //    return result;
+            //}
+            //else
+            //{
+            //    if (result.Trim() != Convert.ToString(0))
+            //    {
+            //        MessageBox.Show("La compra se agregó con éxito. :)");
+            //        return result;
+            //    }
 
-                return result;
+             return result;
 
-            }
+            //}
         }
 
         public string AddProducto(string IdCompra,string IdEstante, double stock)
