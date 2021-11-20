@@ -173,7 +173,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlPrincipal.Location = new System.Drawing.Point(0, 0);
             this.PnlPrincipal.Name = "PnlPrincipal";
             this.PnlPrincipal.ShadowDecoration.Parent = this.PnlPrincipal;
-            this.PnlPrincipal.Size = new System.Drawing.Size(1212, 715);
+            this.PnlPrincipal.Size = new System.Drawing.Size(1568, 837);
             this.PnlPrincipal.TabIndex = 0;
             // 
             // PnlMostarFrames
@@ -184,14 +184,14 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlMostarFrames.Location = new System.Drawing.Point(0, 115);
             this.PnlMostarFrames.Name = "PnlMostarFrames";
             this.PnlMostarFrames.ShadowDecoration.Parent = this.PnlMostarFrames;
-            this.PnlMostarFrames.Size = new System.Drawing.Size(1212, 600);
+            this.PnlMostarFrames.Size = new System.Drawing.Size(1568, 722);
             this.PnlMostarFrames.TabIndex = 4;
             // 
             // pictureLogoPrincipal
             // 
             this.pictureLogoPrincipal.BackColor = System.Drawing.Color.White;
             this.pictureLogoPrincipal.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.Logo;
-            this.pictureLogoPrincipal.Location = new System.Drawing.Point(417, 81);
+            this.pictureLogoPrincipal.Location = new System.Drawing.Point(622, 96);
             this.pictureLogoPrincipal.Name = "pictureLogoPrincipal";
             this.pictureLogoPrincipal.ShadowDecoration.Parent = this.pictureLogoPrincipal;
             this.pictureLogoPrincipal.Size = new System.Drawing.Size(376, 332);
@@ -219,7 +219,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlMenu.Location = new System.Drawing.Point(0, 31);
             this.PnlMenu.Name = "PnlMenu";
             this.PnlMenu.ShadowDecoration.Parent = this.PnlMenu;
-            this.PnlMenu.Size = new System.Drawing.Size(1212, 84);
+            this.PnlMenu.Size = new System.Drawing.Size(1568, 84);
             this.PnlMenu.TabIndex = 3;
             // 
             // PnlSubPersona
@@ -1361,7 +1361,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlBarraSuperior.Location = new System.Drawing.Point(0, 0);
             this.PnlBarraSuperior.Name = "PnlBarraSuperior";
             this.PnlBarraSuperior.ShadowDecoration.Parent = this.PnlBarraSuperior;
-            this.PnlBarraSuperior.Size = new System.Drawing.Size(1212, 31);
+            this.PnlBarraSuperior.Size = new System.Drawing.Size(1568, 31);
             this.PnlBarraSuperior.TabIndex = 2;
             this.PnlBarraSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PnlBarraSuperior_MouseDown);
             // 
@@ -1430,7 +1430,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.BtnMinimizar.FillColor = System.Drawing.Color.Gray;
             this.BtnMinimizar.HoverState.Parent = this.BtnMinimizar;
             this.BtnMinimizar.IconColor = System.Drawing.Color.White;
-            this.BtnMinimizar.Location = new System.Drawing.Point(1077, 0);
+            this.BtnMinimizar.Location = new System.Drawing.Point(1433, 0);
             this.BtnMinimizar.Name = "BtnMinimizar";
             this.BtnMinimizar.ShadowDecoration.Parent = this.BtnMinimizar;
             this.BtnMinimizar.Size = new System.Drawing.Size(45, 31);
@@ -1443,7 +1443,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.BtnMazimizar.FillColor = System.Drawing.Color.Gray;
             this.BtnMazimizar.HoverState.Parent = this.BtnMazimizar;
             this.BtnMazimizar.IconColor = System.Drawing.Color.White;
-            this.BtnMazimizar.Location = new System.Drawing.Point(1122, 0);
+            this.BtnMazimizar.Location = new System.Drawing.Point(1478, 0);
             this.BtnMazimizar.Name = "BtnMazimizar";
             this.BtnMazimizar.ShadowDecoration.Parent = this.BtnMazimizar;
             this.BtnMazimizar.Size = new System.Drawing.Size(45, 31);
@@ -1455,7 +1455,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.BtnSalir.FillColor = System.Drawing.Color.Gray;
             this.BtnSalir.HoverState.Parent = this.BtnSalir;
             this.BtnSalir.IconColor = System.Drawing.Color.White;
-            this.BtnSalir.Location = new System.Drawing.Point(1167, 0);
+            this.BtnSalir.Location = new System.Drawing.Point(1523, 0);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.ShadowDecoration.Parent = this.BtnSalir;
             this.BtnSalir.Size = new System.Drawing.Size(45, 31);
@@ -1465,7 +1465,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1212, 715);
+            this.ClientSize = new System.Drawing.Size(1568, 837);
             this.Controls.Add(this.PnlPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPrincipal";
