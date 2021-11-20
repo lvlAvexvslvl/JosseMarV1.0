@@ -374,7 +374,13 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             TxtPrecioUnitario.Enabled = true;
             CmbEmpresa.Enabled = true;
             TxtTotalArt.Enabled = true;
-            DtpFecha.Enabled = true;
+
+            CLogicaObtenerFecha fc = new CLogicaObtenerFecha();
+            string fecha = fc.ObtenerFechaSinHora();
+            DtpFecha.MinDate = Convert.ToDateTime(fecha);
+
+            DtpCaducidad.MinDate = Convert.ToDateTime(fecha);
+
             DtpCaducidad.Enabled = true;
             TxtNFactura.Enabled = true;
             TxtMarca.Enabled = true;
@@ -711,22 +717,40 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("¿Es todo lo qué desea añadir al carrito?", "Avíso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-
-            Save();
-            Delete();
-            //DgvCarrito.DataSource = "";
-            //TxtTotalCompra.Text = "";
-            //contadorAdd = 0;
-            //contador = 0;
-            if (ChxNuevo.Checked == true || ChxExistente.Checked == true)
+            int conteorows = DgvCarrito.Rows.Count;
+            if (conteorows>0)
             {
-                contadorAdd = 0;
-                DgvCarrito.Rows.Clear();
-                TxtTotalCompra.Text = "0";
-                contador = 0;
-                Delete();
+                DialogResult result = MessageBox.Show("¿Es todo lo qué desea añadir al carrito?", "Avíso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+               
+                if (result == DialogResult.OK)
+                {
+                    Save();
+                    Delete();
+                    //DgvCarrito.DataSource = "";
+                    //TxtTotalCompra.Text = "";
+                    //contadorAdd = 0;
+                    //contador = 0;
+                    if (ChxNuevo.Checked == true || ChxExistente.Checked == true)
+                    {
+                        contadorAdd = 0;
+                        DgvCarrito.Rows.Clear();
+                        TxtTotalCompra.Text = "0";
+                        contador = 0;
+                        Delete();
+                    }
+
+                }
+                else if (result == DialogResult.Cancel)
+                {
+                    
+                }
             }
+            else
+            {
+                MessageBox.Show("Antes de guardar añada productos al carrito. :)", "Avíso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+            
         }
 
         private void BtnAñadir_Click(object sender, EventArgs e)

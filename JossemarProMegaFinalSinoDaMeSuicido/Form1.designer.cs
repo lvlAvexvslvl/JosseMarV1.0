@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -38,10 +41,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PanelPrincipalCompra = new Guna.UI2.WinForms.Guna2Panel();
+            this.DgvMarca = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.TxtUnidadMedida = new Guna.UI2.WinForms.Guna2TextBox();
             this.DgvProductos = new Guna.UI2.WinForms.Guna2DataGridView();
             this.BtnLimpiar = new Guna.UI2.WinForms.Guna2Button();
             this.TxtCategoria = new Guna.UI2.WinForms.Guna2TextBox();
@@ -71,6 +73,19 @@
             this.TxtNFactura = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.DgvCarrito = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.BtnAñadir = new Guna.UI2.WinForms.Guna2Button();
+            this.BtnGuardar = new Guna.UI2.WinForms.Guna2Button();
+            this.BtnNuevo = new Guna.UI2.WinForms.Guna2Button();
+            this.CmbUnidadMedida = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.TxtDescripcion = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.TxtNombreProducto = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.PnlBarraSuperior = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblIdUsuario = new System.Windows.Forms.Label();
+            this.BtnSalir = new Guna.UI2.WinForms.Guna2ControlBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -88,27 +103,12 @@
             this.Column29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BtnAñadir = new Guna.UI2.WinForms.Guna2Button();
-            this.BtnGuardar = new Guna.UI2.WinForms.Guna2Button();
-            this.BtnNuevo = new Guna.UI2.WinForms.Guna2Button();
-            this.CmbUnidadMedida = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.TxtDescripcion = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.TxtNombreProducto = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.PnlBarraSuperior = new Guna.UI2.WinForms.Guna2Panel();
-            this.LblIdUsuario = new System.Windows.Forms.Label();
-            this.BtnSalir = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.TxtUnidadMedida = new Guna.UI2.WinForms.Guna2TextBox();
-            this.DgvMarca = new Guna.UI2.WinForms.Guna2DataGridView();
             this.PanelPrincipalCompra.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvMarca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvSave)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvCarrito)).BeginInit();
             this.PnlBarraSuperior.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvMarca)).BeginInit();
             this.SuspendLayout();
             // 
             // PanelPrincipalCompra
@@ -160,6 +160,91 @@
             this.PanelPrincipalCompra.Size = new System.Drawing.Size(1293, 571);
             this.PanelPrincipalCompra.TabIndex = 0;
             this.PanelPrincipalCompra.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelPrincipalCompra_Paint);
+            // 
+            // DgvMarca
+            // 
+            this.DgvMarca.AllowUserToAddRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.DgvMarca.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DgvMarca.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DgvMarca.BackgroundColor = System.Drawing.Color.White;
+            this.DgvMarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.DgvMarca.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.DgvMarca.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvMarca.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.DgvMarca.ColumnHeadersHeight = 32;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvMarca.DefaultCellStyle = dataGridViewCellStyle3;
+            this.DgvMarca.EnableHeadersVisualStyles = false;
+            this.DgvMarca.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DgvMarca.Location = new System.Drawing.Point(59, 3);
+            this.DgvMarca.Name = "DgvMarca";
+            this.DgvMarca.RowHeadersVisible = false;
+            this.DgvMarca.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvMarca.Size = new System.Drawing.Size(55, 173);
+            this.DgvMarca.TabIndex = 76;
+            this.DgvMarca.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.DgvMarca.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.DgvMarca.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.DgvMarca.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.DgvMarca.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.DgvMarca.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.DgvMarca.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.DgvMarca.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DgvMarca.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.DgvMarca.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DgvMarca.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.DgvMarca.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.DgvMarca.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
+            this.DgvMarca.ThemeStyle.HeaderStyle.Height = 32;
+            this.DgvMarca.ThemeStyle.ReadOnly = false;
+            this.DgvMarca.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.DgvMarca.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.DgvMarca.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.DgvMarca.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.DgvMarca.ThemeStyle.RowsStyle.Height = 22;
+            this.DgvMarca.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DgvMarca.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // TxtUnidadMedida
+            // 
+            this.TxtUnidadMedida.Animated = true;
+            this.TxtUnidadMedida.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TxtUnidadMedida.DefaultText = "";
+            this.TxtUnidadMedida.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TxtUnidadMedida.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TxtUnidadMedida.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtUnidadMedida.DisabledState.Parent = this.TxtUnidadMedida;
+            this.TxtUnidadMedida.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtUnidadMedida.Enabled = false;
+            this.TxtUnidadMedida.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtUnidadMedida.FocusedState.Parent = this.TxtUnidadMedida;
+            this.TxtUnidadMedida.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtUnidadMedida.HoverState.Parent = this.TxtUnidadMedida;
+            this.TxtUnidadMedida.Location = new System.Drawing.Point(337, 161);
+            this.TxtUnidadMedida.Multiline = true;
+            this.TxtUnidadMedida.Name = "TxtUnidadMedida";
+            this.TxtUnidadMedida.PasswordChar = '\0';
+            this.TxtUnidadMedida.PlaceholderText = "";
+            this.TxtUnidadMedida.ReadOnly = true;
+            this.TxtUnidadMedida.SelectedText = "";
+            this.TxtUnidadMedida.ShadowDecoration.Parent = this.TxtUnidadMedida;
+            this.TxtUnidadMedida.Size = new System.Drawing.Size(150, 39);
+            this.TxtUnidadMedida.TabIndex = 75;
+            this.TxtUnidadMedida.Visible = false;
             // 
             // DgvProductos
             // 
@@ -815,108 +900,6 @@
             this.DgvCarrito.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.DgvCarrito.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvCarrito_CellDoubleClick);
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Producto";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Descripción";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Categoria";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Unidad Medida";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Precio";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Proveedor";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Cantidad ";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Fecha Ingreso";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "N° Factura";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Marca";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Caducidad";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            // 
-            // Column26
-            // 
-            this.Column26.HeaderText = "IdProv";
-            this.Column26.Name = "Column26";
-            this.Column26.ReadOnly = true;
-            // 
-            // Column27
-            // 
-            this.Column27.HeaderText = "IdUm";
-            this.Column27.Name = "Column27";
-            this.Column27.ReadOnly = true;
-            // 
-            // Column28
-            // 
-            this.Column28.HeaderText = "TC";
-            this.Column28.Name = "Column28";
-            this.Column28.ReadOnly = true;
-            // 
-            // Column29
-            // 
-            this.Column29.HeaderText = "IdC";
-            this.Column29.Name = "Column29";
-            this.Column29.ReadOnly = true;
-            // 
-            // Column30
-            // 
-            this.Column30.HeaderText = "IdU";
-            this.Column30.Name = "Column30";
-            this.Column30.ReadOnly = true;
-            // 
-            // Column31
-            // 
-            this.Column31.HeaderText = "PVenta";
-            this.Column31.Name = "Column31";
-            this.Column31.ReadOnly = true;
-            // 
             // BtnAñadir
             // 
             this.BtnAñadir.CheckedState.Parent = this.BtnAñadir;
@@ -1107,90 +1090,107 @@
             this.BtnSalir.Size = new System.Drawing.Size(45, 31);
             this.BtnSalir.TabIndex = 0;
             // 
-            // TxtUnidadMedida
+            // Column1
             // 
-            this.TxtUnidadMedida.Animated = true;
-            this.TxtUnidadMedida.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.TxtUnidadMedida.DefaultText = "";
-            this.TxtUnidadMedida.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.TxtUnidadMedida.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.TxtUnidadMedida.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtUnidadMedida.DisabledState.Parent = this.TxtUnidadMedida;
-            this.TxtUnidadMedida.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.TxtUnidadMedida.Enabled = false;
-            this.TxtUnidadMedida.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtUnidadMedida.FocusedState.Parent = this.TxtUnidadMedida;
-            this.TxtUnidadMedida.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.TxtUnidadMedida.HoverState.Parent = this.TxtUnidadMedida;
-            this.TxtUnidadMedida.Location = new System.Drawing.Point(337, 161);
-            this.TxtUnidadMedida.Multiline = true;
-            this.TxtUnidadMedida.Name = "TxtUnidadMedida";
-            this.TxtUnidadMedida.PasswordChar = '\0';
-            this.TxtUnidadMedida.PlaceholderText = "";
-            this.TxtUnidadMedida.ReadOnly = true;
-            this.TxtUnidadMedida.SelectedText = "";
-            this.TxtUnidadMedida.ShadowDecoration.Parent = this.TxtUnidadMedida;
-            this.TxtUnidadMedida.Size = new System.Drawing.Size(150, 39);
-            this.TxtUnidadMedida.TabIndex = 75;
-            this.TxtUnidadMedida.Visible = false;
+            this.Column1.HeaderText = "Producto";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
-            // DgvMarca
+            // Column2
             // 
-            this.DgvMarca.AllowUserToAddRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.DgvMarca.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.DgvMarca.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DgvMarca.BackgroundColor = System.Drawing.Color.White;
-            this.DgvMarca.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DgvMarca.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.DgvMarca.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvMarca.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DgvMarca.ColumnHeadersHeight = 32;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvMarca.DefaultCellStyle = dataGridViewCellStyle3;
-            this.DgvMarca.EnableHeadersVisualStyles = false;
-            this.DgvMarca.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DgvMarca.Location = new System.Drawing.Point(59, 3);
-            this.DgvMarca.Name = "DgvMarca";
-            this.DgvMarca.RowHeadersVisible = false;
-            this.DgvMarca.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvMarca.Size = new System.Drawing.Size(55, 173);
-            this.DgvMarca.TabIndex = 76;
-            this.DgvMarca.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
-            this.DgvMarca.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.DgvMarca.ThemeStyle.AlternatingRowsStyle.Font = null;
-            this.DgvMarca.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
-            this.DgvMarca.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
-            this.DgvMarca.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.DgvMarca.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.DgvMarca.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DgvMarca.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.DgvMarca.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.DgvMarca.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.DgvMarca.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
-            this.DgvMarca.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.DgvMarca.ThemeStyle.HeaderStyle.Height = 32;
-            this.DgvMarca.ThemeStyle.ReadOnly = false;
-            this.DgvMarca.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
-            this.DgvMarca.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.DgvMarca.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.DgvMarca.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.DgvMarca.ThemeStyle.RowsStyle.Height = 22;
-            this.DgvMarca.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DgvMarca.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.Column2.HeaderText = "Descripción";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Categoria";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Unidad Medida";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Precio";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Proveedor";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Cantidad ";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Fecha Ingreso";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "N° Factura";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Marca";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Caducidad";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            // 
+            // Column26
+            // 
+            this.Column26.HeaderText = "IdProv";
+            this.Column26.Name = "Column26";
+            this.Column26.ReadOnly = true;
+            // 
+            // Column27
+            // 
+            this.Column27.HeaderText = "IdUm";
+            this.Column27.Name = "Column27";
+            this.Column27.ReadOnly = true;
+            // 
+            // Column28
+            // 
+            this.Column28.HeaderText = "TC";
+            this.Column28.Name = "Column28";
+            this.Column28.ReadOnly = true;
+            // 
+            // Column29
+            // 
+            this.Column29.HeaderText = "IdC";
+            this.Column29.Name = "Column29";
+            this.Column29.ReadOnly = true;
+            // 
+            // Column30
+            // 
+            this.Column30.HeaderText = "IdU";
+            this.Column30.Name = "Column30";
+            this.Column30.ReadOnly = true;
+            // 
+            // Column31
+            // 
+            this.Column31.HeaderText = "PVenta";
+            this.Column31.Name = "Column31";
+            this.Column31.ReadOnly = true;
             // 
             // Form1
             // 
@@ -1205,12 +1205,12 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.PanelPrincipalCompra.ResumeLayout(false);
             this.PanelPrincipalCompra.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvMarca)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvSave)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvCarrito)).EndInit();
             this.PnlBarraSuperior.ResumeLayout(false);
             this.PnlBarraSuperior.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvMarca)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1260,6 +1260,8 @@
         private Guna.UI2.WinForms.Guna2TextBox TxtCategoria;
         private Guna.UI2.WinForms.Guna2Button BtnLimpiar;
         private Guna.UI2.WinForms.Guna2DataGridView DgvProductos;
+        private Guna.UI2.WinForms.Guna2TextBox TxtUnidadMedida;
+        private Guna.UI2.WinForms.Guna2DataGridView DgvMarca;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -1277,8 +1279,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column29;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column30;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column31;
-        private Guna.UI2.WinForms.Guna2TextBox TxtUnidadMedida;
-        private Guna.UI2.WinForms.Guna2DataGridView DgvMarca;
     }
 }
 
