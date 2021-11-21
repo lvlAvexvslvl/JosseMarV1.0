@@ -22,6 +22,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
         CLogicaLlenarCmb fill = new CLogicaLlenarCmb();
         CLogicaConsultas sql = new CLogicaConsultas();
         CLogicaAgregarCompra buy = new CLogicaAgregarCompra();
+       
         int contador = 0, contadorAdd = 0;
         string id;
         double totalCompra=0, totalCompra2;
@@ -139,12 +140,25 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
         }
 
         //METODO PARA LLAMAR LA VISTA DE PRODUCTOS EN EXISTENCIA
+        //void ProductosE(string a)
+        //{
+           
+        //    DgvSave.DataSource = sql.ConsultaTab("SELECT vs_ProductosExistentes.Descripcion, vs_ProductosExistentes.DescripcionTipoUM, vs_ProductosExistentes.IdCompra AS ID, vs_ProductosExistentes.NombreProducto AS Nombre, vs_ProductosExistentes.Marca AS Marca,vs_ProductosExistentes.DescripcionC AS Categoria FROM vs_ProductosExistentes where vs_ProductosExistentes.NombreProducto LIKE'%" + a+"%' AND vs_ProductosExistentes.Marca LIKE '%"+a+"%'");
+           
+        //}
         void ProductosE(string a)
         {
-           
-            DgvSave.DataSource = sql.ConsultaTab("SELECT vs_ProductosExistentes.Descripcion, vs_ProductosExistentes.DescripcionTipoUM, vs_ProductosExistentes.IdCompra AS ID, vs_ProductosExistentes.NombreProducto AS Nombre, vs_ProductosExistentes.Marca AS Marca,vs_ProductosExistentes.DescripcionC AS Categoria FROM vs_ProductosExistentes where vs_ProductosExistentes.NombreProducto LIKE'%" + a+"%' AND vs_ProductosExistentes.Marca LIKE '%"+a+"%'");
-           
+
+            DgvSave.DataSource = sql.ConsultaTab("SELECT vs_ProductosExistentes.Descripcion, vs_ProductosExistentes.DescripcionTipoUM,vs_ProductosExistentes.NombreProducto AS Nombre, vs_ProductosExistentes.Marca AS Marca,vs_ProductosExistentes.DescripcionC AS Categoria FROM vs_ProductosExistentes WHERE vs_ProductosExistentes.NombreProducto LIKE '%"+a+"%' OR vs_ProductosExistentes.Marca LIKE '%"+a+"%' GROUP BY  vs_ProductosExistentes.Descripcion, vs_ProductosExistentes.DescripcionTipoUM, vs_ProductosExistentes.NombreProducto, vs_ProductosExistentes.Marca,vs_ProductosExistentes.DescripcionC");
+
         }
+
+        //void ProductosE2()
+        //{
+
+        //    DgvSave.DataSource = sql.ConsultaTab("SELECT vs_ProductosExistentes.Descripcion, vs_ProductosExistentes.DescripcionTipoUM,vs_ProductosExistentes.NombreProducto AS Nombre, vs_ProductosExistentes.Marca AS Marca,vs_ProductosExistentes.DescripcionC AS Categoria FROM vs_ProductosExistentes GROUP BY vs_ProductosExistentes.Descripcion, vs_ProductosExistentes.DescripcionTipoUM, vs_ProductosExistentes.NombreProducto, vs_ProductosExistentes.Marca,vs_ProductosExistentes.DescripcionC");
+
+        //}
 
         void DgvNomProducts()
         {
@@ -166,6 +180,10 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             DgvSave.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             DgvSave.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             ProductosE("");
+            int con = DgvSave.RowCount;
+            MessageBox.Show("con= "+con);
+            //ProductosE2();
+
             this.DgvSave.Columns["Descripcion"].Visible = false;
             this.DgvSave.Columns["DescripcionTipoUM"].Visible = false;
 
@@ -244,6 +262,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
                     DgvCarrito.Rows.Clear();
                     HabilitarProNew();
                     contador = 0;
+                    TxtTotalCompra.Text = "0";
                 }
             else if (result == DialogResult.Cancel)
             {
@@ -405,7 +424,8 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
                     DgvCarrito.Rows.Clear();
                     HabilitarProdExis();
                     contador = 0;
-                    
+                    TxtTotalCompra.Text = "0";
+
                 }
                 else if (result == DialogResult.Cancel)
                 {
@@ -426,9 +446,9 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             TxtDescripcion.Text = Convert.ToString(DgvSave.CurrentRow.Cells[0].Value).Trim();
             TxtUnidadMedida.Text = Convert.ToString(DgvSave.CurrentRow.Cells[1].Value).Trim();
 
-            TxtNombreProducto.Text = Convert.ToString(DgvSave.CurrentRow.Cells[3].Value).Trim();
-            TxtMarca.Text = Convert.ToString(DgvSave.CurrentRow.Cells[4].Value).Trim();
-            TxtCategoria.Text = Convert.ToString(DgvSave.CurrentRow.Cells[5].Value).Trim();
+            TxtNombreProducto.Text = Convert.ToString(DgvSave.CurrentRow.Cells[2].Value).Trim();
+            TxtMarca.Text = Convert.ToString(DgvSave.CurrentRow.Cells[3].Value).Trim();
+            TxtCategoria.Text = Convert.ToString(DgvSave.CurrentRow.Cells[4].Value).Trim();
             //TxtDescripcion.Text = Convert.ToString(DgvSave.CurrentRow.Cells[1].Value).Trim();
                 
             //}
@@ -460,6 +480,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             TxtMarca.Text = "";
             TxtPrecioVenta.Text = "";
             TxtCategoria.Text = "";
+            TxtUnidadMedida.Text = "";
         }
 
 
@@ -726,6 +747,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
                 {
                     Save();
                     Delete();
+                    ProductosE("");
                     //DgvCarrito.DataSource = "";
                     //TxtTotalCompra.Text = "";
                     //contadorAdd = 0;
