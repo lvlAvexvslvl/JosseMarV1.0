@@ -1036,6 +1036,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.BtnMostarInventario.ShadowDecoration.Parent = this.BtnMostarInventario;
             this.BtnMostarInventario.Size = new System.Drawing.Size(58, 52);
             this.BtnMostarInventario.TabIndex = 6;
+            this.BtnMostarInventario.Click += new System.EventHandler(this.BtnMostarInventario_Click);
             // 
             // PnlAgregarInventario
             // 
