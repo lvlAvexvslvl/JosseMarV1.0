@@ -34,13 +34,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.PanelPrincipalCompra = new Guna.UI2.WinForms.Guna2Panel();
             this.DgvMarca = new Guna.UI2.WinForms.Guna2DataGridView();
             this.TxtUnidadMedida = new Guna.UI2.WinForms.Guna2TextBox();
@@ -48,7 +48,6 @@
             this.BtnLimpiar = new Guna.UI2.WinForms.Guna2Button();
             this.TxtCategoria = new Guna.UI2.WinForms.Guna2TextBox();
             this.TxtBuscar = new Guna.UI2.WinForms.Guna2TextBox();
-            this.BtnBuscar = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.TxtPrecioVenta = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -73,19 +72,6 @@
             this.TxtNFactura = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.DgvCarrito = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.BtnAñadir = new Guna.UI2.WinForms.Guna2Button();
-            this.BtnGuardar = new Guna.UI2.WinForms.Guna2Button();
-            this.BtnNuevo = new Guna.UI2.WinForms.Guna2Button();
-            this.CmbUnidadMedida = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.TxtDescripcion = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.TxtNombreProducto = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.PnlBarraSuperior = new Guna.UI2.WinForms.Guna2Panel();
-            this.LblIdUsuario = new System.Windows.Forms.Label();
-            this.BtnSalir = new Guna.UI2.WinForms.Guna2ControlBox();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -103,6 +89,20 @@
             this.Column29 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column30 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column31 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnAñadir = new Guna.UI2.WinForms.Guna2Button();
+            this.BtnGuardar = new Guna.UI2.WinForms.Guna2Button();
+            this.BtnNuevo = new Guna.UI2.WinForms.Guna2Button();
+            this.CmbUnidadMedida = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.TxtDescripcion = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.TxtNombreProducto = new Guna.UI2.WinForms.Guna2TextBox();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.PnlBarraSuperior = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblIdUsuario = new System.Windows.Forms.Label();
+            this.BtnSalir = new Guna.UI2.WinForms.Guna2ControlBox();
+            this.BtnBuscar = new Guna.UI2.WinForms.Guna2ImageButton();
             this.PanelPrincipalCompra.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvMarca)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProductos)).BeginInit();
@@ -369,20 +369,6 @@
             this.TxtBuscar.Size = new System.Drawing.Size(382, 39);
             this.TxtBuscar.TabIndex = 71;
             this.TxtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged);
-            // 
-            // BtnBuscar
-            // 
-            this.BtnBuscar.CheckedState.Parent = this.BtnBuscar;
-            this.BtnBuscar.Enabled = false;
-            this.BtnBuscar.HoverState.ImageSize = new System.Drawing.Size(40, 40);
-            this.BtnBuscar.HoverState.Parent = this.BtnBuscar;
-            this.BtnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscar.Image")));
-            this.BtnBuscar.ImageSize = new System.Drawing.Size(30, 30);
-            this.BtnBuscar.Location = new System.Drawing.Point(853, 25);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.PressedState.Parent = this.BtnBuscar;
-            this.BtnBuscar.Size = new System.Drawing.Size(46, 39);
-            this.BtnBuscar.TabIndex = 70;
             // 
             // guna2HtmlLabel8
             // 
@@ -723,8 +709,10 @@
             // DtpFecha
             // 
             this.DtpFecha.Animated = true;
+            this.DtpFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(189)))), ((int)(((byte)(180)))));
             this.DtpFecha.CheckedState.Parent = this.DtpFecha;
             this.DtpFecha.Enabled = false;
+            this.DtpFecha.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(189)))), ((int)(((byte)(180)))));
             this.DtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DtpFecha.HoverState.Parent = this.DtpFecha;
             this.DtpFecha.Location = new System.Drawing.Point(512, 228);
@@ -832,7 +820,7 @@
             this.DgvCarrito.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DgvCarrito.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(189)))), ((int)(((byte)(180)))));
             dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -884,7 +872,7 @@
             this.DgvCarrito.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.DgvCarrito.ThemeStyle.BackColor = System.Drawing.Color.WhiteSmoke;
             this.DgvCarrito.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DgvCarrito.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.DgvCarrito.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(189)))), ((int)(((byte)(180)))));
             this.DgvCarrito.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DgvCarrito.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DgvCarrito.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
@@ -899,6 +887,108 @@
             this.DgvCarrito.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DgvCarrito.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.DgvCarrito.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvCarrito_CellDoubleClick);
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Producto";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Descripción";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Categoria";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Unidad Medida";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "Precio";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "Proveedor";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "Cantidad ";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.HeaderText = "Fecha Ingreso";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.HeaderText = "N° Factura";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.HeaderText = "Marca";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column11
+            // 
+            this.Column11.HeaderText = "Caducidad";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            // 
+            // Column26
+            // 
+            this.Column26.HeaderText = "IdProv";
+            this.Column26.Name = "Column26";
+            this.Column26.ReadOnly = true;
+            // 
+            // Column27
+            // 
+            this.Column27.HeaderText = "IdUm";
+            this.Column27.Name = "Column27";
+            this.Column27.ReadOnly = true;
+            // 
+            // Column28
+            // 
+            this.Column28.HeaderText = "TC";
+            this.Column28.Name = "Column28";
+            this.Column28.ReadOnly = true;
+            // 
+            // Column29
+            // 
+            this.Column29.HeaderText = "IdC";
+            this.Column29.Name = "Column29";
+            this.Column29.ReadOnly = true;
+            // 
+            // Column30
+            // 
+            this.Column30.HeaderText = "IdU";
+            this.Column30.Name = "Column30";
+            this.Column30.ReadOnly = true;
+            // 
+            // Column31
+            // 
+            this.Column31.HeaderText = "PVenta";
+            this.Column31.Name = "Column31";
+            this.Column31.ReadOnly = true;
             // 
             // BtnAñadir
             // 
@@ -1090,107 +1180,19 @@
             this.BtnSalir.Size = new System.Drawing.Size(45, 31);
             this.BtnSalir.TabIndex = 0;
             // 
-            // Column1
+            // BtnBuscar
             // 
-            this.Column1.HeaderText = "Producto";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Descripción";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Categoria";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Unidad Medida";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Precio";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Proveedor";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Cantidad ";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "Fecha Ingreso";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "N° Factura";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "Marca";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "Caducidad";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            // 
-            // Column26
-            // 
-            this.Column26.HeaderText = "IdProv";
-            this.Column26.Name = "Column26";
-            this.Column26.ReadOnly = true;
-            // 
-            // Column27
-            // 
-            this.Column27.HeaderText = "IdUm";
-            this.Column27.Name = "Column27";
-            this.Column27.ReadOnly = true;
-            // 
-            // Column28
-            // 
-            this.Column28.HeaderText = "TC";
-            this.Column28.Name = "Column28";
-            this.Column28.ReadOnly = true;
-            // 
-            // Column29
-            // 
-            this.Column29.HeaderText = "IdC";
-            this.Column29.Name = "Column29";
-            this.Column29.ReadOnly = true;
-            // 
-            // Column30
-            // 
-            this.Column30.HeaderText = "IdU";
-            this.Column30.Name = "Column30";
-            this.Column30.ReadOnly = true;
-            // 
-            // Column31
-            // 
-            this.Column31.HeaderText = "PVenta";
-            this.Column31.Name = "Column31";
-            this.Column31.ReadOnly = true;
+            this.BtnBuscar.CheckedState.Parent = this.BtnBuscar;
+            this.BtnBuscar.Enabled = false;
+            this.BtnBuscar.HoverState.ImageSize = new System.Drawing.Size(40, 40);
+            this.BtnBuscar.HoverState.Parent = this.BtnBuscar;
+            this.BtnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscar.Image")));
+            this.BtnBuscar.ImageSize = new System.Drawing.Size(30, 30);
+            this.BtnBuscar.Location = new System.Drawing.Point(853, 25);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.PressedState.Parent = this.BtnBuscar;
+            this.BtnBuscar.Size = new System.Drawing.Size(46, 39);
+            this.BtnBuscar.TabIndex = 70;
             // 
             // Form1
             // 

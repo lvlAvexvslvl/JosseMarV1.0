@@ -29,6 +29,8 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             DgvProductos.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             DgvProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             ProductosAlls();
+            DgvProductos.Columns["ID"].Visible = false;
+            DgvProductos.Columns["NFactura"].Visible = false;
         }
     }
 }

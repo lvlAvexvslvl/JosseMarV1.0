@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInventario));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInventario));
             this.PnlBarraSuperior = new Guna.UI2.WinForms.Guna2Panel();
             this.BtnSalir = new Guna.UI2.WinForms.Guna2ControlBox();
             this.TxtBuscar = new Guna.UI2.WinForms.Guna2TextBox();
-            this.BtnBuscar = new Guna.UI2.WinForms.Guna2ImageButton();
             this.LblFiltrar = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.RbtnMarca = new Guna.UI2.WinForms.Guna2RadioButton();
             this.guna2RadioButton2 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.guna2RadioButton3 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.DgvInventario = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.BtnBuscar = new Guna.UI2.WinForms.Guna2ImageButton();
             this.PnlBarraSuperior.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvInventario)).BeginInit();
@@ -93,20 +93,6 @@
             this.TxtBuscar.Size = new System.Drawing.Size(444, 39);
             this.TxtBuscar.TabIndex = 73;
             this.TxtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged);
-            // 
-            // BtnBuscar
-            // 
-            this.BtnBuscar.CheckedState.Parent = this.BtnBuscar;
-            this.BtnBuscar.HoverState.ImageSize = new System.Drawing.Size(40, 40);
-            this.BtnBuscar.HoverState.Parent = this.BtnBuscar;
-            this.BtnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscar.Image")));
-            this.BtnBuscar.ImageSize = new System.Drawing.Size(30, 30);
-            this.BtnBuscar.Location = new System.Drawing.Point(513, 48);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.PressedState.Parent = this.BtnBuscar;
-            this.BtnBuscar.Size = new System.Drawing.Size(56, 39);
-            this.BtnBuscar.TabIndex = 72;
-            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // LblFiltrar
             // 
@@ -253,6 +239,20 @@
             this.DgvInventario.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.DgvInventario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvInventario_CellClick);
             this.DgvInventario.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.DgvInventario_CellPainting);
+            // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.CheckedState.Parent = this.BtnBuscar;
+            this.BtnBuscar.HoverState.ImageSize = new System.Drawing.Size(40, 40);
+            this.BtnBuscar.HoverState.Parent = this.BtnBuscar;
+            this.BtnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscar.Image")));
+            this.BtnBuscar.ImageSize = new System.Drawing.Size(30, 30);
+            this.BtnBuscar.Location = new System.Drawing.Point(503, 48);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.PressedState.Parent = this.BtnBuscar;
+            this.BtnBuscar.Size = new System.Drawing.Size(56, 39);
+            this.BtnBuscar.TabIndex = 72;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // FrmInventario
             // 
