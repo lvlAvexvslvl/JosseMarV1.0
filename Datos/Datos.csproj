@@ -53,6 +53,7 @@
     <Compile Include="CDatosContadorCedula.cs" />
     <Compile Include="CDatosHistorialU.cs" />
     <Compile Include="CDatosInicarSesion.cs" />
+    <Compile Include="CDatosMovimientos.cs" />
     <Compile Include="CDatosRegistrar.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

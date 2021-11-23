@@ -55,6 +55,7 @@
     <Compile Include="CLogicaIniciarSesion.cs" />
     <Compile Include="CLogicaLlenarCmb.cs" />
     <Compile Include="CLogicaMessageRes.cs" />
+    <Compile Include="CLogicaMovimientos.cs" />
     <Compile Include="CLogicaObtenerFecha.cs" />
     <Compile Include="CLogicaObtenerIP.cs" />
     <Compile Include="CLogicarecibirId.cs" />
