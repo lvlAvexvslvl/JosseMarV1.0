@@ -32,5 +32,16 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             DgvProductos.Columns["ID"].Visible = false;
             DgvProductos.Columns["NFactura"].Visible = false;
         }
+
+        private void DgvProductos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            FrmVentas v = new FrmVentas("");
+            
+            foreach (DataGridViewRow row in DgvProductos.SelectedRows)
+            {
+                v.Datasave(Convert.ToString(DgvProductos.CurrentRow.Cells[0].Value).Trim()); 
+            }
+
+        }
     }
 }

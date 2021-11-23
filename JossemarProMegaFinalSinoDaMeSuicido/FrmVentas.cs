@@ -29,6 +29,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
 
         private void FrmVentas_Load(object sender, EventArgs e)
         {
+            LblUsuario.Text = id;
             DgvProductos.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             DgvProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             ProductosUnificados("");
@@ -38,6 +39,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
            // DgvProductos.Columns["Add"].Visible = false;
             int conteo = DgvProductos.Rows.Count;
             MessageBox.Show("Cantidad de Productos = " + conteo);
+            Datasave("");
         }
 
         private void TxtBuscar_TextChanged(object sender, EventArgs e)
@@ -76,6 +78,12 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
                 //}
 
             }
+        }
+
+       public string Datasave(string idP)
+        {
+            MessageBox.Show("ID PROD = "+idP);
+            return idP;
         }
     }
 }
