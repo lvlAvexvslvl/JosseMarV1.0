@@ -752,6 +752,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
                     //TxtTotalCompra.Text = "";
                     //contadorAdd = 0;
                     //contador = 0;
+                    Movimiento();
                     if (ChxNuevo.Checked == true || ChxExistente.Checked == true)
                     {
                         contadorAdd = 0;
@@ -774,7 +775,13 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             
             
         }
-
+        private void Movimiento()
+        {
+            CLogicaMovimientos lg = new CLogicaMovimientos();
+            string note = sql.ConsultaSimple("SELECT MAX(Compra.IdCompra)FROM Compra");
+            lg.MovimientoCompras(note,TxtTotalCompra.Text.Trim());
+            lg.SaldoD(TxtTotalCompra.Text.Trim(), 1);
+        }
         private void BtnAñadir_Click(object sender, EventArgs e)
         {
 

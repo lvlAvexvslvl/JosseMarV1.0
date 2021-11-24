@@ -16,7 +16,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Inicio Main = new Inicio();
+           Inicio Main = new Inicio();
             //FormPrincipal Main = new FormPrincipal();
             Main.FormClosed += MainForm_Closed;
             Main.Show();

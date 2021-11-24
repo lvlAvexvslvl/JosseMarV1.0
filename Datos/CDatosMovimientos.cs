@@ -43,7 +43,7 @@ namespace Datos
             comando.Connection = conexion.AbrirConexion();
             comando.CommandText = "JSMMovimientoCompra";
             comando.CommandType = CommandType.StoredProcedure;
-            comando.Parameters.AddWithValue("@idVenta", idCompra);
+            comando.Parameters.AddWithValue("@idCompra", idCompra);
             comando.Parameters.AddWithValue("@Total", Total);
             comando.ExecuteNonQuery();
             comando.Parameters.Clear();
@@ -53,13 +53,35 @@ namespace Datos
         catch (Exception ex)
         {
             Console.WriteLine(ex + "Eroror");
-            return "ERROR3";
+            return "ERROR3"+ex;
         }
 
     }
 
-public string AbrirCaja(double Total)
-{
+        public string MovimientoDevolucion(int idMDevolucion, double Total)
+        {
+            try
+            {
+                comando.Connection = conexion.AbrirConexion();
+                comando.CommandText = "JSMMovimientoDevolucion";
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@idDevolucionV", idMDevolucion);
+                comando.Parameters.AddWithValue("@Total", Total);
+                comando.ExecuteNonQuery();
+                comando.Parameters.Clear();
+
+                return "Guardado";
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex + "Eroror");
+                return "ERROR3" + ex;
+            }
+
+        }
+
+        public string AbrirCaja(double Total)
+    {
     try
     {
         comando.Connection = conexion.AbrirConexion();
@@ -77,7 +99,7 @@ public string AbrirCaja(double Total)
         return "ERROR3";
     }
 
-}
+    }
     
   public string CerrarCaja()
 {
@@ -90,15 +112,66 @@ public string AbrirCaja(double Total)
         comando.Parameters.Clear();
 
                 string fecha = DateTime.Now.ToString("yyyy-MM-dd");
-        return c.CSimple("SELECT Movimientos.TotalFactura FROM Movimientos WHERE Movimientos.Fecha='"+fecha+"' AND Movimientos.tipoMovimiento = 4;");
+                string id = c.CSimple("SELECT MAX(idMovimientos) FROM Movimientos WHERE Movimientos.tipoMovimiento = 4; ");
+        return c.CSimple("SELECT Movimientos.TotalFactura FROM Movimientos WHERE Movimientos.Fecha='"+fecha+ "' AND Movimientos.tipoMovimiento = 4 AND Movimientos.idMovimientos = '"+id+"'");
     }
     catch (Exception ex)
     {
         Console.WriteLine(ex + "Eroror");
-        return "ERROR3";
+        return "ERROR88" + ex;
     }
 
         }
-      
+
+        public string MontoActual()
+        {
+            try
+            {
+                string result = "";
+                DataTable dt = new DataTable();
+                SqlCommand sql = new SqlCommand("JSMMontoActual", conexion.AbrirConexion());
+                sql.CommandType = CommandType.StoredProcedure;
+                sql.ExecuteNonQuery();
+                SqlDataAdapter da = new SqlDataAdapter(sql);
+                da.Fill(dt);
+
+                if (dt.Rows.Count > 0)
+                {
+                   result = Convert.ToString(dt.Rows[0][0]);
+                }
+                return result;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex + "Eroror");
+                return "ERROR3" + ex;
+            }
+
+        }
+
+        public string SaldoDia(double Total, int tipo)
+        {
+            
+            try
+            {
+               
+                comando.Connection = conexion.AbrirConexion();
+                comando.CommandText = "JSMSaldoDiario";
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@Monto", Total);
+                comando.Parameters.AddWithValue("@Tipo", Total);
+                comando.ExecuteNonQuery();
+                comando.Parameters.Clear();
+
+                return "Guardado";
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex + "Eroror");
+                return "Er"+ ex.ToString();
+            }
+
+        }
+
     }
 }

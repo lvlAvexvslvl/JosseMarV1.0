@@ -34,10 +34,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI">
-      <HintPath>..\..\..\..\Desktop\FRMRespaldosJosseMar\Jossemar\Jossemar\bin\Debug\Guna.UI.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Telegram Desktop\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2">
-      <HintPath>..\..\..\..\Desktop\FRMRespaldosJosseMar\Jossemar\Jossemar\bin\Debug\Guna.UI2.dll</HintPath>
+      <HintPath>..\..\..\..\Downloads\Telegram Desktop\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -88,6 +88,12 @@
     <Compile Include="FormProveedor.designer.cs">
       <DependentUpon>FormProveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmActividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmActividades.Designer.cs">
+      <DependentUpon>FrmActividades.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +111,12 @@
     </Compile>
     <Compile Include="FrmProductosAlls.Designer.cs">
       <DependentUpon>FrmProductosAlls.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSaldos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSaldos.Designer.cs">
+      <DependentUpon>FrmSaldos.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmVentas.cs">
       <SubType>Form</SubType>
@@ -145,6 +157,9 @@
     <EmbeddedResource Include="FormProveedor.resx">
       <DependentUpon>FormProveedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmActividades.resx">
+      <DependentUpon>FrmActividades.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmInventario.resx">
       <DependentUpon>FrmInventario.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProductosAlls.resx">
       <DependentUpon>FrmProductosAlls.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSaldos.resx">
+      <DependentUpon>FrmSaldos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVentas.resx">
       <DependentUpon>FrmVentas.cs</DependentUpon>

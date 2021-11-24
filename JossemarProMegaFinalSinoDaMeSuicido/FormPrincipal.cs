@@ -358,6 +358,17 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             ActivarFrm(new FrmVentas(a));
         }
 
+        private void BtnMovimientos_Click(object sender, EventArgs e)
+        {
+            ActivarFrm(new FrmActividades());
+        }
+
+        private void BtnSaldo_Click(object sender, EventArgs e)
+        {
+            FrmSaldos s = new FrmSaldos();
+            s.ShowDialog();
+        }
+
         private void BtnCliente_Click(object sender, EventArgs e)
         {
             ActivarFrm(new FormCliente());
