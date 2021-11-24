@@ -36,7 +36,7 @@ namespace Datos
             catch (Exception ex)
             {
                 Console.WriteLine(ex + "Eroror");
-                return "ERROR3";
+                return "ERROR3"+ex;
             }
 
         }

@@ -31,10 +31,10 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVentas));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmVentas));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -49,14 +49,18 @@
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.DgvProductos = new Guna.UI2.WinForms.Guna2DataGridView();
             this.TxtBuscar = new Guna.UI2.WinForms.Guna2TextBox();
-            this.BtnBuscar = new Guna.UI2.WinForms.Guna2ImageButton();
             this.guna2GroupBox4 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.DgvCarrito = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.IDS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Columna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TxtDireccion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.TxtTelefono = new System.Windows.Forms.TextBox();
             this.TxtApellido = new System.Windows.Forms.TextBox();
             this.DtpFechaFact = new System.Windows.Forms.DateTimePicker();
             this.TxtCedulaV = new System.Windows.Forms.TextBox();
@@ -68,6 +72,12 @@
             this.LblNombreFull = new System.Windows.Forms.Label();
             this.TxtNombreFull = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.RbtnCategoria = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.RbtnFecha = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.RbtnPrecio = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.RbtnMarca = new Guna.UI2.WinForms.Guna2RadioButton();
+            this.label5 = new System.Windows.Forms.Label();
+            this.BtnBuscar = new Guna.UI2.WinForms.Guna2ImageButton();
             this.DtpFechaPago = new System.Windows.Forms.DateTimePicker();
             this.LblDechaPago = new System.Windows.Forms.Label();
             this.LblDeuda = new System.Windows.Forms.Label();
@@ -91,21 +101,15 @@
             this.guna2Separator2 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
             this.DgvSave = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BtnCalcular = new System.Windows.Forms.Button();
             this.idP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idC = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.des = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fch = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idU = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.PnlBarraSuperior.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProductos)).BeginInit();
@@ -173,6 +177,7 @@
             this.RbtnCorriente.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.RbtnCorriente.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.RbtnCorriente.UseVisualStyleBackColor = false;
+            this.RbtnCorriente.CheckedChanged += new System.EventHandler(this.RbtnCorriente_CheckedChanged);
             // 
             // RbtnCredito
             // 
@@ -195,6 +200,7 @@
             this.RbtnCredito.UncheckedState.FillColor = System.Drawing.Color.Transparent;
             this.RbtnCredito.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
             this.RbtnCredito.UseVisualStyleBackColor = false;
+            this.RbtnCredito.CheckedChanged += new System.EventHandler(this.RbtnCredito_CheckedChanged);
             // 
             // guna2GroupBox2
             // 
@@ -202,10 +208,10 @@
             this.guna2GroupBox2.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(189)))), ((int)(((byte)(180)))));
             this.guna2GroupBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2GroupBox2.Location = new System.Drawing.Point(677, 128);
+            this.guna2GroupBox2.Location = new System.Drawing.Point(639, 168);
             this.guna2GroupBox2.Name = "guna2GroupBox2";
             this.guna2GroupBox2.ShadowDecoration.Parent = this.guna2GroupBox2;
-            this.guna2GroupBox2.Size = new System.Drawing.Size(731, 311);
+            this.guna2GroupBox2.Size = new System.Drawing.Size(766, 311);
             this.guna2GroupBox2.TabIndex = 2;
             this.guna2GroupBox2.Text = "Productos";
             // 
@@ -239,12 +245,13 @@
             this.DgvProductos.DefaultCellStyle = dataGridViewCellStyle3;
             this.DgvProductos.EnableHeadersVisualStyles = false;
             this.DgvProductos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DgvProductos.Location = new System.Drawing.Point(3, 50);
+            this.DgvProductos.Location = new System.Drawing.Point(3, 40);
             this.DgvProductos.MultiSelect = false;
             this.DgvProductos.Name = "DgvProductos";
+            this.DgvProductos.ReadOnly = true;
             this.DgvProductos.RowHeadersVisible = false;
             this.DgvProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvProductos.Size = new System.Drawing.Size(725, 262);
+            this.DgvProductos.Size = new System.Drawing.Size(760, 262);
             this.DgvProductos.TabIndex = 0;
             this.DgvProductos.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.DgvProductos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -260,7 +267,7 @@
             this.DgvProductos.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.DgvProductos.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DgvProductos.ThemeStyle.HeaderStyle.Height = 32;
-            this.DgvProductos.ThemeStyle.ReadOnly = false;
+            this.DgvProductos.ThemeStyle.ReadOnly = true;
             this.DgvProductos.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.DgvProductos.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DgvProductos.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -268,8 +275,7 @@
             this.DgvProductos.ThemeStyle.RowsStyle.Height = 22;
             this.DgvProductos.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DgvProductos.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.DgvProductos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProductos_CellClick);
-            this.DgvProductos.CellPainting += new System.Windows.Forms.DataGridViewCellPaintingEventHandler(this.DgvProductos_CellPainting);
+            this.DgvProductos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvProductos_CellDoubleClick);
             // 
             // TxtBuscar
             // 
@@ -286,29 +292,15 @@
             this.TxtBuscar.FocusedState.Parent = this.TxtBuscar;
             this.TxtBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtBuscar.HoverState.Parent = this.TxtBuscar;
-            this.TxtBuscar.Location = new System.Drawing.Point(107, 21);
+            this.TxtBuscar.Location = new System.Drawing.Point(377, 21);
             this.TxtBuscar.Name = "TxtBuscar";
             this.TxtBuscar.PasswordChar = '\0';
             this.TxtBuscar.PlaceholderText = "";
             this.TxtBuscar.SelectedText = "";
             this.TxtBuscar.ShadowDecoration.Parent = this.TxtBuscar;
-            this.TxtBuscar.Size = new System.Drawing.Size(606, 39);
+            this.TxtBuscar.Size = new System.Drawing.Size(336, 39);
             this.TxtBuscar.TabIndex = 75;
             this.TxtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged);
-            // 
-            // BtnBuscar
-            // 
-            this.BtnBuscar.BackColor = System.Drawing.Color.Transparent;
-            this.BtnBuscar.CheckedState.Parent = this.BtnBuscar;
-            this.BtnBuscar.HoverState.ImageSize = new System.Drawing.Size(40, 40);
-            this.BtnBuscar.HoverState.Parent = this.BtnBuscar;
-            this.BtnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscar.Image")));
-            this.BtnBuscar.ImageSize = new System.Drawing.Size(30, 30);
-            this.BtnBuscar.Location = new System.Drawing.Point(30, 21);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.PressedState.Parent = this.BtnBuscar;
-            this.BtnBuscar.Size = new System.Drawing.Size(56, 39);
-            this.BtnBuscar.TabIndex = 74;
             // 
             // guna2GroupBox4
             // 
@@ -328,25 +320,29 @@
             this.DgvCarrito.AllowUserToAddRows = false;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             this.DgvCarrito.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.DgvCarrito.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.DgvCarrito.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DgvCarrito.BackgroundColor = System.Drawing.Color.White;
+            this.DgvCarrito.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.DgvCarrito.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvCarrito.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DgvCarrito.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(189)))), ((int)(((byte)(180)))));
             dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DgvCarrito.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
-            this.DgvCarrito.ColumnHeadersHeight = 22;
+            this.DgvCarrito.ColumnHeadersHeight = 20;
             this.DgvCarrito.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Producto,
-            this.Column1,
-            this.Column2,
-            this.Column3});
+            this.IDS,
+            this.Columna4,
+            this.Column4,
+            this.Column5,
+            this.Cantidad});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -357,26 +353,27 @@
             this.DgvCarrito.DefaultCellStyle = dataGridViewCellStyle6;
             this.DgvCarrito.EnableHeadersVisualStyles = false;
             this.DgvCarrito.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DgvCarrito.Location = new System.Drawing.Point(3, 43);
+            this.DgvCarrito.Location = new System.Drawing.Point(1, 43);
+            this.DgvCarrito.MultiSelect = false;
             this.DgvCarrito.Name = "DgvCarrito";
             this.DgvCarrito.RowHeadersVisible = false;
             this.DgvCarrito.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvCarrito.Size = new System.Drawing.Size(580, 237);
-            this.DgvCarrito.TabIndex = 0;
+            this.DgvCarrito.Size = new System.Drawing.Size(580, 255);
+            this.DgvCarrito.TabIndex = 20;
             this.DgvCarrito.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.DgvCarrito.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.DgvCarrito.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.DgvCarrito.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.DgvCarrito.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.DgvCarrito.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.DgvCarrito.ThemeStyle.BackColor = System.Drawing.Color.White;
+            this.DgvCarrito.ThemeStyle.BackColor = System.Drawing.Color.WhiteSmoke;
             this.DgvCarrito.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.DgvCarrito.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DgvCarrito.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(189)))), ((int)(((byte)(180)))));
             this.DgvCarrito.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.DgvCarrito.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DgvCarrito.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
+            this.DgvCarrito.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.DgvCarrito.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.DgvCarrito.ThemeStyle.HeaderStyle.Height = 22;
+            this.DgvCarrito.ThemeStyle.HeaderStyle.Height = 20;
             this.DgvCarrito.ThemeStyle.ReadOnly = false;
             this.DgvCarrito.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.DgvCarrito.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -385,13 +382,39 @@
             this.DgvCarrito.ThemeStyle.RowsStyle.Height = 22;
             this.DgvCarrito.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DgvCarrito.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.DgvCarrito.SelectionChanged += new System.EventHandler(this.DgvCarrito_SelectionChanged);
+            // 
+            // IDS
+            // 
+            this.IDS.HeaderText = "ID";
+            this.IDS.Name = "IDS";
+            // 
+            // Columna4
+            // 
+            this.Columna4.HeaderText = "Producto";
+            this.Columna4.Name = "Columna4";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Descripción";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "P.Venta";
+            this.Column5.Name = "Column5";
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.TxtDireccion);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.TxtTelefono);
             this.groupBox1.Controls.Add(this.TxtApellido);
             this.groupBox1.Controls.Add(this.DtpFechaFact);
             this.groupBox1.Controls.Add(this.TxtCedulaV);
@@ -404,18 +427,20 @@
             this.groupBox1.Controls.Add(this.TxtNombreFull);
             this.groupBox1.Location = new System.Drawing.Point(12, 43);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(583, 167);
+            this.groupBox1.Size = new System.Drawing.Size(583, 180);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Cliente";
             // 
-            // textBox1
+            // TxtDireccion
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(212, 80);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(159, 22);
-            this.textBox1.TabIndex = 64;
+            this.TxtDireccion.Enabled = false;
+            this.TxtDireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtDireccion.Location = new System.Drawing.Point(212, 80);
+            this.TxtDireccion.Multiline = true;
+            this.TxtDireccion.Name = "TxtDireccion";
+            this.TxtDireccion.Size = new System.Drawing.Size(188, 33);
+            this.TxtDireccion.TabIndex = 64;
             // 
             // label2
             // 
@@ -423,9 +448,9 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(212, 63);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 16);
+            this.label2.Size = new System.Drawing.Size(74, 16);
             this.label2.TabIndex = 63;
-            this.label2.Text = "Apellido Cliente";
+            this.label2.Text = "Dirección";
             // 
             // label3
             // 
@@ -433,22 +458,24 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(212, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 16);
+            this.label3.Size = new System.Drawing.Size(86, 16);
             this.label3.TabIndex = 61;
-            this.label3.Text = "Nombre Cliente";
+            this.label3.Text = "N°Teléfono";
             // 
-            // textBox2
+            // TxtTelefono
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(212, 38);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(159, 22);
-            this.textBox2.TabIndex = 62;
+            this.TxtTelefono.Enabled = false;
+            this.TxtTelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtTelefono.Location = new System.Drawing.Point(212, 38);
+            this.TxtTelefono.Name = "TxtTelefono";
+            this.TxtTelefono.Size = new System.Drawing.Size(172, 22);
+            this.TxtTelefono.TabIndex = 62;
             // 
             // TxtApellido
             // 
+            this.TxtApellido.Enabled = false;
             this.TxtApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtApellido.Location = new System.Drawing.Point(15, 80);
+            this.TxtApellido.Location = new System.Drawing.Point(12, 80);
             this.TxtApellido.Name = "TxtApellido";
             this.TxtApellido.Size = new System.Drawing.Size(159, 22);
             this.TxtApellido.TabIndex = 60;
@@ -456,6 +483,7 @@
             // DtpFechaFact
             // 
             this.DtpFechaFact.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtpFechaFact.Enabled = false;
             this.DtpFechaFact.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DtpFechaFact.Location = new System.Drawing.Point(486, 93);
             this.DtpFechaFact.Name = "DtpFechaFact";
@@ -464,14 +492,16 @@
             // 
             // TxtCedulaV
             // 
+            this.TxtCedulaV.Enabled = false;
             this.TxtCedulaV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtCedulaV.Location = new System.Drawing.Point(114, 136);
+            this.TxtCedulaV.Location = new System.Drawing.Point(112, 144);
             this.TxtCedulaV.Name = "TxtCedulaV";
             this.TxtCedulaV.Size = new System.Drawing.Size(159, 22);
             this.TxtCedulaV.TabIndex = 58;
             // 
             // TxtNumFactura
             // 
+            this.TxtNumFactura.Enabled = false;
             this.TxtNumFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNumFactura.Location = new System.Drawing.Point(488, 33);
             this.TxtNumFactura.Name = "TxtNumFactura";
@@ -482,7 +512,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 63);
+            this.label1.Location = new System.Drawing.Point(12, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 16);
             this.label1.TabIndex = 59;
@@ -492,7 +522,7 @@
             // 
             this.LblCedulaVendedor.AutoSize = true;
             this.LblCedulaVendedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCedulaVendedor.Location = new System.Drawing.Point(114, 119);
+            this.LblCedulaVendedor.Location = new System.Drawing.Point(133, 125);
             this.LblCedulaVendedor.Name = "LblCedulaVendedor";
             this.LblCedulaVendedor.Size = new System.Drawing.Size(131, 16);
             this.LblCedulaVendedor.TabIndex = 57;
@@ -530,6 +560,7 @@
             // 
             // TxtNombreFull
             // 
+            this.TxtNombreFull.Enabled = false;
             this.TxtNombreFull.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtNombreFull.Location = new System.Drawing.Point(15, 38);
             this.TxtNombreFull.Name = "TxtNombreFull";
@@ -538,24 +569,137 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.RbtnCategoria);
+            this.groupBox2.Controls.Add(this.RbtnFecha);
+            this.groupBox2.Controls.Add(this.RbtnPrecio);
+            this.groupBox2.Controls.Add(this.RbtnMarca);
+            this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.BtnBuscar);
             this.groupBox2.Controls.Add(this.TxtBuscar);
-            this.groupBox2.Location = new System.Drawing.Point(677, 43);
+            this.groupBox2.Location = new System.Drawing.Point(639, 43);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(731, 79);
+            this.groupBox2.Size = new System.Drawing.Size(769, 113);
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Buscar Productos";
             // 
+            // RbtnCategoria
+            // 
+            this.RbtnCategoria.AutoSize = true;
+            this.RbtnCategoria.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.RbtnCategoria.CheckedState.BorderThickness = 0;
+            this.RbtnCategoria.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.RbtnCategoria.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.RbtnCategoria.CheckedState.InnerOffset = -4;
+            this.RbtnCategoria.Location = new System.Drawing.Point(72, 63);
+            this.RbtnCategoria.Name = "RbtnCategoria";
+            this.RbtnCategoria.Size = new System.Drawing.Size(72, 17);
+            this.RbtnCategoria.TabIndex = 79;
+            this.RbtnCategoria.TabStop = true;
+            this.RbtnCategoria.Text = "Categoría";
+            this.RbtnCategoria.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.RbtnCategoria.UncheckedState.BorderThickness = 2;
+            this.RbtnCategoria.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.RbtnCategoria.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.RbtnCategoria.UseVisualStyleBackColor = true;
+            this.RbtnCategoria.CheckedChanged += new System.EventHandler(this.RbtnCategoria_CheckedChanged);
+            // 
+            // RbtnFecha
+            // 
+            this.RbtnFecha.AutoSize = true;
+            this.RbtnFecha.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.RbtnFecha.CheckedState.BorderThickness = 0;
+            this.RbtnFecha.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.RbtnFecha.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.RbtnFecha.CheckedState.InnerOffset = -4;
+            this.RbtnFecha.Location = new System.Drawing.Point(11, 62);
+            this.RbtnFecha.Name = "RbtnFecha";
+            this.RbtnFecha.Size = new System.Drawing.Size(55, 17);
+            this.RbtnFecha.TabIndex = 78;
+            this.RbtnFecha.TabStop = true;
+            this.RbtnFecha.Text = "Fecha";
+            this.RbtnFecha.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.RbtnFecha.UncheckedState.BorderThickness = 2;
+            this.RbtnFecha.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.RbtnFecha.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.RbtnFecha.UseVisualStyleBackColor = true;
+            this.RbtnFecha.CheckedChanged += new System.EventHandler(this.RbtnFecha_CheckedChanged);
+            // 
+            // RbtnPrecio
+            // 
+            this.RbtnPrecio.AutoSize = true;
+            this.RbtnPrecio.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.RbtnPrecio.CheckedState.BorderThickness = 0;
+            this.RbtnPrecio.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.RbtnPrecio.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.RbtnPrecio.CheckedState.InnerOffset = -4;
+            this.RbtnPrecio.Location = new System.Drawing.Point(72, 33);
+            this.RbtnPrecio.Name = "RbtnPrecio";
+            this.RbtnPrecio.Size = new System.Drawing.Size(55, 17);
+            this.RbtnPrecio.TabIndex = 77;
+            this.RbtnPrecio.TabStop = true;
+            this.RbtnPrecio.Text = "Precio";
+            this.RbtnPrecio.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.RbtnPrecio.UncheckedState.BorderThickness = 2;
+            this.RbtnPrecio.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.RbtnPrecio.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.RbtnPrecio.UseVisualStyleBackColor = true;
+            this.RbtnPrecio.CheckedChanged += new System.EventHandler(this.guna2RadioButton2_CheckedChanged);
+            // 
+            // RbtnMarca
+            // 
+            this.RbtnMarca.AutoSize = true;
+            this.RbtnMarca.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.RbtnMarca.CheckedState.BorderThickness = 0;
+            this.RbtnMarca.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.RbtnMarca.CheckedState.InnerColor = System.Drawing.Color.White;
+            this.RbtnMarca.CheckedState.InnerOffset = -4;
+            this.RbtnMarca.Location = new System.Drawing.Point(11, 33);
+            this.RbtnMarca.Name = "RbtnMarca";
+            this.RbtnMarca.Size = new System.Drawing.Size(55, 17);
+            this.RbtnMarca.TabIndex = 76;
+            this.RbtnMarca.TabStop = true;
+            this.RbtnMarca.Text = "Marca";
+            this.RbtnMarca.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            this.RbtnMarca.UncheckedState.BorderThickness = 2;
+            this.RbtnMarca.UncheckedState.FillColor = System.Drawing.Color.Transparent;
+            this.RbtnMarca.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
+            this.RbtnMarca.UseVisualStyleBackColor = true;
+            this.RbtnMarca.CheckedChanged += new System.EventHandler(this.RbtnMarca_CheckedChanged);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(8, 16);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 15);
+            this.label5.TabIndex = 65;
+            this.label5.Text = "Filtrar Por:";
+            // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.BackColor = System.Drawing.Color.Transparent;
+            this.BtnBuscar.CheckedState.Parent = this.BtnBuscar;
+            this.BtnBuscar.HoverState.ImageSize = new System.Drawing.Size(40, 40);
+            this.BtnBuscar.HoverState.Parent = this.BtnBuscar;
+            this.BtnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscar.Image")));
+            this.BtnBuscar.ImageSize = new System.Drawing.Size(30, 30);
+            this.BtnBuscar.Location = new System.Drawing.Point(315, 21);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.PressedState.Parent = this.BtnBuscar;
+            this.BtnBuscar.Size = new System.Drawing.Size(56, 39);
+            this.BtnBuscar.TabIndex = 74;
+            // 
             // DtpFechaPago
             // 
             this.DtpFechaPago.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DtpFechaPago.Enabled = false;
             this.DtpFechaPago.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DtpFechaPago.Location = new System.Drawing.Point(227, 678);
             this.DtpFechaPago.Name = "DtpFechaPago";
             this.DtpFechaPago.Size = new System.Drawing.Size(131, 20);
             this.DtpFechaPago.TabIndex = 69;
-            this.DtpFechaPago.Visible = false;
             // 
             // LblDechaPago
             // 
@@ -567,7 +711,6 @@
             this.LblDechaPago.Size = new System.Drawing.Size(134, 16);
             this.LblDechaPago.TabIndex = 68;
             this.LblDechaPago.Text = "Fecha a Cancelar:";
-            this.LblDechaPago.Visible = false;
             // 
             // LblDeuda
             // 
@@ -578,16 +721,15 @@
             this.LblDeuda.Size = new System.Drawing.Size(104, 18);
             this.LblDeuda.TabIndex = 67;
             this.LblDeuda.Text = "Deuda Total:";
-            this.LblDeuda.Visible = false;
             // 
             // TxtDeuda
             // 
+            this.TxtDeuda.Enabled = false;
             this.TxtDeuda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDeuda.Location = new System.Drawing.Point(148, 685);
             this.TxtDeuda.Name = "TxtDeuda";
             this.TxtDeuda.Size = new System.Drawing.Size(70, 22);
             this.TxtDeuda.TabIndex = 66;
-            this.TxtDeuda.Visible = false;
             // 
             // LblInteres
             // 
@@ -598,16 +740,15 @@
             this.LblInteres.Size = new System.Drawing.Size(150, 18);
             this.LblInteres.TabIndex = 65;
             this.LblInteres.Text = "Interes Porcentual:";
-            this.LblInteres.Visible = false;
             // 
             // TxtAbono
             // 
+            this.TxtAbono.Enabled = false;
             this.TxtAbono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtAbono.Location = new System.Drawing.Point(148, 657);
             this.TxtAbono.Name = "TxtAbono";
             this.TxtAbono.Size = new System.Drawing.Size(70, 22);
             this.TxtAbono.TabIndex = 64;
-            this.TxtAbono.Visible = false;
             // 
             // LblAbono
             // 
@@ -618,22 +759,21 @@
             this.LblAbono.Size = new System.Drawing.Size(61, 18);
             this.LblAbono.TabIndex = 63;
             this.LblAbono.Text = "Abono:";
-            this.LblAbono.Visible = false;
             // 
             // TxtInteres
             // 
+            this.TxtInteres.Enabled = false;
             this.TxtInteres.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtInteres.Location = new System.Drawing.Point(165, 629);
             this.TxtInteres.Name = "TxtInteres";
             this.TxtInteres.Size = new System.Drawing.Size(53, 22);
             this.TxtInteres.TabIndex = 62;
-            this.TxtInteres.Visible = false;
             // 
             // TxtTotal
             // 
             this.TxtTotal.Enabled = false;
             this.TxtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtTotal.Location = new System.Drawing.Point(463, 676);
+            this.TxtTotal.Location = new System.Drawing.Point(463, 659);
             this.TxtTotal.Name = "TxtTotal";
             this.TxtTotal.ReadOnly = true;
             this.TxtTotal.Size = new System.Drawing.Size(94, 22);
@@ -643,7 +783,7 @@
             // 
             this.LblTotal.AutoSize = true;
             this.LblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTotal.Location = new System.Drawing.Point(390, 678);
+            this.LblTotal.Location = new System.Drawing.Point(390, 661);
             this.LblTotal.Name = "LblTotal";
             this.LblTotal.Size = new System.Drawing.Size(51, 18);
             this.LblTotal.TabIndex = 60;
@@ -651,6 +791,7 @@
             // 
             // TxtDescuento
             // 
+            this.TxtDescuento.Enabled = false;
             this.TxtDescuento.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtDescuento.Location = new System.Drawing.Point(463, 626);
             this.TxtDescuento.Name = "TxtDescuento";
@@ -670,17 +811,18 @@
             // BtnAgregarDV
             // 
             this.BtnAgregarDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAgregarDV.Location = new System.Drawing.Point(393, 728);
+            this.BtnAgregarDV.Location = new System.Drawing.Point(298, 728);
             this.BtnAgregarDV.Name = "BtnAgregarDV";
             this.BtnAgregarDV.Size = new System.Drawing.Size(98, 27);
             this.BtnAgregarDV.TabIndex = 57;
             this.BtnAgregarDV.Text = "Agregar Producto";
             this.BtnAgregarDV.UseVisualStyleBackColor = true;
+            this.BtnAgregarDV.Click += new System.EventHandler(this.BtnAgregarDV_Click);
             // 
             // BtnLimpiarDV
             // 
             this.BtnLimpiarDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLimpiarDV.Location = new System.Drawing.Point(233, 728);
+            this.BtnLimpiarDV.Location = new System.Drawing.Point(148, 728);
             this.BtnLimpiarDV.Name = "BtnLimpiarDV";
             this.BtnLimpiarDV.Size = new System.Drawing.Size(98, 27);
             this.BtnLimpiarDV.TabIndex = 56;
@@ -690,7 +832,7 @@
             // BtnRetirarDV
             // 
             this.BtnRetirarDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRetirarDV.Location = new System.Drawing.Point(71, 728);
+            this.BtnRetirarDV.Location = new System.Drawing.Point(15, 728);
             this.BtnRetirarDV.Name = "BtnRetirarDV";
             this.BtnRetirarDV.Size = new System.Drawing.Size(98, 27);
             this.BtnRetirarDV.TabIndex = 54;
@@ -723,10 +865,10 @@
             this.guna2GroupBox1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(189)))), ((int)(((byte)(180)))));
             this.guna2GroupBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2GroupBox1.ForeColor = System.Drawing.Color.Black;
-            this.guna2GroupBox1.Location = new System.Drawing.Point(677, 455);
+            this.guna2GroupBox1.Location = new System.Drawing.Point(642, 498);
             this.guna2GroupBox1.Name = "guna2GroupBox1";
             this.guna2GroupBox1.ShadowDecoration.Parent = this.guna2GroupBox1;
-            this.guna2GroupBox1.Size = new System.Drawing.Size(731, 303);
+            this.guna2GroupBox1.Size = new System.Drawing.Size(766, 260);
             this.guna2GroupBox1.TabIndex = 3;
             this.guna2GroupBox1.Text = "Detalles de Factura";
             // 
@@ -763,7 +905,7 @@
             this.DgvDatellesFac.Name = "DgvDatellesFac";
             this.DgvDatellesFac.RowHeadersVisible = false;
             this.DgvDatellesFac.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvDatellesFac.Size = new System.Drawing.Size(566, 259);
+            this.DgvDatellesFac.Size = new System.Drawing.Size(760, 216);
             this.DgvDatellesFac.TabIndex = 1;
             this.DgvDatellesFac.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.DgvDatellesFac.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -792,7 +934,7 @@
             // 
             this.guna2Separator1.FillColor = System.Drawing.Color.Silver;
             this.guna2Separator1.FillThickness = 2;
-            this.guna2Separator1.Location = new System.Drawing.Point(677, 445);
+            this.guna2Separator1.Location = new System.Drawing.Point(674, 482);
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(731, 10);
             this.guna2Separator1.TabIndex = 70;
@@ -839,7 +981,6 @@
             this.cant,
             this.fch,
             this.subt,
-            this.iva,
             this.total,
             this.idU});
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -883,25 +1024,16 @@
             this.DgvSave.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DgvSave.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
-            // Producto
+            // BtnCalcular
             // 
-            this.Producto.HeaderText = "Producto";
-            this.Producto.Name = "Producto";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Descripcion";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "P.Unitario";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Cantidad";
-            this.Column3.Name = "Column3";
+            this.BtnCalcular.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCalcular.Location = new System.Drawing.Point(434, 728);
+            this.BtnCalcular.Name = "BtnCalcular";
+            this.BtnCalcular.Size = new System.Drawing.Size(117, 27);
+            this.BtnCalcular.TabIndex = 76;
+            this.BtnCalcular.Text = "Calcular Venta";
+            this.BtnCalcular.UseVisualStyleBackColor = true;
+            this.BtnCalcular.Click += new System.EventHandler(this.BtnCalcular_Click);
             // 
             // idP
             // 
@@ -939,12 +1071,6 @@
             this.subt.Name = "subt";
             this.subt.ReadOnly = true;
             // 
-            // iva
-            // 
-            this.iva.HeaderText = "iva";
-            this.iva.Name = "iva";
-            this.iva.ReadOnly = true;
-            // 
             // total
             // 
             this.total.HeaderText = "total";
@@ -957,32 +1083,13 @@
             this.idU.Name = "idU";
             this.idU.ReadOnly = true;
             // 
-            // textBox3
-            // 
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(463, 651);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(94, 22);
-            this.textBox3.TabIndex = 75;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(390, 655);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 18);
-            this.label4.TabIndex = 74;
-            this.label4.Text = "Iva:";
-            // 
             // FrmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1420, 782);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.BtnCalcular);
             this.Controls.Add(this.DgvSave);
             this.Controls.Add(this.guna2Separator3);
             this.Controls.Add(this.guna2Separator2);
@@ -1025,6 +1132,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.guna2GroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgvDatellesFac)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DgvSave)).EndInit();
@@ -1066,7 +1174,6 @@
         private System.Windows.Forms.Button BtnRetirarDV;
         private System.Windows.Forms.TextBox TxtSubTotal;
         private System.Windows.Forms.Label LblSubTotal;
-        private Guna.UI2.WinForms.Guna2DataGridView DgvCarrito;
         private System.Windows.Forms.TextBox TxtApellido;
         private System.Windows.Forms.TextBox TxtCedulaV;
         private System.Windows.Forms.Label label1;
@@ -1079,25 +1186,30 @@
         private Guna.UI2.WinForms.Guna2Separator guna2Separator3;
         private Guna.UI2.WinForms.Guna2DataGridView DgvProductos;
         private Guna.UI2.WinForms.Guna2DataGridView DgvDatellesFac;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TxtDireccion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TxtTelefono;
         private Guna.UI2.WinForms.Guna2DataGridView DgvSave;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private Guna.UI2.WinForms.Guna2DataGridView DgvCarrito;
+        private Guna.UI2.WinForms.Guna2RadioButton RbtnFecha;
+        private Guna.UI2.WinForms.Guna2RadioButton RbtnPrecio;
+        private Guna.UI2.WinForms.Guna2RadioButton RbtnMarca;
+        private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2RadioButton RbtnCategoria;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Columna4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.Button BtnCalcular;
         private System.Windows.Forms.DataGridViewTextBoxColumn idP;
         private System.Windows.Forms.DataGridViewTextBoxColumn idC;
         private System.Windows.Forms.DataGridViewTextBoxColumn des;
         private System.Windows.Forms.DataGridViewTextBoxColumn cant;
         private System.Windows.Forms.DataGridViewTextBoxColumn fch;
         private System.Windows.Forms.DataGridViewTextBoxColumn subt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iva;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
         private System.Windows.Forms.DataGridViewTextBoxColumn idU;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label4;
     }
 }

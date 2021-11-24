@@ -173,7 +173,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlPrincipal.Location = new System.Drawing.Point(0, 0);
             this.PnlPrincipal.Name = "PnlPrincipal";
             this.PnlPrincipal.ShadowDecoration.Parent = this.PnlPrincipal;
-            this.PnlPrincipal.Size = new System.Drawing.Size(1386, 788);
+            this.PnlPrincipal.Size = new System.Drawing.Size(1568, 878);
             this.PnlPrincipal.TabIndex = 0;
             // 
             // PnlMostarFrames
@@ -184,7 +184,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlMostarFrames.Location = new System.Drawing.Point(0, 115);
             this.PnlMostarFrames.Name = "PnlMostarFrames";
             this.PnlMostarFrames.ShadowDecoration.Parent = this.PnlMostarFrames;
-            this.PnlMostarFrames.Size = new System.Drawing.Size(1386, 673);
+            this.PnlMostarFrames.Size = new System.Drawing.Size(1568, 763);
             this.PnlMostarFrames.TabIndex = 4;
             // 
             // pictureLogoPrincipal
@@ -702,6 +702,8 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             // 
             // PnlMovimientos
             // 
+            // PnlMovimientos
+            // 
             this.PnlMovimientos.Controls.Add(this.LblMovimientos);
             this.PnlMovimientos.Controls.Add(this.BtnMovimientos);
             this.PnlMovimientos.Dock = System.Windows.Forms.DockStyle.Left;
@@ -741,6 +743,20 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.BtnMovimientos.Size = new System.Drawing.Size(58, 52);
             this.BtnMovimientos.TabIndex = 6;
             this.BtnMovimientos.Click += new System.EventHandler(this.BtnMovimientos_Click);
+            // 
+            // PnlCaja
+            // 
+            this.PnlCaja.Controls.Add(this.PnlPressCaja);
+            this.PnlCaja.Controls.Add(this.LblCaja);
+            this.PnlCaja.Controls.Add(this.BtnCaja);
+            this.PnlCaja.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PnlCaja.Location = new System.Drawing.Point(960, 0);
+            this.PnlCaja.Name = "PnlCaja";
+            this.PnlCaja.ShadowDecoration.Parent = this.PnlCaja;
+            this.PnlCaja.Size = new System.Drawing.Size(78, 67);
+            this.PnlCaja.TabIndex = 17;
+            // 
+            // PnlPressCaja
             // 
             // PnlCaja
             // 
@@ -1365,7 +1381,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlBarraSuperior.Location = new System.Drawing.Point(0, 0);
             this.PnlBarraSuperior.Name = "PnlBarraSuperior";
             this.PnlBarraSuperior.ShadowDecoration.Parent = this.PnlBarraSuperior;
-            this.PnlBarraSuperior.Size = new System.Drawing.Size(1386, 31);
+            this.PnlBarraSuperior.Size = new System.Drawing.Size(1568, 31);
             this.PnlBarraSuperior.TabIndex = 2;
             this.PnlBarraSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PnlBarraSuperior_MouseDown);
             // 
@@ -1434,7 +1450,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.BtnMinimizar.FillColor = System.Drawing.Color.Gray;
             this.BtnMinimizar.HoverState.Parent = this.BtnMinimizar;
             this.BtnMinimizar.IconColor = System.Drawing.Color.White;
-            this.BtnMinimizar.Location = new System.Drawing.Point(1251, 0);
+            this.BtnMinimizar.Location = new System.Drawing.Point(1433, 0);
             this.BtnMinimizar.Name = "BtnMinimizar";
             this.BtnMinimizar.ShadowDecoration.Parent = this.BtnMinimizar;
             this.BtnMinimizar.Size = new System.Drawing.Size(45, 31);
@@ -1447,7 +1463,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.BtnMazimizar.FillColor = System.Drawing.Color.Gray;
             this.BtnMazimizar.HoverState.Parent = this.BtnMazimizar;
             this.BtnMazimizar.IconColor = System.Drawing.Color.White;
-            this.BtnMazimizar.Location = new System.Drawing.Point(1296, 0);
+            this.BtnMazimizar.Location = new System.Drawing.Point(1478, 0);
             this.BtnMazimizar.Name = "BtnMazimizar";
             this.BtnMazimizar.ShadowDecoration.Parent = this.BtnMazimizar;
             this.BtnMazimizar.Size = new System.Drawing.Size(45, 31);
@@ -1459,7 +1475,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.BtnSalir.FillColor = System.Drawing.Color.Gray;
             this.BtnSalir.HoverState.Parent = this.BtnSalir;
             this.BtnSalir.IconColor = System.Drawing.Color.White;
-            this.BtnSalir.Location = new System.Drawing.Point(1341, 0);
+            this.BtnSalir.Location = new System.Drawing.Point(1523, 0);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.ShadowDecoration.Parent = this.BtnSalir;
             this.BtnSalir.Size = new System.Drawing.Size(45, 31);
@@ -1469,7 +1485,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1386, 788);
+            this.ClientSize = new System.Drawing.Size(1568, 878);
             this.Controls.Add(this.PnlPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPrincipal";
