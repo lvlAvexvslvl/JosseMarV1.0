@@ -181,7 +181,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             DgvSave.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             ProductosE("");
             int con = DgvSave.RowCount;
-            MessageBox.Show("con= "+con);
+            //MessageBox.Show("con= "+con);
             //ProductosE2();
 
             this.DgvSave.Columns["Descripcion"].Visible = false;
@@ -194,8 +194,8 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             DgvNomProducts2();
             int Nomp = DgvProductos.Rows.Count;
             int marca22 = DgvMarca.Rows.Count;
-            MessageBox.Show(" " + Nomp);
-            MessageBox.Show(" " + marca22);
+            //MessageBox.Show(" " + Nomp);
+           // MessageBox.Show(" " + marca22);
             nombresProd = new string[Nomp];
             marcaProd = new string[Nomp];
             for (int i = 0; i < Nomp; i++)
@@ -232,11 +232,11 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
 
             CLogicaObtenerFecha fc = new CLogicaObtenerFecha();
             string fecha = fc.ObtenerFechaSinHora();
-            DtpFecha.MinDate = Convert.ToDateTime(fecha);
+            //DtpFecha.MinDate = Convert.ToDateTime(fecha);
 
-            DtpFecha.MinDate = Convert.ToDateTime(fecha);
+            //DtpFecha.MinDate = Convert.ToDateTime(fecha);
 
-            DtpCaducidad.MinDate = Convert.ToDateTime(fecha);
+            //DtpCaducidad.MinDate = Convert.ToDateTime(fecha);
             TxtNombreProducto.Enabled = true;
             TxtDescripcion.Enabled = true;
             CmbCategoria.Enabled = true;
@@ -396,9 +396,9 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
 
             CLogicaObtenerFecha fc = new CLogicaObtenerFecha();
             string fecha = fc.ObtenerFechaSinHora();
-            DtpFecha.MinDate = Convert.ToDateTime(fecha);
+            //DtpFecha.MinDate = Convert.ToDateTime(fecha);
 
-            DtpCaducidad.MinDate = Convert.ToDateTime(fecha);
+            //DtpCaducidad.MinDate = Convert.ToDateTime(fecha);
 
             DtpCaducidad.Enabled = true;
             TxtNFactura.Enabled = true;
@@ -704,7 +704,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
         {
           //  CapturarCompra();
             int contador = DgvCarrito.Rows.Count;
-            MessageBox.Show("numeros de productos = " + Convert.ToString(contador));
+            //MessageBox.Show("numeros de productos = " + Convert.ToString(contador));
             string res = "";
             for (int i = 0; i < contador; i++)
             {

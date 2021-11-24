@@ -87,7 +87,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             foreach (DataGridViewColumn c in DgvCarrito.Columns)
                 if (c.Name != "Cantidad") c.ReadOnly = true;
 
-
+            TxtDescuento.Text = "0";
         }
 
         private void TxtBuscar_TextChanged(object sender, EventArgs e)
@@ -287,8 +287,25 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
                 DgvCarrito.Rows[filas].Cells[2].Value = DgvProductos.CurrentRow.Cells[5].Value;
                 DgvCarrito.Rows[filas].Cells[3].Value = DgvProductos.CurrentRow.Cells[10].Value;
 
-                
+                string nomCli = TxtNombreFull.Text.Trim();
+                string apllidoCli = TxtApellido.Text.Trim();
 
+
+                string result = sql.ConsultaSimple("SELECT COUNT(*) FROM dbo.Clientes WHERE NombreCli = '" + nomCli + "' AND ApellidoCli = '" + apllidoCli + "'");
+                if (Convert.ToInt32(result) > 0)
+                {
+                    IdCliente = sql.ConsultaSimple("SELECT MAX(dbo.Clientes.IdClientes) FROM Clientes");
+                }
+                else if (Convert.ToInt32(result) == 0)
+                {
+                    IdCliente = addC.AddClientes(nomCli, apllidoCli);
+                }
+                DgvCarrito.Rows[filas].Cells[5].Value = IdCliente;
+                DgvCarrito.Rows[filas].Cells[6].Value = TxtDescuento.Text;
+                DgvCarrito.Rows[filas].Cells[7].Value = DtpFechaFact.Value.ToString("yyy/MM/dd");
+                DgvCarrito.Rows[filas].Cells[8].Value = TxtSubTotal.Text;
+                DgvCarrito.Rows[filas].Cells[9].Value = TxtTotal.Text;
+                DgvCarrito.Rows[filas].Cells[10].Value = id;
             }
 
             //..............................................................UnU uWu UwU UuU 
@@ -296,7 +313,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
 
         }
 
-        void MetodoSave()
+       /* void MetodoSave()
         {
             string idC;
             int conteo2;
@@ -397,14 +414,66 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             }
 
             
-            
+        }*/
 
-            
+        //METODO PARA CAPTURAR DATOS DE LA VENTA 
+        void CapturarVenta()
+        {
+            string nomCli = TxtNombreFull.Text.Trim();
+            string apllidoCli = TxtApellido.Text.Trim();
+
+
+            string result = sql.ConsultaSimple("SELECT COUNT(*) FROM dbo.Clientes WHERE NombreCli = '"+nomCli+"' AND ApellidoCli = '"+apllidoCli+"'");
+            if (Convert.ToInt32(result) > 0)
+            {
+                IdCliente = sql.ConsultaSimple("SELECT MAX(dbo.Clientes.IdClientes) FROM Clientes");
+            }
+            else if(Convert.ToInt32(result) == 0)
+            {
+                IdCliente = addC.AddClientes(nomCli, apllidoCli);
+            }
+
+            int filas = 0 + contador;
+            contador++;
+            DgvSave.Rows.Add();
+            DgvSave.Rows[filas].Cells[0].Value = DgvCarrito.CurrentRow.Cells[0].Value;
+            DgvSave.Rows[filas].Cells[1].Value = IdCliente;
+            DgvSave.Rows[filas].Cells[2].Value = TxtDescuento.Text;
+            DgvSave.Rows[filas].Cells[3].Value = DgvCarrito.CurrentRow.Cells[4].Value;
+            DgvSave.Rows[filas].Cells[4].Value = DtpFechaFact.Value.ToString("yyy/MM/dd");
+            DgvSave.Rows[filas].Cells[5].Value = TxtSubTotal.Text;
+            DgvSave.Rows[filas].Cells[6].Value = TxtTotal.Text;
+            DgvSave.Rows[filas].Cells[7].Value = id;
+
         }
 
         private void DgvProductos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             AgregarVenta();
+            double Subt = 0;
+            double descuento = Convert.ToDouble(TxtDescuento.Text);
+            double Total = 0;
+            double PreTotal = 0;
+
+            int contCarrito = DgvCarrito.Rows.Count;
+
+            if (contCarrito > 0)
+            {
+                for (int i = 0; i < contCarrito; i++)
+                {
+                    double PVenta = Convert.ToDouble(DgvCarrito.Rows[i].Cells[3].Value);
+                    double Cantidad = Convert.ToInt32(DgvCarrito.Rows[i].Cells[4].Value);
+
+                    Subt = Subt + (PVenta * Cantidad);
+                    TxtSubTotal.Text = Convert.ToString(Subt);
+
+                }
+                PreTotal = Convert.ToDouble(TxtSubTotal.Text);
+                Total = PreTotal - descuento;
+                TxtTotal.Text = Convert.ToString(Total);
+
+            }
+            //contador++;
         }
 
         private void DgvCarrito_SelectionChanged(object sender, EventArgs e)
@@ -437,18 +506,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
                 PreTotal = Convert.ToDouble(TxtSubTotal.Text);
                 Total = PreTotal - descuento;
                 TxtTotal.Text = Convert.ToString(Total);
-                for (int i = 0; i < contCarrito; i++)
-                {
-                    DgvSave.Rows.Add();
-                    DgvSave.Rows[i].Cells[0].Value = DgvCarrito.CurrentRow.Cells[0].Value;
-                    DgvSave.Rows[i].Cells[1].Value = 19;
-                    DgvSave.Rows[i].Cells[2].Value = TxtDescuento.Text;
-                    DgvSave.Rows[i].Cells[3].Value = DgvCarrito.CurrentRow.Cells[4].Value;
-                    DgvSave.Rows[i].Cells[4].Value = DtpFechaFact.Value.ToString("yyy/MM/dd");
-                    DgvSave.Rows[i].Cells[5].Value = TxtSubTotal.Text;
-                    DgvSave.Rows[i].Cells[6].Value = TxtTotal.Text;
-                    DgvSave.Rows[i].Cells[7].Value = id;
-                }
+                
             }
             else
             {

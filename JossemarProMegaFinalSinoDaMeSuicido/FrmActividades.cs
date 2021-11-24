@@ -23,6 +23,14 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
 
         private void FrmActividades_Load(object sender, EventArgs e)
         {
+            dgvCompras.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dgvCompras.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            dgvDetalles.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dgvDetalles.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            dgvVerMov.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            dgvVerMov.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             Existir();
             CargarVista();
         }

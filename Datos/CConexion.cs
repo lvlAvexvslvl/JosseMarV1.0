@@ -12,7 +12,7 @@ namespace Datos
         static Microsoft.Win32.RegistryKey key = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("CCV");
         //static string server = (String)key.GetValue("IpModem");
 
-        public SqlConnection conexion = new SqlConnection("Data Source =.; Initial Catalog = BddJosseMar1.1; Integrated Security = True");
+        public SqlConnection conexion = new SqlConnection("Data Source =.; Initial Catalog = BddJossemar1.3; Integrated Security = True");
 
 
 

@@ -35,10 +35,6 @@
             this.PnlBarraSuperior = new Guna.UI2.WinForms.Guna2Panel();
             this.BtnSalir = new Guna.UI2.WinForms.Guna2ControlBox();
             this.TxtBuscar = new Guna.UI2.WinForms.Guna2TextBox();
-            this.LblFiltrar = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.RbtnMarca = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.guna2RadioButton2 = new Guna.UI2.WinForms.Guna2RadioButton();
-            this.guna2RadioButton3 = new Guna.UI2.WinForms.Guna2RadioButton();
             this.guna2GroupBox2 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.DgvInventario = new Guna.UI2.WinForms.Guna2DataGridView();
             this.BtnBuscar = new Guna.UI2.WinForms.Guna2ImageButton();
@@ -93,76 +89,6 @@
             this.TxtBuscar.Size = new System.Drawing.Size(444, 39);
             this.TxtBuscar.TabIndex = 73;
             this.TxtBuscar.TextChanged += new System.EventHandler(this.TxtBuscar_TextChanged);
-            // 
-            // LblFiltrar
-            // 
-            this.LblFiltrar.BackColor = System.Drawing.Color.Transparent;
-            this.LblFiltrar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblFiltrar.Location = new System.Drawing.Point(21, 48);
-            this.LblFiltrar.Name = "LblFiltrar";
-            this.LblFiltrar.Size = new System.Drawing.Size(69, 19);
-            this.LblFiltrar.TabIndex = 74;
-            this.LblFiltrar.Text = "Filtrar por:";
-            // 
-            // RbtnMarca
-            // 
-            this.RbtnMarca.AutoSize = true;
-            this.RbtnMarca.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.RbtnMarca.CheckedState.BorderThickness = 0;
-            this.RbtnMarca.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.RbtnMarca.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.RbtnMarca.CheckedState.InnerOffset = -4;
-            this.RbtnMarca.Location = new System.Drawing.Point(21, 70);
-            this.RbtnMarca.Name = "RbtnMarca";
-            this.RbtnMarca.Size = new System.Drawing.Size(55, 17);
-            this.RbtnMarca.TabIndex = 75;
-            this.RbtnMarca.TabStop = true;
-            this.RbtnMarca.Text = "Marca";
-            this.RbtnMarca.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.RbtnMarca.UncheckedState.BorderThickness = 2;
-            this.RbtnMarca.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.RbtnMarca.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.RbtnMarca.UseVisualStyleBackColor = true;
-            // 
-            // guna2RadioButton2
-            // 
-            this.guna2RadioButton2.AutoSize = true;
-            this.guna2RadioButton2.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton2.CheckedState.BorderThickness = 0;
-            this.guna2RadioButton2.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton2.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2RadioButton2.CheckedState.InnerOffset = -4;
-            this.guna2RadioButton2.Location = new System.Drawing.Point(82, 70);
-            this.guna2RadioButton2.Name = "guna2RadioButton2";
-            this.guna2RadioButton2.Size = new System.Drawing.Size(120, 17);
-            this.guna2RadioButton2.TabIndex = 76;
-            this.guna2RadioButton2.TabStop = true;
-            this.guna2RadioButton2.Text = "guna2RadioButton2";
-            this.guna2RadioButton2.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2RadioButton2.UncheckedState.BorderThickness = 2;
-            this.guna2RadioButton2.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton2.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton2.UseVisualStyleBackColor = true;
-            // 
-            // guna2RadioButton3
-            // 
-            this.guna2RadioButton3.AutoSize = true;
-            this.guna2RadioButton3.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton3.CheckedState.BorderThickness = 0;
-            this.guna2RadioButton3.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2RadioButton3.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.guna2RadioButton3.CheckedState.InnerOffset = -4;
-            this.guna2RadioButton3.Location = new System.Drawing.Point(208, 70);
-            this.guna2RadioButton3.Name = "guna2RadioButton3";
-            this.guna2RadioButton3.Size = new System.Drawing.Size(120, 17);
-            this.guna2RadioButton3.TabIndex = 77;
-            this.guna2RadioButton3.TabStop = true;
-            this.guna2RadioButton3.Text = "guna2RadioButton3";
-            this.guna2RadioButton3.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            this.guna2RadioButton3.UncheckedState.BorderThickness = 2;
-            this.guna2RadioButton3.UncheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton3.UncheckedState.InnerColor = System.Drawing.Color.Transparent;
-            this.guna2RadioButton3.UseVisualStyleBackColor = true;
             // 
             // guna2GroupBox2
             // 
@@ -260,10 +186,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1568, 722);
             this.Controls.Add(this.guna2GroupBox2);
-            this.Controls.Add(this.guna2RadioButton3);
-            this.Controls.Add(this.guna2RadioButton2);
-            this.Controls.Add(this.RbtnMarca);
-            this.Controls.Add(this.LblFiltrar);
             this.Controls.Add(this.TxtBuscar);
             this.Controls.Add(this.BtnBuscar);
             this.Controls.Add(this.PnlBarraSuperior);
@@ -275,7 +197,6 @@
             this.guna2GroupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgvInventario)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -285,10 +206,6 @@
         private Guna.UI2.WinForms.Guna2ControlBox BtnSalir;
         private Guna.UI2.WinForms.Guna2TextBox TxtBuscar;
         private Guna.UI2.WinForms.Guna2ImageButton BtnBuscar;
-        private Guna.UI2.WinForms.Guna2HtmlLabel LblFiltrar;
-        private Guna.UI2.WinForms.Guna2RadioButton RbtnMarca;
-        private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton2;
-        private Guna.UI2.WinForms.Guna2RadioButton guna2RadioButton3;
         private Guna.UI2.WinForms.Guna2GroupBox guna2GroupBox2;
         private Guna.UI2.WinForms.Guna2DataGridView DgvInventario;
     }

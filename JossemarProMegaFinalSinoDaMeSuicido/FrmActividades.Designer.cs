@@ -41,6 +41,9 @@
             this.dgvDetalles = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvCompras = new System.Windows.Forms.DataGridView();
+            this.PnlBarraSuperior = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblIdUsuario = new System.Windows.Forms.Label();
+            this.BtnSalir = new Guna.UI2.WinForms.Guna2ControlBox();
             this.gbAbrir.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVerMov)).BeginInit();
@@ -49,6 +52,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompras)).BeginInit();
+            this.PnlBarraSuperior.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbAbrir
@@ -56,7 +60,7 @@
             this.gbAbrir.Controls.Add(this.btnAbrir);
             this.gbAbrir.Controls.Add(this.txtMonto);
             this.gbAbrir.Controls.Add(this.label1);
-            this.gbAbrir.Location = new System.Drawing.Point(30, 26);
+            this.gbAbrir.Location = new System.Drawing.Point(30, 37);
             this.gbAbrir.Name = "gbAbrir";
             this.gbAbrir.Size = new System.Drawing.Size(342, 130);
             this.gbAbrir.TabIndex = 0;
@@ -94,27 +98,32 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.dgvVerMov);
-            this.groupBox2.Location = new System.Drawing.Point(30, 196);
+            this.groupBox2.Location = new System.Drawing.Point(12, 196);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(460, 225);
+            this.groupBox2.Size = new System.Drawing.Size(478, 225);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Movimientos";
             // 
             // dgvVerMov
             // 
+            this.dgvVerMov.AllowUserToAddRows = false;
+            this.dgvVerMov.BackgroundColor = System.Drawing.Color.White;
             this.dgvVerMov.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvVerMov.Location = new System.Drawing.Point(0, 19);
+            this.dgvVerMov.MultiSelect = false;
             this.dgvVerMov.Name = "dgvVerMov";
+            this.dgvVerMov.ReadOnly = true;
             this.dgvVerMov.RowHeadersWidth = 10;
-            this.dgvVerMov.Size = new System.Drawing.Size(449, 200);
+            this.dgvVerMov.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvVerMov.Size = new System.Drawing.Size(472, 200);
             this.dgvVerMov.TabIndex = 0;
             // 
             // gbCerrar
             // 
             this.gbCerrar.Controls.Add(this.btnCerrar);
             this.gbCerrar.Controls.Add(this.lblMonto);
-            this.gbCerrar.Location = new System.Drawing.Point(469, 26);
+            this.gbCerrar.Location = new System.Drawing.Point(469, 37);
             this.gbCerrar.Name = "gbCerrar";
             this.gbCerrar.Size = new System.Drawing.Size(369, 141);
             this.gbCerrar.TabIndex = 1;
@@ -154,40 +163,87 @@
             // 
             // dgvDetalles
             // 
+            this.dgvDetalles.AllowUserToAddRows = false;
+            this.dgvDetalles.BackgroundColor = System.Drawing.Color.White;
             this.dgvDetalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetalles.Location = new System.Drawing.Point(6, 19);
+            this.dgvDetalles.MultiSelect = false;
             this.dgvDetalles.Name = "dgvDetalles";
+            this.dgvDetalles.ReadOnly = true;
+            this.dgvDetalles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDetalles.Size = new System.Drawing.Size(382, 200);
             this.dgvDetalles.TabIndex = 0;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvCompras);
-            this.groupBox1.Location = new System.Drawing.Point(924, 196);
+            this.groupBox1.Location = new System.Drawing.Point(915, 196);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(394, 225);
+            this.groupBox1.Size = new System.Drawing.Size(403, 225);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Compras";
             // 
             // dgvCompras
             // 
+            this.dgvCompras.AllowUserToAddRows = false;
+            this.dgvCompras.BackgroundColor = System.Drawing.Color.White;
             this.dgvCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCompras.Location = new System.Drawing.Point(6, 19);
+            this.dgvCompras.MultiSelect = false;
             this.dgvCompras.Name = "dgvCompras";
-            this.dgvCompras.Size = new System.Drawing.Size(382, 200);
+            this.dgvCompras.ReadOnly = true;
+            this.dgvCompras.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCompras.Size = new System.Drawing.Size(397, 200);
             this.dgvCompras.TabIndex = 0;
+            // 
+            // PnlBarraSuperior
+            // 
+            this.PnlBarraSuperior.Controls.Add(this.LblIdUsuario);
+            this.PnlBarraSuperior.Controls.Add(this.BtnSalir);
+            this.PnlBarraSuperior.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PnlBarraSuperior.FillColor = System.Drawing.Color.Gray;
+            this.PnlBarraSuperior.Location = new System.Drawing.Point(0, 0);
+            this.PnlBarraSuperior.Name = "PnlBarraSuperior";
+            this.PnlBarraSuperior.ShadowDecoration.Parent = this.PnlBarraSuperior;
+            this.PnlBarraSuperior.Size = new System.Drawing.Size(1330, 31);
+            this.PnlBarraSuperior.TabIndex = 4;
+            // 
+            // LblIdUsuario
+            // 
+            this.LblIdUsuario.AutoSize = true;
+            this.LblIdUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.LblIdUsuario.Location = new System.Drawing.Point(495, 9);
+            this.LblIdUsuario.Name = "LblIdUsuario";
+            this.LblIdUsuario.Size = new System.Drawing.Size(13, 13);
+            this.LblIdUsuario.TabIndex = 65;
+            this.LblIdUsuario.Text = "a";
+            // 
+            // BtnSalir
+            // 
+            this.BtnSalir.Dock = System.Windows.Forms.DockStyle.Right;
+            this.BtnSalir.FillColor = System.Drawing.Color.Gray;
+            this.BtnSalir.HoverState.Parent = this.BtnSalir;
+            this.BtnSalir.IconColor = System.Drawing.Color.White;
+            this.BtnSalir.Location = new System.Drawing.Point(1285, 0);
+            this.BtnSalir.Name = "BtnSalir";
+            this.BtnSalir.ShadowDecoration.Parent = this.BtnSalir;
+            this.BtnSalir.Size = new System.Drawing.Size(45, 31);
+            this.BtnSalir.TabIndex = 0;
             // 
             // FrmActividades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1330, 488);
+            this.Controls.Add(this.PnlBarraSuperior);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.gbCerrar);
             this.Controls.Add(this.gbAbrir);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmActividades";
             this.Text = "FrmActividades";
             this.Load += new System.EventHandler(this.FrmActividades_Load);
@@ -201,6 +257,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompras)).EndInit();
+            this.PnlBarraSuperior.ResumeLayout(false);
+            this.PnlBarraSuperior.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -220,5 +278,8 @@
         private System.Windows.Forms.DataGridView dgvDetalles;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvCompras;
+        private Guna.UI2.WinForms.Guna2Panel PnlBarraSuperior;
+        private System.Windows.Forms.Label LblIdUsuario;
+        private Guna.UI2.WinForms.Guna2ControlBox BtnSalir;
     }
 }

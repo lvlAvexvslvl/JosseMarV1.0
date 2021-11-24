@@ -51,11 +51,6 @@
             this.TxtBuscar = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GroupBox4 = new Guna.UI2.WinForms.Guna2GroupBox();
             this.DgvCarrito = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.IDS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Columna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.TxtDireccion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -110,6 +105,17 @@
             this.subt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idU = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Columna4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IdClientes = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PnlBarraSuperior.SuspendLayout();
             this.guna2GroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DgvProductos)).BeginInit();
@@ -342,7 +348,13 @@
             this.Columna4,
             this.Column4,
             this.Column5,
-            this.Cantidad});
+            this.Cantidad,
+            this.IdClientes,
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column6,
+            this.Column7});
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -383,31 +395,6 @@
             this.DgvCarrito.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DgvCarrito.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.DgvCarrito.SelectionChanged += new System.EventHandler(this.DgvCarrito_SelectionChanged);
-            // 
-            // IDS
-            // 
-            this.IDS.HeaderText = "ID";
-            this.IDS.Name = "IDS";
-            // 
-            // Columna4
-            // 
-            this.Columna4.HeaderText = "Producto";
-            this.Columna4.Name = "Columna4";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Descripción";
-            this.Column4.Name = "Column4";
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "P.Venta";
-            this.Column5.Name = "Column5";
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
             // 
             // groupBox1
             // 
@@ -1083,6 +1070,61 @@
             this.idU.Name = "idU";
             this.idU.ReadOnly = true;
             // 
+            // IDS
+            // 
+            this.IDS.HeaderText = "ID";
+            this.IDS.Name = "IDS";
+            // 
+            // Columna4
+            // 
+            this.Columna4.HeaderText = "Producto";
+            this.Columna4.Name = "Columna4";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Descripción";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "P.Venta";
+            this.Column5.Name = "Column5";
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            // 
+            // IdClientes
+            // 
+            this.IdClientes.HeaderText = "idC";
+            this.IdClientes.Name = "IdClientes";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "des";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "fch";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "subt";
+            this.Column3.Name = "Column3";
+            // 
+            // Column6
+            // 
+            this.Column6.HeaderText = "total";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "IdU";
+            this.Column7.Name = "Column7";
+            // 
             // FrmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1197,11 +1239,6 @@
         private Guna.UI2.WinForms.Guna2RadioButton RbtnMarca;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2RadioButton RbtnCategoria;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDS;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Columna4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.Button BtnCalcular;
         private System.Windows.Forms.DataGridViewTextBoxColumn idP;
         private System.Windows.Forms.DataGridViewTextBoxColumn idC;
@@ -1211,5 +1248,16 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn subt;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
         private System.Windows.Forms.DataGridViewTextBoxColumn idU;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Columna4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdClientes;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
     }
 }
