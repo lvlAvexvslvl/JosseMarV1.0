@@ -300,7 +300,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
                     int contT = Convert.ToInt16(contCedula.ContadorTelefonos(TxtTelefonoCliente.Text));
                     if (contT == 1)
                     {
-                        MessageBox.Show("La Teléfono que intenta actualizar ya pertenece a otro Proveedor. :(", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("El Teléfono que intenta actualizar ya pertenece a otro Proveedor. :(", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else { 
                         int filas = 0 + contador;

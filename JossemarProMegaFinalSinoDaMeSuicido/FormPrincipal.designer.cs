@@ -31,102 +31,103 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
         {
             this.PnlPrincipal = new Guna.UI2.WinForms.Guna2Panel();
             this.PnlMostarFrames = new Guna.UI2.WinForms.Guna2Panel();
+            this.pictureLogoPrincipal = new Guna.UI2.WinForms.Guna2PictureBox();
             this.PnlMenu = new Guna.UI2.WinForms.Guna2Panel();
             this.PnlSubPersona = new Guna.UI2.WinForms.Guna2Panel();
             this.PnlEmpleado = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblEmpleado = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.BtnPersonal = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PnlProveedor = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblProveedor = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.BtnProveedor = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PnlCliente = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblCliente = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.BtnCliente = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PnlPersona = new Guna.UI2.WinForms.Guna2Panel();
             this.PnlPressPersona = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblPersona = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.BtnPersona = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PnlSubCredito = new Guna.UI2.WinForms.Guna2Panel();
             this.PnlCreditoPendiente = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblCreditosPendientes = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.btnCreditoPendiente = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PnlHistorialCredito = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblhistorialCredito = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.BtnHistorialCredito = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PnlNuevoCredito = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblNuevoCredito = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.BtnNuevoCredito = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PnlCredito = new Guna.UI2.WinForms.Guna2Panel();
             this.PnlPressCredito = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblCredito = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.BtnCredito = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PnlSubCaja = new Guna.UI2.WinForms.Guna2Panel();
             this.PnlNotas = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblNotas = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.BtnNotas = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PnlSaldo = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblSaldo = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.BtnSaldo = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PnlMovimientos = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblMovimientos = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.BtnMovimientos = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PnlCaja = new Guna.UI2.WinForms.Guna2Panel();
             this.PnlPressCaja = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblCaja = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.BtnCaja = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PnlSubVentas = new Guna.UI2.WinForms.Guna2Panel();
             this.PnlDevoluciones = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblDevoluciones = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.BtnDevoluciones = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PnlHistorialVentas = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblHistorialVentas = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.BtnHistorialVentas = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PnlNuevaVenta = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblNuevaVenta = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.BtnNuevaVenta = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PnlVentas = new Guna.UI2.WinForms.Guna2Panel();
             this.PnlPressVentas = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblVentas = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.BtnVentas = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PnlSubInventario = new Guna.UI2.WinForms.Guna2Panel();
             this.PnlMostarInventario = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblMostrarInventario = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.BtnMostarInventario = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PnlAgregarInventario = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblAgregarInventario = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.BtnAgregarInventario = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PnlInventario = new Guna.UI2.WinForms.Guna2Panel();
             this.PnlPressInventario = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblInventario = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.BtnInventario = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PnlSubCompra = new Guna.UI2.WinForms.Guna2Panel();
             this.PnlDevolucionesCompra = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblDevolucionesCompra = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.BtnDevolucionCompra = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PnlHistorialCompra = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblHistorialCompra = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.BtnHistorialCompra = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PnlAgregarCompra = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblAgregarCompra = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.BtnAgregarProducto = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PnlCompra = new Guna.UI2.WinForms.Guna2Panel();
             this.PnlPressCompra = new Guna.UI2.WinForms.Guna2Panel();
+            this.LblCompra = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.BtnCompra = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PnlLogo = new Guna.UI2.WinForms.Guna2Panel();
+            this.PbLogoPequeño = new Guna.UI2.WinForms.Guna2PictureBox();
             this.PnlBarraSuperior = new Guna.UI2.WinForms.Guna2Panel();
             this.LbliUser = new System.Windows.Forms.Label();
             this.LblSeparador = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.BtnCerrarSesion = new Guna.UI2.WinForms.Guna2Button();
             this.LblUsuario = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.PbUsuario = new Guna.UI2.WinForms.Guna2PictureBox();
             this.BtnMinimizar = new Guna.UI2.WinForms.Guna2ControlBox();
             this.BtnMazimizar = new Guna.UI2.WinForms.Guna2ControlBox();
             this.BtnSalir = new Guna.UI2.WinForms.Guna2ControlBox();
-            this.pictureLogoPrincipal = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.LblEmpleado = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.BtnPersonal = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.LblProveedor = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.BtnProveedor = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.LblCliente = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.BtnCliente = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.LblPersona = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.BtnPersona = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.LblCreditosPendientes = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnCreditoPendiente = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.LblhistorialCredito = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.BtnHistorialCredito = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.LblNuevoCredito = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.BtnNuevoCredito = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.LblCredito = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.BtnCredito = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.LblNotas = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.BtnNotas = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.LblSaldo = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.BtnSaldo = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.LblMovimientos = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.BtnMovimientos = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.LblCaja = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.BtnCaja = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.LblDevoluciones = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.BtnDevoluciones = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.LblHistorialVentas = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.BtnHistorialVentas = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.LblNuevaVenta = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.BtnNuevaVenta = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.LblVentas = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.BtnVentas = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.LblMostrarInventario = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.BtnMostarInventario = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.LblAgregarInventario = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.BtnAgregarInventario = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.LblInventario = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.BtnInventario = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.LblDevolucionesCompra = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.BtnDevolucionCompra = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.LblHistorialCompra = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.BtnHistorialCompra = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.LblAgregarCompra = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.BtnAgregarProducto = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.LblCompra = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.BtnCompra = new Guna.UI2.WinForms.Guna2CircleButton();
-            this.PbLogoPequeño = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.PbUsuario = new Guna.UI2.WinForms.Guna2PictureBox();
             this.PnlPrincipal.SuspendLayout();
             this.PnlMostarFrames.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLogoPrincipal)).BeginInit();
             this.PnlMenu.SuspendLayout();
             this.PnlSubPersona.SuspendLayout();
             this.PnlEmpleado.SuspendLayout();
@@ -158,9 +159,8 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlAgregarCompra.SuspendLayout();
             this.PnlCompra.SuspendLayout();
             this.PnlLogo.SuspendLayout();
-            this.PnlBarraSuperior.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureLogoPrincipal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbLogoPequeño)).BeginInit();
+            this.PnlBarraSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PbUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -173,7 +173,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlPrincipal.Location = new System.Drawing.Point(0, 0);
             this.PnlPrincipal.Name = "PnlPrincipal";
             this.PnlPrincipal.ShadowDecoration.Parent = this.PnlPrincipal;
-            this.PnlPrincipal.Size = new System.Drawing.Size(1568, 837);
+            this.PnlPrincipal.Size = new System.Drawing.Size(1568, 878);
             this.PnlPrincipal.TabIndex = 0;
             // 
             // PnlMostarFrames
@@ -184,8 +184,20 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlMostarFrames.Location = new System.Drawing.Point(0, 115);
             this.PnlMostarFrames.Name = "PnlMostarFrames";
             this.PnlMostarFrames.ShadowDecoration.Parent = this.PnlMostarFrames;
-            this.PnlMostarFrames.Size = new System.Drawing.Size(1568, 722);
+            this.PnlMostarFrames.Size = new System.Drawing.Size(1568, 763);
             this.PnlMostarFrames.TabIndex = 4;
+            // 
+            // pictureLogoPrincipal
+            // 
+            this.pictureLogoPrincipal.BackColor = System.Drawing.Color.White;
+            this.pictureLogoPrincipal.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.Logo;
+            this.pictureLogoPrincipal.Location = new System.Drawing.Point(622, 96);
+            this.pictureLogoPrincipal.Name = "pictureLogoPrincipal";
+            this.pictureLogoPrincipal.ShadowDecoration.Parent = this.pictureLogoPrincipal;
+            this.pictureLogoPrincipal.Size = new System.Drawing.Size(376, 332);
+            this.pictureLogoPrincipal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureLogoPrincipal.TabIndex = 0;
+            this.pictureLogoPrincipal.TabStop = false;
             // 
             // PnlMenu
             // 
@@ -233,6 +245,37 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlEmpleado.Size = new System.Drawing.Size(78, 67);
             this.PnlEmpleado.TabIndex = 11;
             // 
+            // LblEmpleado
+            // 
+            this.LblEmpleado.BackColor = System.Drawing.Color.Transparent;
+            this.LblEmpleado.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
+            this.LblEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LblEmpleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblEmpleado.ForeColor = System.Drawing.Color.Black;
+            this.LblEmpleado.Location = new System.Drawing.Point(11, 61);
+            this.LblEmpleado.Name = "LblEmpleado";
+            this.LblEmpleado.Size = new System.Drawing.Size(57, 19);
+            this.LblEmpleado.TabIndex = 8;
+            this.LblEmpleado.Text = "Personal";
+            // 
+            // BtnPersonal
+            // 
+            this.BtnPersonal.CheckedState.Parent = this.BtnPersonal;
+            this.BtnPersonal.CustomImages.Parent = this.BtnPersonal;
+            this.BtnPersonal.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BtnPersonal.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnPersonal.ForeColor = System.Drawing.Color.White;
+            this.BtnPersonal.HoverState.Parent = this.BtnPersonal;
+            this.BtnPersonal.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.empleado;
+            this.BtnPersonal.ImageSize = new System.Drawing.Size(35, 35);
+            this.BtnPersonal.Location = new System.Drawing.Point(10, 6);
+            this.BtnPersonal.Name = "BtnPersonal";
+            this.BtnPersonal.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.BtnPersonal.ShadowDecoration.Parent = this.BtnPersonal;
+            this.BtnPersonal.Size = new System.Drawing.Size(58, 52);
+            this.BtnPersonal.TabIndex = 6;
+            this.BtnPersonal.Click += new System.EventHandler(this.BtnPersonal_Click);
+            // 
             // PnlProveedor
             // 
             this.PnlProveedor.Controls.Add(this.LblProveedor);
@@ -244,6 +287,37 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlProveedor.Size = new System.Drawing.Size(78, 67);
             this.PnlProveedor.TabIndex = 10;
             // 
+            // LblProveedor
+            // 
+            this.LblProveedor.BackColor = System.Drawing.Color.Transparent;
+            this.LblProveedor.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
+            this.LblProveedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LblProveedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblProveedor.ForeColor = System.Drawing.Color.Black;
+            this.LblProveedor.Location = new System.Drawing.Point(4, 61);
+            this.LblProveedor.Name = "LblProveedor";
+            this.LblProveedor.Size = new System.Drawing.Size(70, 19);
+            this.LblProveedor.TabIndex = 8;
+            this.LblProveedor.Text = "Proveedor";
+            // 
+            // BtnProveedor
+            // 
+            this.BtnProveedor.CheckedState.Parent = this.BtnProveedor;
+            this.BtnProveedor.CustomImages.Parent = this.BtnProveedor;
+            this.BtnProveedor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BtnProveedor.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnProveedor.ForeColor = System.Drawing.Color.White;
+            this.BtnProveedor.HoverState.Parent = this.BtnProveedor;
+            this.BtnProveedor.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.proveedor;
+            this.BtnProveedor.ImageSize = new System.Drawing.Size(35, 35);
+            this.BtnProveedor.Location = new System.Drawing.Point(10, 6);
+            this.BtnProveedor.Name = "BtnProveedor";
+            this.BtnProveedor.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.BtnProveedor.ShadowDecoration.Parent = this.BtnProveedor;
+            this.BtnProveedor.Size = new System.Drawing.Size(58, 52);
+            this.BtnProveedor.TabIndex = 6;
+            this.BtnProveedor.Click += new System.EventHandler(this.BtnProveedor_Click);
+            // 
             // PnlCliente
             // 
             this.PnlCliente.Controls.Add(this.LblCliente);
@@ -254,6 +328,37 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlCliente.ShadowDecoration.Parent = this.PnlCliente;
             this.PnlCliente.Size = new System.Drawing.Size(78, 67);
             this.PnlCliente.TabIndex = 10;
+            // 
+            // LblCliente
+            // 
+            this.LblCliente.BackColor = System.Drawing.Color.Transparent;
+            this.LblCliente.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
+            this.LblCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LblCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCliente.ForeColor = System.Drawing.Color.Black;
+            this.LblCliente.Location = new System.Drawing.Point(15, 61);
+            this.LblCliente.Name = "LblCliente";
+            this.LblCliente.Size = new System.Drawing.Size(49, 19);
+            this.LblCliente.TabIndex = 8;
+            this.LblCliente.Text = "Cliente";
+            // 
+            // BtnCliente
+            // 
+            this.BtnCliente.CheckedState.Parent = this.BtnCliente;
+            this.BtnCliente.CustomImages.Parent = this.BtnCliente;
+            this.BtnCliente.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BtnCliente.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnCliente.ForeColor = System.Drawing.Color.White;
+            this.BtnCliente.HoverState.Parent = this.BtnCliente;
+            this.BtnCliente.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.consumidor;
+            this.BtnCliente.ImageSize = new System.Drawing.Size(40, 40);
+            this.BtnCliente.Location = new System.Drawing.Point(10, 6);
+            this.BtnCliente.Name = "BtnCliente";
+            this.BtnCliente.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.BtnCliente.ShadowDecoration.Parent = this.BtnCliente;
+            this.BtnCliente.Size = new System.Drawing.Size(58, 52);
+            this.BtnCliente.TabIndex = 6;
+            this.BtnCliente.Click += new System.EventHandler(this.BtnCliente_Click);
             // 
             // PnlPersona
             // 
@@ -276,6 +381,39 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlPressPersona.ShadowDecoration.Parent = this.PnlPressPersona;
             this.PnlPressPersona.Size = new System.Drawing.Size(78, 8);
             this.PnlPressPersona.TabIndex = 9;
+            // 
+            // LblPersona
+            // 
+            this.LblPersona.BackColor = System.Drawing.Color.Transparent;
+            this.LblPersona.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
+            this.LblPersona.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LblPersona.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblPersona.ForeColor = System.Drawing.Color.Black;
+            this.LblPersona.Location = new System.Drawing.Point(12, 61);
+            this.LblPersona.Name = "LblPersona";
+            this.LblPersona.Size = new System.Drawing.Size(54, 19);
+            this.LblPersona.TabIndex = 8;
+            this.LblPersona.Text = "Persona";
+            // 
+            // BtnPersona
+            // 
+            this.BtnPersona.CheckedState.Parent = this.BtnPersona;
+            this.BtnPersona.CustomImages.Parent = this.BtnPersona;
+            this.BtnPersona.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.BtnPersona.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnPersona.ForeColor = System.Drawing.Color.White;
+            this.BtnPersona.HoverState.Parent = this.BtnPersona;
+            this.BtnPersona.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.grupo_de_chat;
+            this.BtnPersona.ImageSize = new System.Drawing.Size(45, 45);
+            this.BtnPersona.Location = new System.Drawing.Point(10, 6);
+            this.BtnPersona.Name = "BtnPersona";
+            this.BtnPersona.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.BtnPersona.ShadowDecoration.Parent = this.BtnPersona;
+            this.BtnPersona.Size = new System.Drawing.Size(58, 52);
+            this.BtnPersona.TabIndex = 6;
+            this.BtnPersona.Click += new System.EventHandler(this.BtnPersona_Click);
+            this.BtnPersona.MouseEnter += new System.EventHandler(this.BtnPersona_MouseEnter);
+            this.BtnPersona.MouseLeave += new System.EventHandler(this.BtnPersona_MouseLeave);
             // 
             // PnlSubCredito
             // 
@@ -300,6 +438,36 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlCreditoPendiente.Size = new System.Drawing.Size(78, 67);
             this.PnlCreditoPendiente.TabIndex = 11;
             // 
+            // LblCreditosPendientes
+            // 
+            this.LblCreditosPendientes.BackColor = System.Drawing.Color.Transparent;
+            this.LblCreditosPendientes.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
+            this.LblCreditosPendientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LblCreditosPendientes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCreditosPendientes.ForeColor = System.Drawing.Color.Black;
+            this.LblCreditosPendientes.Location = new System.Drawing.Point(1, 61);
+            this.LblCreditosPendientes.Name = "LblCreditosPendientes";
+            this.LblCreditosPendientes.Size = new System.Drawing.Size(77, 19);
+            this.LblCreditosPendientes.TabIndex = 8;
+            this.LblCreditosPendientes.Text = "Prendientes";
+            // 
+            // btnCreditoPendiente
+            // 
+            this.btnCreditoPendiente.CheckedState.Parent = this.btnCreditoPendiente;
+            this.btnCreditoPendiente.CustomImages.Parent = this.btnCreditoPendiente;
+            this.btnCreditoPendiente.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.btnCreditoPendiente.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCreditoPendiente.ForeColor = System.Drawing.Color.White;
+            this.btnCreditoPendiente.HoverState.Parent = this.btnCreditoPendiente;
+            this.btnCreditoPendiente.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.pendiente;
+            this.btnCreditoPendiente.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnCreditoPendiente.Location = new System.Drawing.Point(10, 6);
+            this.btnCreditoPendiente.Name = "btnCreditoPendiente";
+            this.btnCreditoPendiente.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnCreditoPendiente.ShadowDecoration.Parent = this.btnCreditoPendiente;
+            this.btnCreditoPendiente.Size = new System.Drawing.Size(58, 52);
+            this.btnCreditoPendiente.TabIndex = 6;
+            // 
             // PnlHistorialCredito
             // 
             this.PnlHistorialCredito.Controls.Add(this.LblhistorialCredito);
@@ -311,6 +479,36 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlHistorialCredito.Size = new System.Drawing.Size(78, 67);
             this.PnlHistorialCredito.TabIndex = 10;
             // 
+            // LblhistorialCredito
+            // 
+            this.LblhistorialCredito.BackColor = System.Drawing.Color.Transparent;
+            this.LblhistorialCredito.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
+            this.LblhistorialCredito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LblhistorialCredito.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblhistorialCredito.ForeColor = System.Drawing.Color.Black;
+            this.LblhistorialCredito.Location = new System.Drawing.Point(12, 61);
+            this.LblhistorialCredito.Name = "LblhistorialCredito";
+            this.LblhistorialCredito.Size = new System.Drawing.Size(53, 19);
+            this.LblhistorialCredito.TabIndex = 8;
+            this.LblhistorialCredito.Text = "Historial";
+            // 
+            // BtnHistorialCredito
+            // 
+            this.BtnHistorialCredito.CheckedState.Parent = this.BtnHistorialCredito;
+            this.BtnHistorialCredito.CustomImages.Parent = this.BtnHistorialCredito;
+            this.BtnHistorialCredito.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BtnHistorialCredito.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnHistorialCredito.ForeColor = System.Drawing.Color.White;
+            this.BtnHistorialCredito.HoverState.Parent = this.BtnHistorialCredito;
+            this.BtnHistorialCredito.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.historial_medico;
+            this.BtnHistorialCredito.ImageSize = new System.Drawing.Size(35, 35);
+            this.BtnHistorialCredito.Location = new System.Drawing.Point(10, 6);
+            this.BtnHistorialCredito.Name = "BtnHistorialCredito";
+            this.BtnHistorialCredito.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.BtnHistorialCredito.ShadowDecoration.Parent = this.BtnHistorialCredito;
+            this.BtnHistorialCredito.Size = new System.Drawing.Size(58, 52);
+            this.BtnHistorialCredito.TabIndex = 6;
+            // 
             // PnlNuevoCredito
             // 
             this.PnlNuevoCredito.Controls.Add(this.LblNuevoCredito);
@@ -321,6 +519,36 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlNuevoCredito.ShadowDecoration.Parent = this.PnlNuevoCredito;
             this.PnlNuevoCredito.Size = new System.Drawing.Size(78, 67);
             this.PnlNuevoCredito.TabIndex = 10;
+            // 
+            // LblNuevoCredito
+            // 
+            this.LblNuevoCredito.BackColor = System.Drawing.Color.Transparent;
+            this.LblNuevoCredito.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
+            this.LblNuevoCredito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LblNuevoCredito.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNuevoCredito.ForeColor = System.Drawing.Color.Black;
+            this.LblNuevoCredito.Location = new System.Drawing.Point(15, 61);
+            this.LblNuevoCredito.Name = "LblNuevoCredito";
+            this.LblNuevoCredito.Size = new System.Drawing.Size(46, 19);
+            this.LblNuevoCredito.TabIndex = 8;
+            this.LblNuevoCredito.Text = "Nuevo";
+            // 
+            // BtnNuevoCredito
+            // 
+            this.BtnNuevoCredito.CheckedState.Parent = this.BtnNuevoCredito;
+            this.BtnNuevoCredito.CustomImages.Parent = this.BtnNuevoCredito;
+            this.BtnNuevoCredito.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BtnNuevoCredito.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnNuevoCredito.ForeColor = System.Drawing.Color.White;
+            this.BtnNuevoCredito.HoverState.Parent = this.BtnNuevoCredito;
+            this.BtnNuevoCredito.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.agregar_archivo;
+            this.BtnNuevoCredito.ImageSize = new System.Drawing.Size(35, 35);
+            this.BtnNuevoCredito.Location = new System.Drawing.Point(10, 6);
+            this.BtnNuevoCredito.Name = "BtnNuevoCredito";
+            this.BtnNuevoCredito.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.BtnNuevoCredito.ShadowDecoration.Parent = this.BtnNuevoCredito;
+            this.BtnNuevoCredito.Size = new System.Drawing.Size(58, 52);
+            this.BtnNuevoCredito.TabIndex = 6;
             // 
             // PnlCredito
             // 
@@ -343,6 +571,39 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlPressCredito.ShadowDecoration.Parent = this.PnlPressCredito;
             this.PnlPressCredito.Size = new System.Drawing.Size(78, 8);
             this.PnlPressCredito.TabIndex = 9;
+            // 
+            // LblCredito
+            // 
+            this.LblCredito.BackColor = System.Drawing.Color.Transparent;
+            this.LblCredito.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
+            this.LblCredito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LblCredito.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCredito.ForeColor = System.Drawing.Color.Black;
+            this.LblCredito.Location = new System.Drawing.Point(13, 61);
+            this.LblCredito.Name = "LblCredito";
+            this.LblCredito.Size = new System.Drawing.Size(52, 19);
+            this.LblCredito.TabIndex = 8;
+            this.LblCredito.Text = "Credito";
+            // 
+            // BtnCredito
+            // 
+            this.BtnCredito.CheckedState.Parent = this.BtnCredito;
+            this.BtnCredito.CustomImages.Parent = this.BtnCredito;
+            this.BtnCredito.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.BtnCredito.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnCredito.ForeColor = System.Drawing.Color.White;
+            this.BtnCredito.HoverState.Parent = this.BtnCredito;
+            this.BtnCredito.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.tarjeta_de_credito;
+            this.BtnCredito.ImageSize = new System.Drawing.Size(35, 35);
+            this.BtnCredito.Location = new System.Drawing.Point(10, 6);
+            this.BtnCredito.Name = "BtnCredito";
+            this.BtnCredito.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.BtnCredito.ShadowDecoration.Parent = this.BtnCredito;
+            this.BtnCredito.Size = new System.Drawing.Size(58, 52);
+            this.BtnCredito.TabIndex = 6;
+            this.BtnCredito.Click += new System.EventHandler(this.BtnCredito_Click);
+            this.BtnCredito.MouseEnter += new System.EventHandler(this.BtnCredito_MouseEnter);
+            this.BtnCredito.MouseLeave += new System.EventHandler(this.BtnCredito_MouseLeave);
             // 
             // PnlSubCaja
             // 
@@ -367,6 +628,36 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlNotas.Size = new System.Drawing.Size(78, 67);
             this.PnlNotas.TabIndex = 11;
             // 
+            // LblNotas
+            // 
+            this.LblNotas.BackColor = System.Drawing.Color.Transparent;
+            this.LblNotas.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
+            this.LblNotas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LblNotas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNotas.ForeColor = System.Drawing.Color.Black;
+            this.LblNotas.Location = new System.Drawing.Point(17, 61);
+            this.LblNotas.Name = "LblNotas";
+            this.LblNotas.Size = new System.Drawing.Size(41, 19);
+            this.LblNotas.TabIndex = 8;
+            this.LblNotas.Text = "Notas";
+            // 
+            // BtnNotas
+            // 
+            this.BtnNotas.CheckedState.Parent = this.BtnNotas;
+            this.BtnNotas.CustomImages.Parent = this.BtnNotas;
+            this.BtnNotas.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BtnNotas.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnNotas.ForeColor = System.Drawing.Color.White;
+            this.BtnNotas.HoverState.Parent = this.BtnNotas;
+            this.BtnNotas.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.notas;
+            this.BtnNotas.ImageSize = new System.Drawing.Size(35, 35);
+            this.BtnNotas.Location = new System.Drawing.Point(10, 6);
+            this.BtnNotas.Name = "BtnNotas";
+            this.BtnNotas.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.BtnNotas.ShadowDecoration.Parent = this.BtnNotas;
+            this.BtnNotas.Size = new System.Drawing.Size(58, 52);
+            this.BtnNotas.TabIndex = 6;
+            // 
             // PnlSaldo
             // 
             this.PnlSaldo.Controls.Add(this.LblSaldo);
@@ -378,6 +669,36 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlSaldo.Size = new System.Drawing.Size(78, 67);
             this.PnlSaldo.TabIndex = 10;
             // 
+            // LblSaldo
+            // 
+            this.LblSaldo.BackColor = System.Drawing.Color.Transparent;
+            this.LblSaldo.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
+            this.LblSaldo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LblSaldo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblSaldo.ForeColor = System.Drawing.Color.Black;
+            this.LblSaldo.Location = new System.Drawing.Point(20, 61);
+            this.LblSaldo.Name = "LblSaldo";
+            this.LblSaldo.Size = new System.Drawing.Size(39, 19);
+            this.LblSaldo.TabIndex = 8;
+            this.LblSaldo.Text = "Saldo";
+            // 
+            // BtnSaldo
+            // 
+            this.BtnSaldo.CheckedState.Parent = this.BtnSaldo;
+            this.BtnSaldo.CustomImages.Parent = this.BtnSaldo;
+            this.BtnSaldo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BtnSaldo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnSaldo.ForeColor = System.Drawing.Color.White;
+            this.BtnSaldo.HoverState.Parent = this.BtnSaldo;
+            this.BtnSaldo.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.hoja_de_balance;
+            this.BtnSaldo.ImageSize = new System.Drawing.Size(35, 35);
+            this.BtnSaldo.Location = new System.Drawing.Point(10, 6);
+            this.BtnSaldo.Name = "BtnSaldo";
+            this.BtnSaldo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.BtnSaldo.ShadowDecoration.Parent = this.BtnSaldo;
+            this.BtnSaldo.Size = new System.Drawing.Size(58, 52);
+            this.BtnSaldo.TabIndex = 6;
+            // 
             // PnlMovimientos
             // 
             this.PnlMovimientos.Controls.Add(this.LblMovimientos);
@@ -388,6 +709,36 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlMovimientos.ShadowDecoration.Parent = this.PnlMovimientos;
             this.PnlMovimientos.Size = new System.Drawing.Size(78, 67);
             this.PnlMovimientos.TabIndex = 10;
+            // 
+            // LblMovimientos
+            // 
+            this.LblMovimientos.BackColor = System.Drawing.Color.Transparent;
+            this.LblMovimientos.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
+            this.LblMovimientos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LblMovimientos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMovimientos.ForeColor = System.Drawing.Color.Black;
+            this.LblMovimientos.Location = new System.Drawing.Point(6, 61);
+            this.LblMovimientos.Name = "LblMovimientos";
+            this.LblMovimientos.Size = new System.Drawing.Size(66, 19);
+            this.LblMovimientos.TabIndex = 8;
+            this.LblMovimientos.Text = "Actividad";
+            // 
+            // BtnMovimientos
+            // 
+            this.BtnMovimientos.CheckedState.Parent = this.BtnMovimientos;
+            this.BtnMovimientos.CustomImages.Parent = this.BtnMovimientos;
+            this.BtnMovimientos.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BtnMovimientos.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnMovimientos.ForeColor = System.Drawing.Color.White;
+            this.BtnMovimientos.HoverState.Parent = this.BtnMovimientos;
+            this.BtnMovimientos.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.dinero;
+            this.BtnMovimientos.ImageSize = new System.Drawing.Size(35, 35);
+            this.BtnMovimientos.Location = new System.Drawing.Point(10, 6);
+            this.BtnMovimientos.Name = "BtnMovimientos";
+            this.BtnMovimientos.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.BtnMovimientos.ShadowDecoration.Parent = this.BtnMovimientos;
+            this.BtnMovimientos.Size = new System.Drawing.Size(58, 52);
+            this.BtnMovimientos.TabIndex = 6;
             // 
             // PnlCaja
             // 
@@ -410,6 +761,39 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlPressCaja.ShadowDecoration.Parent = this.PnlPressCaja;
             this.PnlPressCaja.Size = new System.Drawing.Size(78, 8);
             this.PnlPressCaja.TabIndex = 9;
+            // 
+            // LblCaja
+            // 
+            this.LblCaja.BackColor = System.Drawing.Color.Transparent;
+            this.LblCaja.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
+            this.LblCaja.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LblCaja.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCaja.ForeColor = System.Drawing.Color.Black;
+            this.LblCaja.Location = new System.Drawing.Point(20, 61);
+            this.LblCaja.Name = "LblCaja";
+            this.LblCaja.Size = new System.Drawing.Size(35, 19);
+            this.LblCaja.TabIndex = 8;
+            this.LblCaja.Text = "Caja";
+            // 
+            // BtnCaja
+            // 
+            this.BtnCaja.CheckedState.Parent = this.BtnCaja;
+            this.BtnCaja.CustomImages.Parent = this.BtnCaja;
+            this.BtnCaja.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.BtnCaja.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnCaja.ForeColor = System.Drawing.Color.White;
+            this.BtnCaja.HoverState.Parent = this.BtnCaja;
+            this.BtnCaja.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.caja_registradora;
+            this.BtnCaja.ImageSize = new System.Drawing.Size(35, 35);
+            this.BtnCaja.Location = new System.Drawing.Point(10, 6);
+            this.BtnCaja.Name = "BtnCaja";
+            this.BtnCaja.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.BtnCaja.ShadowDecoration.Parent = this.BtnCaja;
+            this.BtnCaja.Size = new System.Drawing.Size(58, 52);
+            this.BtnCaja.TabIndex = 6;
+            this.BtnCaja.Click += new System.EventHandler(this.BtnCaja_Click);
+            this.BtnCaja.MouseEnter += new System.EventHandler(this.BtnCaja_MouseEnter);
+            this.BtnCaja.MouseLeave += new System.EventHandler(this.BtnCaja_MouseLeave);
             // 
             // PnlSubVentas
             // 
@@ -434,6 +818,36 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlDevoluciones.Size = new System.Drawing.Size(78, 67);
             this.PnlDevoluciones.TabIndex = 11;
             // 
+            // LblDevoluciones
+            // 
+            this.LblDevoluciones.BackColor = System.Drawing.Color.Transparent;
+            this.LblDevoluciones.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
+            this.LblDevoluciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LblDevoluciones.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDevoluciones.ForeColor = System.Drawing.Color.Black;
+            this.LblDevoluciones.Location = new System.Drawing.Point(2, 61);
+            this.LblDevoluciones.Name = "LblDevoluciones";
+            this.LblDevoluciones.Size = new System.Drawing.Size(77, 19);
+            this.LblDevoluciones.TabIndex = 8;
+            this.LblDevoluciones.Text = "Devolución";
+            // 
+            // BtnDevoluciones
+            // 
+            this.BtnDevoluciones.CheckedState.Parent = this.BtnDevoluciones;
+            this.BtnDevoluciones.CustomImages.Parent = this.BtnDevoluciones;
+            this.BtnDevoluciones.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BtnDevoluciones.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnDevoluciones.ForeColor = System.Drawing.Color.White;
+            this.BtnDevoluciones.HoverState.Parent = this.BtnDevoluciones;
+            this.BtnDevoluciones.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.devolucion_de_producto;
+            this.BtnDevoluciones.ImageSize = new System.Drawing.Size(35, 35);
+            this.BtnDevoluciones.Location = new System.Drawing.Point(10, 6);
+            this.BtnDevoluciones.Name = "BtnDevoluciones";
+            this.BtnDevoluciones.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.BtnDevoluciones.ShadowDecoration.Parent = this.BtnDevoluciones;
+            this.BtnDevoluciones.Size = new System.Drawing.Size(58, 52);
+            this.BtnDevoluciones.TabIndex = 6;
+            // 
             // PnlHistorialVentas
             // 
             this.PnlHistorialVentas.Controls.Add(this.LblHistorialVentas);
@@ -445,6 +859,36 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlHistorialVentas.Size = new System.Drawing.Size(78, 67);
             this.PnlHistorialVentas.TabIndex = 10;
             // 
+            // LblHistorialVentas
+            // 
+            this.LblHistorialVentas.BackColor = System.Drawing.Color.Transparent;
+            this.LblHistorialVentas.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
+            this.LblHistorialVentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LblHistorialVentas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblHistorialVentas.ForeColor = System.Drawing.Color.Black;
+            this.LblHistorialVentas.Location = new System.Drawing.Point(12, 61);
+            this.LblHistorialVentas.Name = "LblHistorialVentas";
+            this.LblHistorialVentas.Size = new System.Drawing.Size(53, 19);
+            this.LblHistorialVentas.TabIndex = 8;
+            this.LblHistorialVentas.Text = "Historial";
+            // 
+            // BtnHistorialVentas
+            // 
+            this.BtnHistorialVentas.CheckedState.Parent = this.BtnHistorialVentas;
+            this.BtnHistorialVentas.CustomImages.Parent = this.BtnHistorialVentas;
+            this.BtnHistorialVentas.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BtnHistorialVentas.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnHistorialVentas.ForeColor = System.Drawing.Color.White;
+            this.BtnHistorialVentas.HoverState.Parent = this.BtnHistorialVentas;
+            this.BtnHistorialVentas.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.historial_medico;
+            this.BtnHistorialVentas.ImageSize = new System.Drawing.Size(35, 35);
+            this.BtnHistorialVentas.Location = new System.Drawing.Point(10, 6);
+            this.BtnHistorialVentas.Name = "BtnHistorialVentas";
+            this.BtnHistorialVentas.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.BtnHistorialVentas.ShadowDecoration.Parent = this.BtnHistorialVentas;
+            this.BtnHistorialVentas.Size = new System.Drawing.Size(58, 52);
+            this.BtnHistorialVentas.TabIndex = 6;
+            // 
             // PnlNuevaVenta
             // 
             this.PnlNuevaVenta.Controls.Add(this.LblNuevaVenta);
@@ -455,6 +899,37 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlNuevaVenta.ShadowDecoration.Parent = this.PnlNuevaVenta;
             this.PnlNuevaVenta.Size = new System.Drawing.Size(78, 67);
             this.PnlNuevaVenta.TabIndex = 10;
+            // 
+            // LblNuevaVenta
+            // 
+            this.LblNuevaVenta.BackColor = System.Drawing.Color.Transparent;
+            this.LblNuevaVenta.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
+            this.LblNuevaVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LblNuevaVenta.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblNuevaVenta.ForeColor = System.Drawing.Color.Black;
+            this.LblNuevaVenta.Location = new System.Drawing.Point(16, 61);
+            this.LblNuevaVenta.Name = "LblNuevaVenta";
+            this.LblNuevaVenta.Size = new System.Drawing.Size(44, 19);
+            this.LblNuevaVenta.TabIndex = 8;
+            this.LblNuevaVenta.Text = "nueva";
+            // 
+            // BtnNuevaVenta
+            // 
+            this.BtnNuevaVenta.CheckedState.Parent = this.BtnNuevaVenta;
+            this.BtnNuevaVenta.CustomImages.Parent = this.BtnNuevaVenta;
+            this.BtnNuevaVenta.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BtnNuevaVenta.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnNuevaVenta.ForeColor = System.Drawing.Color.White;
+            this.BtnNuevaVenta.HoverState.Parent = this.BtnNuevaVenta;
+            this.BtnNuevaVenta.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.agregar_archivo;
+            this.BtnNuevaVenta.ImageSize = new System.Drawing.Size(35, 35);
+            this.BtnNuevaVenta.Location = new System.Drawing.Point(10, 6);
+            this.BtnNuevaVenta.Name = "BtnNuevaVenta";
+            this.BtnNuevaVenta.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.BtnNuevaVenta.ShadowDecoration.Parent = this.BtnNuevaVenta;
+            this.BtnNuevaVenta.Size = new System.Drawing.Size(58, 52);
+            this.BtnNuevaVenta.TabIndex = 6;
+            this.BtnNuevaVenta.Click += new System.EventHandler(this.BtnNuevaVenta_Click);
             // 
             // PnlVentas
             // 
@@ -478,6 +953,39 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlPressVentas.Size = new System.Drawing.Size(78, 8);
             this.PnlPressVentas.TabIndex = 9;
             // 
+            // LblVentas
+            // 
+            this.LblVentas.BackColor = System.Drawing.Color.Transparent;
+            this.LblVentas.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
+            this.LblVentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LblVentas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblVentas.ForeColor = System.Drawing.Color.Black;
+            this.LblVentas.Location = new System.Drawing.Point(14, 61);
+            this.LblVentas.Name = "LblVentas";
+            this.LblVentas.Size = new System.Drawing.Size(47, 19);
+            this.LblVentas.TabIndex = 8;
+            this.LblVentas.Text = "Ventas";
+            // 
+            // BtnVentas
+            // 
+            this.BtnVentas.CheckedState.Parent = this.BtnVentas;
+            this.BtnVentas.CustomImages.Parent = this.BtnVentas;
+            this.BtnVentas.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.BtnVentas.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnVentas.ForeColor = System.Drawing.Color.White;
+            this.BtnVentas.HoverState.Parent = this.BtnVentas;
+            this.BtnVentas.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.comprar;
+            this.BtnVentas.ImageSize = new System.Drawing.Size(35, 35);
+            this.BtnVentas.Location = new System.Drawing.Point(10, 6);
+            this.BtnVentas.Name = "BtnVentas";
+            this.BtnVentas.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.BtnVentas.ShadowDecoration.Parent = this.BtnVentas;
+            this.BtnVentas.Size = new System.Drawing.Size(58, 52);
+            this.BtnVentas.TabIndex = 6;
+            this.BtnVentas.Click += new System.EventHandler(this.BtnVentas_Click);
+            this.BtnVentas.MouseEnter += new System.EventHandler(this.BtnVentas_MouseEnter);
+            this.BtnVentas.MouseLeave += new System.EventHandler(this.BtnVentas_MouseLeave);
+            // 
             // PnlSubInventario
             // 
             this.PnlSubInventario.Controls.Add(this.PnlMostarInventario);
@@ -500,6 +1008,37 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlMostarInventario.Size = new System.Drawing.Size(78, 67);
             this.PnlMostarInventario.TabIndex = 10;
             // 
+            // LblMostrarInventario
+            // 
+            this.LblMostrarInventario.BackColor = System.Drawing.Color.Transparent;
+            this.LblMostrarInventario.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
+            this.LblMostrarInventario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LblMostrarInventario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblMostrarInventario.ForeColor = System.Drawing.Color.Black;
+            this.LblMostrarInventario.Location = new System.Drawing.Point(4, 61);
+            this.LblMostrarInventario.Name = "LblMostrarInventario";
+            this.LblMostrarInventario.Size = new System.Drawing.Size(68, 19);
+            this.LblMostrarInventario.TabIndex = 8;
+            this.LblMostrarInventario.Text = "Productos";
+            // 
+            // BtnMostarInventario
+            // 
+            this.BtnMostarInventario.CheckedState.Parent = this.BtnMostarInventario;
+            this.BtnMostarInventario.CustomImages.Parent = this.BtnMostarInventario;
+            this.BtnMostarInventario.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BtnMostarInventario.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnMostarInventario.ForeColor = System.Drawing.Color.White;
+            this.BtnMostarInventario.HoverState.Parent = this.BtnMostarInventario;
+            this.BtnMostarInventario.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.historial_medico;
+            this.BtnMostarInventario.ImageSize = new System.Drawing.Size(35, 35);
+            this.BtnMostarInventario.Location = new System.Drawing.Point(10, 6);
+            this.BtnMostarInventario.Name = "BtnMostarInventario";
+            this.BtnMostarInventario.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.BtnMostarInventario.ShadowDecoration.Parent = this.BtnMostarInventario;
+            this.BtnMostarInventario.Size = new System.Drawing.Size(58, 52);
+            this.BtnMostarInventario.TabIndex = 6;
+            this.BtnMostarInventario.Click += new System.EventHandler(this.BtnMostarInventario_Click);
+            // 
             // PnlAgregarInventario
             // 
             this.PnlAgregarInventario.Controls.Add(this.LblAgregarInventario);
@@ -510,6 +1049,36 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlAgregarInventario.ShadowDecoration.Parent = this.PnlAgregarInventario;
             this.PnlAgregarInventario.Size = new System.Drawing.Size(78, 67);
             this.PnlAgregarInventario.TabIndex = 10;
+            // 
+            // LblAgregarInventario
+            // 
+            this.LblAgregarInventario.BackColor = System.Drawing.Color.Transparent;
+            this.LblAgregarInventario.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
+            this.LblAgregarInventario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LblAgregarInventario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAgregarInventario.ForeColor = System.Drawing.Color.Black;
+            this.LblAgregarInventario.Location = new System.Drawing.Point(11, 61);
+            this.LblAgregarInventario.Name = "LblAgregarInventario";
+            this.LblAgregarInventario.Size = new System.Drawing.Size(55, 19);
+            this.LblAgregarInventario.TabIndex = 8;
+            this.LblAgregarInventario.Text = "Agregar";
+            // 
+            // BtnAgregarInventario
+            // 
+            this.BtnAgregarInventario.CheckedState.Parent = this.BtnAgregarInventario;
+            this.BtnAgregarInventario.CustomImages.Parent = this.BtnAgregarInventario;
+            this.BtnAgregarInventario.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BtnAgregarInventario.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnAgregarInventario.ForeColor = System.Drawing.Color.White;
+            this.BtnAgregarInventario.HoverState.Parent = this.BtnAgregarInventario;
+            this.BtnAgregarInventario.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.agregar_archivo;
+            this.BtnAgregarInventario.ImageSize = new System.Drawing.Size(35, 35);
+            this.BtnAgregarInventario.Location = new System.Drawing.Point(10, 6);
+            this.BtnAgregarInventario.Name = "BtnAgregarInventario";
+            this.BtnAgregarInventario.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.BtnAgregarInventario.ShadowDecoration.Parent = this.BtnAgregarInventario;
+            this.BtnAgregarInventario.Size = new System.Drawing.Size(58, 52);
+            this.BtnAgregarInventario.TabIndex = 6;
             // 
             // PnlInventario
             // 
@@ -532,6 +1101,39 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlPressInventario.ShadowDecoration.Parent = this.PnlPressInventario;
             this.PnlPressInventario.Size = new System.Drawing.Size(78, 8);
             this.PnlPressInventario.TabIndex = 9;
+            // 
+            // LblInventario
+            // 
+            this.LblInventario.BackColor = System.Drawing.Color.Transparent;
+            this.LblInventario.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
+            this.LblInventario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LblInventario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblInventario.ForeColor = System.Drawing.Color.Black;
+            this.LblInventario.Location = new System.Drawing.Point(4, 61);
+            this.LblInventario.Name = "LblInventario";
+            this.LblInventario.Size = new System.Drawing.Size(68, 19);
+            this.LblInventario.TabIndex = 8;
+            this.LblInventario.Text = "Inventario";
+            // 
+            // BtnInventario
+            // 
+            this.BtnInventario.CheckedState.Parent = this.BtnInventario;
+            this.BtnInventario.CustomImages.Parent = this.BtnInventario;
+            this.BtnInventario.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.BtnInventario.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnInventario.ForeColor = System.Drawing.Color.White;
+            this.BtnInventario.HoverState.Parent = this.BtnInventario;
+            this.BtnInventario.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.inventario;
+            this.BtnInventario.ImageSize = new System.Drawing.Size(35, 35);
+            this.BtnInventario.Location = new System.Drawing.Point(10, 6);
+            this.BtnInventario.Name = "BtnInventario";
+            this.BtnInventario.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.BtnInventario.ShadowDecoration.Parent = this.BtnInventario;
+            this.BtnInventario.Size = new System.Drawing.Size(58, 52);
+            this.BtnInventario.TabIndex = 6;
+            this.BtnInventario.Click += new System.EventHandler(this.BtnInventario_Click);
+            this.BtnInventario.MouseEnter += new System.EventHandler(this.BtnInventario_MouseEnter);
+            this.BtnInventario.MouseLeave += new System.EventHandler(this.BtnInventario_MouseLeave);
             // 
             // PnlSubCompra
             // 
@@ -556,6 +1158,37 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlDevolucionesCompra.Size = new System.Drawing.Size(78, 67);
             this.PnlDevolucionesCompra.TabIndex = 11;
             // 
+            // LblDevolucionesCompra
+            // 
+            this.LblDevolucionesCompra.BackColor = System.Drawing.Color.Transparent;
+            this.LblDevolucionesCompra.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
+            this.LblDevolucionesCompra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LblDevolucionesCompra.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblDevolucionesCompra.ForeColor = System.Drawing.Color.Black;
+            this.LblDevolucionesCompra.Location = new System.Drawing.Point(0, 61);
+            this.LblDevolucionesCompra.Name = "LblDevolucionesCompra";
+            this.LblDevolucionesCompra.Size = new System.Drawing.Size(77, 19);
+            this.LblDevolucionesCompra.TabIndex = 8;
+            this.LblDevolucionesCompra.Text = "Devolución";
+            // 
+            // BtnDevolucionCompra
+            // 
+            this.BtnDevolucionCompra.CheckedState.Parent = this.BtnDevolucionCompra;
+            this.BtnDevolucionCompra.CustomImages.Parent = this.BtnDevolucionCompra;
+            this.BtnDevolucionCompra.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BtnDevolucionCompra.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnDevolucionCompra.ForeColor = System.Drawing.Color.White;
+            this.BtnDevolucionCompra.HoverState.Parent = this.BtnDevolucionCompra;
+            this.BtnDevolucionCompra.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.devolucion_de_producto;
+            this.BtnDevolucionCompra.ImageSize = new System.Drawing.Size(35, 35);
+            this.BtnDevolucionCompra.Location = new System.Drawing.Point(10, 6);
+            this.BtnDevolucionCompra.Name = "BtnDevolucionCompra";
+            this.BtnDevolucionCompra.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.BtnDevolucionCompra.ShadowDecoration.Parent = this.BtnDevolucionCompra;
+            this.BtnDevolucionCompra.Size = new System.Drawing.Size(58, 52);
+            this.BtnDevolucionCompra.TabIndex = 6;
+            this.BtnDevolucionCompra.Click += new System.EventHandler(this.BtnDevolucionCompra_Click);
+            // 
             // PnlHistorialCompra
             // 
             this.PnlHistorialCompra.Controls.Add(this.LblHistorialCompra);
@@ -567,6 +1200,36 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlHistorialCompra.Size = new System.Drawing.Size(78, 67);
             this.PnlHistorialCompra.TabIndex = 10;
             // 
+            // LblHistorialCompra
+            // 
+            this.LblHistorialCompra.BackColor = System.Drawing.Color.Transparent;
+            this.LblHistorialCompra.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
+            this.LblHistorialCompra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LblHistorialCompra.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblHistorialCompra.ForeColor = System.Drawing.Color.Black;
+            this.LblHistorialCompra.Location = new System.Drawing.Point(12, 61);
+            this.LblHistorialCompra.Name = "LblHistorialCompra";
+            this.LblHistorialCompra.Size = new System.Drawing.Size(53, 19);
+            this.LblHistorialCompra.TabIndex = 8;
+            this.LblHistorialCompra.Text = "Historial";
+            // 
+            // BtnHistorialCompra
+            // 
+            this.BtnHistorialCompra.CheckedState.Parent = this.BtnHistorialCompra;
+            this.BtnHistorialCompra.CustomImages.Parent = this.BtnHistorialCompra;
+            this.BtnHistorialCompra.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BtnHistorialCompra.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnHistorialCompra.ForeColor = System.Drawing.Color.White;
+            this.BtnHistorialCompra.HoverState.Parent = this.BtnHistorialCompra;
+            this.BtnHistorialCompra.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.historial_medico_1_;
+            this.BtnHistorialCompra.ImageSize = new System.Drawing.Size(35, 35);
+            this.BtnHistorialCompra.Location = new System.Drawing.Point(10, 6);
+            this.BtnHistorialCompra.Name = "BtnHistorialCompra";
+            this.BtnHistorialCompra.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.BtnHistorialCompra.ShadowDecoration.Parent = this.BtnHistorialCompra;
+            this.BtnHistorialCompra.Size = new System.Drawing.Size(58, 52);
+            this.BtnHistorialCompra.TabIndex = 6;
+            // 
             // PnlAgregarCompra
             // 
             this.PnlAgregarCompra.Controls.Add(this.LblAgregarCompra);
@@ -577,6 +1240,37 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlAgregarCompra.ShadowDecoration.Parent = this.PnlAgregarCompra;
             this.PnlAgregarCompra.Size = new System.Drawing.Size(78, 67);
             this.PnlAgregarCompra.TabIndex = 10;
+            // 
+            // LblAgregarCompra
+            // 
+            this.LblAgregarCompra.BackColor = System.Drawing.Color.Transparent;
+            this.LblAgregarCompra.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
+            this.LblAgregarCompra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LblAgregarCompra.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblAgregarCompra.ForeColor = System.Drawing.Color.Black;
+            this.LblAgregarCompra.Location = new System.Drawing.Point(11, 61);
+            this.LblAgregarCompra.Name = "LblAgregarCompra";
+            this.LblAgregarCompra.Size = new System.Drawing.Size(55, 19);
+            this.LblAgregarCompra.TabIndex = 8;
+            this.LblAgregarCompra.Text = "Agregar";
+            // 
+            // BtnAgregarProducto
+            // 
+            this.BtnAgregarProducto.CheckedState.Parent = this.BtnAgregarProducto;
+            this.BtnAgregarProducto.CustomImages.Parent = this.BtnAgregarProducto;
+            this.BtnAgregarProducto.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BtnAgregarProducto.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnAgregarProducto.ForeColor = System.Drawing.Color.White;
+            this.BtnAgregarProducto.HoverState.Parent = this.BtnAgregarProducto;
+            this.BtnAgregarProducto.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.agregar_archivo;
+            this.BtnAgregarProducto.ImageSize = new System.Drawing.Size(35, 35);
+            this.BtnAgregarProducto.Location = new System.Drawing.Point(10, 6);
+            this.BtnAgregarProducto.Name = "BtnAgregarProducto";
+            this.BtnAgregarProducto.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.BtnAgregarProducto.ShadowDecoration.Parent = this.BtnAgregarProducto;
+            this.BtnAgregarProducto.Size = new System.Drawing.Size(58, 52);
+            this.BtnAgregarProducto.TabIndex = 6;
+            this.BtnAgregarProducto.Click += new System.EventHandler(this.BtnAgregarProducto_Click);
             // 
             // PnlCompra
             // 
@@ -600,6 +1294,39 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlPressCompra.Size = new System.Drawing.Size(78, 8);
             this.PnlPressCompra.TabIndex = 0;
             // 
+            // LblCompra
+            // 
+            this.LblCompra.BackColor = System.Drawing.Color.Transparent;
+            this.LblCompra.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
+            this.LblCompra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.LblCompra.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblCompra.ForeColor = System.Drawing.Color.Black;
+            this.LblCompra.Location = new System.Drawing.Point(10, 61);
+            this.LblCompra.Name = "LblCompra";
+            this.LblCompra.Size = new System.Drawing.Size(58, 19);
+            this.LblCompra.TabIndex = 8;
+            this.LblCompra.Text = "Compra";
+            // 
+            // BtnCompra
+            // 
+            this.BtnCompra.CheckedState.Parent = this.BtnCompra;
+            this.BtnCompra.CustomImages.Parent = this.BtnCompra;
+            this.BtnCompra.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.BtnCompra.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnCompra.ForeColor = System.Drawing.Color.White;
+            this.BtnCompra.HoverState.Parent = this.BtnCompra;
+            this.BtnCompra.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
+            this.BtnCompra.ImageSize = new System.Drawing.Size(35, 35);
+            this.BtnCompra.Location = new System.Drawing.Point(10, 6);
+            this.BtnCompra.Name = "BtnCompra";
+            this.BtnCompra.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.BtnCompra.ShadowDecoration.Parent = this.BtnCompra;
+            this.BtnCompra.Size = new System.Drawing.Size(58, 52);
+            this.BtnCompra.TabIndex = 6;
+            this.BtnCompra.Click += new System.EventHandler(this.BtnCompra_Click);
+            this.BtnCompra.MouseEnter += new System.EventHandler(this.BtnCompra_MouseEnter);
+            this.BtnCompra.MouseLeave += new System.EventHandler(this.BtnCompra_MouseLeave);
+            // 
             // PnlLogo
             // 
             this.PnlLogo.Controls.Add(this.PbLogoPequeño);
@@ -609,6 +1336,17 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlLogo.ShadowDecoration.Parent = this.PnlLogo;
             this.PnlLogo.Size = new System.Drawing.Size(92, 67);
             this.PnlLogo.TabIndex = 0;
+            // 
+            // PbLogoPequeño
+            // 
+            this.PbLogoPequeño.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.Logo;
+            this.PbLogoPequeño.Location = new System.Drawing.Point(0, 0);
+            this.PbLogoPequeño.Name = "PbLogoPequeño";
+            this.PbLogoPequeño.ShadowDecoration.Parent = this.PbLogoPequeño;
+            this.PbLogoPequeño.Size = new System.Drawing.Size(89, 84);
+            this.PbLogoPequeño.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbLogoPequeño.TabIndex = 0;
+            this.PbLogoPequeño.TabStop = false;
             // 
             // PnlBarraSuperior
             // 
@@ -675,6 +1413,18 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.LblUsuario.TabIndex = 4;
             this.LblUsuario.Text = "Usuario";
             // 
+            // PbUsuario
+            // 
+            this.PbUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.PbUsuario.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.gente;
+            this.PbUsuario.Location = new System.Drawing.Point(13, 4);
+            this.PbUsuario.Name = "PbUsuario";
+            this.PbUsuario.ShadowDecoration.Parent = this.PbUsuario;
+            this.PbUsuario.Size = new System.Drawing.Size(28, 21);
+            this.PbUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PbUsuario.TabIndex = 3;
+            this.PbUsuario.TabStop = false;
+            // 
             // BtnMinimizar
             // 
             this.BtnMinimizar.ControlBoxType = Guna.UI2.WinForms.Enums.ControlBoxType.MinimizeBox;
@@ -713,761 +1463,11 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.BtnSalir.Size = new System.Drawing.Size(45, 31);
             this.BtnSalir.TabIndex = 0;
             // 
-            // pictureLogoPrincipal
-            // 
-            this.pictureLogoPrincipal.BackColor = System.Drawing.Color.White;
-            this.pictureLogoPrincipal.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.Logo;
-            this.pictureLogoPrincipal.Location = new System.Drawing.Point(622, 96);
-            this.pictureLogoPrincipal.Name = "pictureLogoPrincipal";
-            this.pictureLogoPrincipal.ShadowDecoration.Parent = this.pictureLogoPrincipal;
-            this.pictureLogoPrincipal.Size = new System.Drawing.Size(376, 332);
-            this.pictureLogoPrincipal.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureLogoPrincipal.TabIndex = 0;
-            this.pictureLogoPrincipal.TabStop = false;
-            // 
-            // LblEmpleado
-            // 
-            this.LblEmpleado.BackColor = System.Drawing.Color.Transparent;
-            this.LblEmpleado.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
-            this.LblEmpleado.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.LblEmpleado.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblEmpleado.ForeColor = System.Drawing.Color.Black;
-            this.LblEmpleado.Location = new System.Drawing.Point(11, 61);
-            this.LblEmpleado.Name = "LblEmpleado";
-            this.LblEmpleado.Size = new System.Drawing.Size(57, 19);
-            this.LblEmpleado.TabIndex = 8;
-            this.LblEmpleado.Text = "Personal";
-            // 
-            // BtnPersonal
-            // 
-            this.BtnPersonal.CheckedState.Parent = this.BtnPersonal;
-            this.BtnPersonal.CustomImages.Parent = this.BtnPersonal;
-            this.BtnPersonal.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.BtnPersonal.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnPersonal.ForeColor = System.Drawing.Color.White;
-            this.BtnPersonal.HoverState.Parent = this.BtnPersonal;
-            this.BtnPersonal.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.empleado;
-            this.BtnPersonal.ImageSize = new System.Drawing.Size(35, 35);
-            this.BtnPersonal.Location = new System.Drawing.Point(10, 6);
-            this.BtnPersonal.Name = "BtnPersonal";
-            this.BtnPersonal.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BtnPersonal.ShadowDecoration.Parent = this.BtnPersonal;
-            this.BtnPersonal.Size = new System.Drawing.Size(58, 52);
-            this.BtnPersonal.TabIndex = 6;
-            this.BtnPersonal.Click += new System.EventHandler(this.BtnPersonal_Click);
-            // 
-            // LblProveedor
-            // 
-            this.LblProveedor.BackColor = System.Drawing.Color.Transparent;
-            this.LblProveedor.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
-            this.LblProveedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.LblProveedor.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblProveedor.ForeColor = System.Drawing.Color.Black;
-            this.LblProveedor.Location = new System.Drawing.Point(4, 61);
-            this.LblProveedor.Name = "LblProveedor";
-            this.LblProveedor.Size = new System.Drawing.Size(70, 19);
-            this.LblProveedor.TabIndex = 8;
-            this.LblProveedor.Text = "Proveedor";
-            // 
-            // BtnProveedor
-            // 
-            this.BtnProveedor.CheckedState.Parent = this.BtnProveedor;
-            this.BtnProveedor.CustomImages.Parent = this.BtnProveedor;
-            this.BtnProveedor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.BtnProveedor.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnProveedor.ForeColor = System.Drawing.Color.White;
-            this.BtnProveedor.HoverState.Parent = this.BtnProveedor;
-            this.BtnProveedor.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.proveedor;
-            this.BtnProveedor.ImageSize = new System.Drawing.Size(35, 35);
-            this.BtnProveedor.Location = new System.Drawing.Point(10, 6);
-            this.BtnProveedor.Name = "BtnProveedor";
-            this.BtnProveedor.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BtnProveedor.ShadowDecoration.Parent = this.BtnProveedor;
-            this.BtnProveedor.Size = new System.Drawing.Size(58, 52);
-            this.BtnProveedor.TabIndex = 6;
-            this.BtnProveedor.Click += new System.EventHandler(this.BtnProveedor_Click);
-            // 
-            // LblCliente
-            // 
-            this.LblCliente.BackColor = System.Drawing.Color.Transparent;
-            this.LblCliente.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
-            this.LblCliente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.LblCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCliente.ForeColor = System.Drawing.Color.Black;
-            this.LblCliente.Location = new System.Drawing.Point(15, 61);
-            this.LblCliente.Name = "LblCliente";
-            this.LblCliente.Size = new System.Drawing.Size(49, 19);
-            this.LblCliente.TabIndex = 8;
-            this.LblCliente.Text = "Cliente";
-            // 
-            // BtnCliente
-            // 
-            this.BtnCliente.CheckedState.Parent = this.BtnCliente;
-            this.BtnCliente.CustomImages.Parent = this.BtnCliente;
-            this.BtnCliente.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.BtnCliente.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnCliente.ForeColor = System.Drawing.Color.White;
-            this.BtnCliente.HoverState.Parent = this.BtnCliente;
-            this.BtnCliente.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.consumidor;
-            this.BtnCliente.ImageSize = new System.Drawing.Size(40, 40);
-            this.BtnCliente.Location = new System.Drawing.Point(10, 6);
-            this.BtnCliente.Name = "BtnCliente";
-            this.BtnCliente.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BtnCliente.ShadowDecoration.Parent = this.BtnCliente;
-            this.BtnCliente.Size = new System.Drawing.Size(58, 52);
-            this.BtnCliente.TabIndex = 6;
-            this.BtnCliente.Click += new System.EventHandler(this.BtnCliente_Click);
-            // 
-            // LblPersona
-            // 
-            this.LblPersona.BackColor = System.Drawing.Color.Transparent;
-            this.LblPersona.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
-            this.LblPersona.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.LblPersona.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblPersona.ForeColor = System.Drawing.Color.Black;
-            this.LblPersona.Location = new System.Drawing.Point(12, 61);
-            this.LblPersona.Name = "LblPersona";
-            this.LblPersona.Size = new System.Drawing.Size(54, 19);
-            this.LblPersona.TabIndex = 8;
-            this.LblPersona.Text = "Persona";
-            // 
-            // BtnPersona
-            // 
-            this.BtnPersona.CheckedState.Parent = this.BtnPersona;
-            this.BtnPersona.CustomImages.Parent = this.BtnPersona;
-            this.BtnPersona.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.BtnPersona.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnPersona.ForeColor = System.Drawing.Color.White;
-            this.BtnPersona.HoverState.Parent = this.BtnPersona;
-            this.BtnPersona.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.grupo_de_chat;
-            this.BtnPersona.ImageSize = new System.Drawing.Size(45, 45);
-            this.BtnPersona.Location = new System.Drawing.Point(10, 6);
-            this.BtnPersona.Name = "BtnPersona";
-            this.BtnPersona.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BtnPersona.ShadowDecoration.Parent = this.BtnPersona;
-            this.BtnPersona.Size = new System.Drawing.Size(58, 52);
-            this.BtnPersona.TabIndex = 6;
-            this.BtnPersona.Click += new System.EventHandler(this.BtnPersona_Click);
-            this.BtnPersona.MouseEnter += new System.EventHandler(this.BtnPersona_MouseEnter);
-            this.BtnPersona.MouseLeave += new System.EventHandler(this.BtnPersona_MouseLeave);
-            // 
-            // LblCreditosPendientes
-            // 
-            this.LblCreditosPendientes.BackColor = System.Drawing.Color.Transparent;
-            this.LblCreditosPendientes.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
-            this.LblCreditosPendientes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.LblCreditosPendientes.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCreditosPendientes.ForeColor = System.Drawing.Color.Black;
-            this.LblCreditosPendientes.Location = new System.Drawing.Point(1, 61);
-            this.LblCreditosPendientes.Name = "LblCreditosPendientes";
-            this.LblCreditosPendientes.Size = new System.Drawing.Size(77, 19);
-            this.LblCreditosPendientes.TabIndex = 8;
-            this.LblCreditosPendientes.Text = "Prendientes";
-            // 
-            // btnCreditoPendiente
-            // 
-            this.btnCreditoPendiente.CheckedState.Parent = this.btnCreditoPendiente;
-            this.btnCreditoPendiente.CustomImages.Parent = this.btnCreditoPendiente;
-            this.btnCreditoPendiente.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.btnCreditoPendiente.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnCreditoPendiente.ForeColor = System.Drawing.Color.White;
-            this.btnCreditoPendiente.HoverState.Parent = this.btnCreditoPendiente;
-            this.btnCreditoPendiente.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.pendiente;
-            this.btnCreditoPendiente.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnCreditoPendiente.Location = new System.Drawing.Point(10, 6);
-            this.btnCreditoPendiente.Name = "btnCreditoPendiente";
-            this.btnCreditoPendiente.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnCreditoPendiente.ShadowDecoration.Parent = this.btnCreditoPendiente;
-            this.btnCreditoPendiente.Size = new System.Drawing.Size(58, 52);
-            this.btnCreditoPendiente.TabIndex = 6;
-            // 
-            // LblhistorialCredito
-            // 
-            this.LblhistorialCredito.BackColor = System.Drawing.Color.Transparent;
-            this.LblhistorialCredito.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
-            this.LblhistorialCredito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.LblhistorialCredito.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblhistorialCredito.ForeColor = System.Drawing.Color.Black;
-            this.LblhistorialCredito.Location = new System.Drawing.Point(12, 61);
-            this.LblhistorialCredito.Name = "LblhistorialCredito";
-            this.LblhistorialCredito.Size = new System.Drawing.Size(53, 19);
-            this.LblhistorialCredito.TabIndex = 8;
-            this.LblhistorialCredito.Text = "Historial";
-            // 
-            // BtnHistorialCredito
-            // 
-            this.BtnHistorialCredito.CheckedState.Parent = this.BtnHistorialCredito;
-            this.BtnHistorialCredito.CustomImages.Parent = this.BtnHistorialCredito;
-            this.BtnHistorialCredito.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.BtnHistorialCredito.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnHistorialCredito.ForeColor = System.Drawing.Color.White;
-            this.BtnHistorialCredito.HoverState.Parent = this.BtnHistorialCredito;
-            this.BtnHistorialCredito.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.historial_medico;
-            this.BtnHistorialCredito.ImageSize = new System.Drawing.Size(35, 35);
-            this.BtnHistorialCredito.Location = new System.Drawing.Point(10, 6);
-            this.BtnHistorialCredito.Name = "BtnHistorialCredito";
-            this.BtnHistorialCredito.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BtnHistorialCredito.ShadowDecoration.Parent = this.BtnHistorialCredito;
-            this.BtnHistorialCredito.Size = new System.Drawing.Size(58, 52);
-            this.BtnHistorialCredito.TabIndex = 6;
-            // 
-            // LblNuevoCredito
-            // 
-            this.LblNuevoCredito.BackColor = System.Drawing.Color.Transparent;
-            this.LblNuevoCredito.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
-            this.LblNuevoCredito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.LblNuevoCredito.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNuevoCredito.ForeColor = System.Drawing.Color.Black;
-            this.LblNuevoCredito.Location = new System.Drawing.Point(15, 61);
-            this.LblNuevoCredito.Name = "LblNuevoCredito";
-            this.LblNuevoCredito.Size = new System.Drawing.Size(46, 19);
-            this.LblNuevoCredito.TabIndex = 8;
-            this.LblNuevoCredito.Text = "Nuevo";
-            // 
-            // BtnNuevoCredito
-            // 
-            this.BtnNuevoCredito.CheckedState.Parent = this.BtnNuevoCredito;
-            this.BtnNuevoCredito.CustomImages.Parent = this.BtnNuevoCredito;
-            this.BtnNuevoCredito.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.BtnNuevoCredito.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnNuevoCredito.ForeColor = System.Drawing.Color.White;
-            this.BtnNuevoCredito.HoverState.Parent = this.BtnNuevoCredito;
-            this.BtnNuevoCredito.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.agregar_archivo;
-            this.BtnNuevoCredito.ImageSize = new System.Drawing.Size(35, 35);
-            this.BtnNuevoCredito.Location = new System.Drawing.Point(10, 6);
-            this.BtnNuevoCredito.Name = "BtnNuevoCredito";
-            this.BtnNuevoCredito.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BtnNuevoCredito.ShadowDecoration.Parent = this.BtnNuevoCredito;
-            this.BtnNuevoCredito.Size = new System.Drawing.Size(58, 52);
-            this.BtnNuevoCredito.TabIndex = 6;
-            // 
-            // LblCredito
-            // 
-            this.LblCredito.BackColor = System.Drawing.Color.Transparent;
-            this.LblCredito.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
-            this.LblCredito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.LblCredito.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCredito.ForeColor = System.Drawing.Color.Black;
-            this.LblCredito.Location = new System.Drawing.Point(13, 61);
-            this.LblCredito.Name = "LblCredito";
-            this.LblCredito.Size = new System.Drawing.Size(52, 19);
-            this.LblCredito.TabIndex = 8;
-            this.LblCredito.Text = "Credito";
-            // 
-            // BtnCredito
-            // 
-            this.BtnCredito.CheckedState.Parent = this.BtnCredito;
-            this.BtnCredito.CustomImages.Parent = this.BtnCredito;
-            this.BtnCredito.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.BtnCredito.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnCredito.ForeColor = System.Drawing.Color.White;
-            this.BtnCredito.HoverState.Parent = this.BtnCredito;
-            this.BtnCredito.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.tarjeta_de_credito;
-            this.BtnCredito.ImageSize = new System.Drawing.Size(35, 35);
-            this.BtnCredito.Location = new System.Drawing.Point(10, 6);
-            this.BtnCredito.Name = "BtnCredito";
-            this.BtnCredito.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BtnCredito.ShadowDecoration.Parent = this.BtnCredito;
-            this.BtnCredito.Size = new System.Drawing.Size(58, 52);
-            this.BtnCredito.TabIndex = 6;
-            this.BtnCredito.Click += new System.EventHandler(this.BtnCredito_Click);
-            this.BtnCredito.MouseEnter += new System.EventHandler(this.BtnCredito_MouseEnter);
-            this.BtnCredito.MouseLeave += new System.EventHandler(this.BtnCredito_MouseLeave);
-            // 
-            // LblNotas
-            // 
-            this.LblNotas.BackColor = System.Drawing.Color.Transparent;
-            this.LblNotas.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
-            this.LblNotas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.LblNotas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNotas.ForeColor = System.Drawing.Color.Black;
-            this.LblNotas.Location = new System.Drawing.Point(17, 61);
-            this.LblNotas.Name = "LblNotas";
-            this.LblNotas.Size = new System.Drawing.Size(41, 19);
-            this.LblNotas.TabIndex = 8;
-            this.LblNotas.Text = "Notas";
-            // 
-            // BtnNotas
-            // 
-            this.BtnNotas.CheckedState.Parent = this.BtnNotas;
-            this.BtnNotas.CustomImages.Parent = this.BtnNotas;
-            this.BtnNotas.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.BtnNotas.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnNotas.ForeColor = System.Drawing.Color.White;
-            this.BtnNotas.HoverState.Parent = this.BtnNotas;
-            this.BtnNotas.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.notas;
-            this.BtnNotas.ImageSize = new System.Drawing.Size(35, 35);
-            this.BtnNotas.Location = new System.Drawing.Point(10, 6);
-            this.BtnNotas.Name = "BtnNotas";
-            this.BtnNotas.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BtnNotas.ShadowDecoration.Parent = this.BtnNotas;
-            this.BtnNotas.Size = new System.Drawing.Size(58, 52);
-            this.BtnNotas.TabIndex = 6;
-            // 
-            // LblSaldo
-            // 
-            this.LblSaldo.BackColor = System.Drawing.Color.Transparent;
-            this.LblSaldo.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
-            this.LblSaldo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.LblSaldo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblSaldo.ForeColor = System.Drawing.Color.Black;
-            this.LblSaldo.Location = new System.Drawing.Point(20, 61);
-            this.LblSaldo.Name = "LblSaldo";
-            this.LblSaldo.Size = new System.Drawing.Size(39, 19);
-            this.LblSaldo.TabIndex = 8;
-            this.LblSaldo.Text = "Saldo";
-            // 
-            // BtnSaldo
-            // 
-            this.BtnSaldo.CheckedState.Parent = this.BtnSaldo;
-            this.BtnSaldo.CustomImages.Parent = this.BtnSaldo;
-            this.BtnSaldo.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.BtnSaldo.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnSaldo.ForeColor = System.Drawing.Color.White;
-            this.BtnSaldo.HoverState.Parent = this.BtnSaldo;
-            this.BtnSaldo.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.hoja_de_balance;
-            this.BtnSaldo.ImageSize = new System.Drawing.Size(35, 35);
-            this.BtnSaldo.Location = new System.Drawing.Point(10, 6);
-            this.BtnSaldo.Name = "BtnSaldo";
-            this.BtnSaldo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BtnSaldo.ShadowDecoration.Parent = this.BtnSaldo;
-            this.BtnSaldo.Size = new System.Drawing.Size(58, 52);
-            this.BtnSaldo.TabIndex = 6;
-            // 
-            // LblMovimientos
-            // 
-            this.LblMovimientos.BackColor = System.Drawing.Color.Transparent;
-            this.LblMovimientos.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
-            this.LblMovimientos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.LblMovimientos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMovimientos.ForeColor = System.Drawing.Color.Black;
-            this.LblMovimientos.Location = new System.Drawing.Point(6, 61);
-            this.LblMovimientos.Name = "LblMovimientos";
-            this.LblMovimientos.Size = new System.Drawing.Size(66, 19);
-            this.LblMovimientos.TabIndex = 8;
-            this.LblMovimientos.Text = "Actividad";
-            // 
-            // BtnMovimientos
-            // 
-            this.BtnMovimientos.CheckedState.Parent = this.BtnMovimientos;
-            this.BtnMovimientos.CustomImages.Parent = this.BtnMovimientos;
-            this.BtnMovimientos.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.BtnMovimientos.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnMovimientos.ForeColor = System.Drawing.Color.White;
-            this.BtnMovimientos.HoverState.Parent = this.BtnMovimientos;
-            this.BtnMovimientos.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.dinero;
-            this.BtnMovimientos.ImageSize = new System.Drawing.Size(35, 35);
-            this.BtnMovimientos.Location = new System.Drawing.Point(10, 6);
-            this.BtnMovimientos.Name = "BtnMovimientos";
-            this.BtnMovimientos.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BtnMovimientos.ShadowDecoration.Parent = this.BtnMovimientos;
-            this.BtnMovimientos.Size = new System.Drawing.Size(58, 52);
-            this.BtnMovimientos.TabIndex = 6;
-            // 
-            // LblCaja
-            // 
-            this.LblCaja.BackColor = System.Drawing.Color.Transparent;
-            this.LblCaja.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
-            this.LblCaja.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.LblCaja.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCaja.ForeColor = System.Drawing.Color.Black;
-            this.LblCaja.Location = new System.Drawing.Point(20, 61);
-            this.LblCaja.Name = "LblCaja";
-            this.LblCaja.Size = new System.Drawing.Size(35, 19);
-            this.LblCaja.TabIndex = 8;
-            this.LblCaja.Text = "Caja";
-            // 
-            // BtnCaja
-            // 
-            this.BtnCaja.CheckedState.Parent = this.BtnCaja;
-            this.BtnCaja.CustomImages.Parent = this.BtnCaja;
-            this.BtnCaja.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.BtnCaja.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnCaja.ForeColor = System.Drawing.Color.White;
-            this.BtnCaja.HoverState.Parent = this.BtnCaja;
-            this.BtnCaja.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.caja_registradora;
-            this.BtnCaja.ImageSize = new System.Drawing.Size(35, 35);
-            this.BtnCaja.Location = new System.Drawing.Point(10, 6);
-            this.BtnCaja.Name = "BtnCaja";
-            this.BtnCaja.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BtnCaja.ShadowDecoration.Parent = this.BtnCaja;
-            this.BtnCaja.Size = new System.Drawing.Size(58, 52);
-            this.BtnCaja.TabIndex = 6;
-            this.BtnCaja.Click += new System.EventHandler(this.BtnCaja_Click);
-            this.BtnCaja.MouseEnter += new System.EventHandler(this.BtnCaja_MouseEnter);
-            this.BtnCaja.MouseLeave += new System.EventHandler(this.BtnCaja_MouseLeave);
-            // 
-            // LblDevoluciones
-            // 
-            this.LblDevoluciones.BackColor = System.Drawing.Color.Transparent;
-            this.LblDevoluciones.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
-            this.LblDevoluciones.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.LblDevoluciones.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDevoluciones.ForeColor = System.Drawing.Color.Black;
-            this.LblDevoluciones.Location = new System.Drawing.Point(2, 61);
-            this.LblDevoluciones.Name = "LblDevoluciones";
-            this.LblDevoluciones.Size = new System.Drawing.Size(77, 19);
-            this.LblDevoluciones.TabIndex = 8;
-            this.LblDevoluciones.Text = "Devolución";
-            // 
-            // BtnDevoluciones
-            // 
-            this.BtnDevoluciones.CheckedState.Parent = this.BtnDevoluciones;
-            this.BtnDevoluciones.CustomImages.Parent = this.BtnDevoluciones;
-            this.BtnDevoluciones.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.BtnDevoluciones.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnDevoluciones.ForeColor = System.Drawing.Color.White;
-            this.BtnDevoluciones.HoverState.Parent = this.BtnDevoluciones;
-            this.BtnDevoluciones.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.devolucion_de_producto;
-            this.BtnDevoluciones.ImageSize = new System.Drawing.Size(35, 35);
-            this.BtnDevoluciones.Location = new System.Drawing.Point(10, 6);
-            this.BtnDevoluciones.Name = "BtnDevoluciones";
-            this.BtnDevoluciones.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BtnDevoluciones.ShadowDecoration.Parent = this.BtnDevoluciones;
-            this.BtnDevoluciones.Size = new System.Drawing.Size(58, 52);
-            this.BtnDevoluciones.TabIndex = 6;
-            // 
-            // LblHistorialVentas
-            // 
-            this.LblHistorialVentas.BackColor = System.Drawing.Color.Transparent;
-            this.LblHistorialVentas.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
-            this.LblHistorialVentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.LblHistorialVentas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblHistorialVentas.ForeColor = System.Drawing.Color.Black;
-            this.LblHistorialVentas.Location = new System.Drawing.Point(12, 61);
-            this.LblHistorialVentas.Name = "LblHistorialVentas";
-            this.LblHistorialVentas.Size = new System.Drawing.Size(53, 19);
-            this.LblHistorialVentas.TabIndex = 8;
-            this.LblHistorialVentas.Text = "Historial";
-            // 
-            // BtnHistorialVentas
-            // 
-            this.BtnHistorialVentas.CheckedState.Parent = this.BtnHistorialVentas;
-            this.BtnHistorialVentas.CustomImages.Parent = this.BtnHistorialVentas;
-            this.BtnHistorialVentas.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.BtnHistorialVentas.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnHistorialVentas.ForeColor = System.Drawing.Color.White;
-            this.BtnHistorialVentas.HoverState.Parent = this.BtnHistorialVentas;
-            this.BtnHistorialVentas.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.historial_medico;
-            this.BtnHistorialVentas.ImageSize = new System.Drawing.Size(35, 35);
-            this.BtnHistorialVentas.Location = new System.Drawing.Point(10, 6);
-            this.BtnHistorialVentas.Name = "BtnHistorialVentas";
-            this.BtnHistorialVentas.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BtnHistorialVentas.ShadowDecoration.Parent = this.BtnHistorialVentas;
-            this.BtnHistorialVentas.Size = new System.Drawing.Size(58, 52);
-            this.BtnHistorialVentas.TabIndex = 6;
-            // 
-            // LblNuevaVenta
-            // 
-            this.LblNuevaVenta.BackColor = System.Drawing.Color.Transparent;
-            this.LblNuevaVenta.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
-            this.LblNuevaVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.LblNuevaVenta.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblNuevaVenta.ForeColor = System.Drawing.Color.Black;
-            this.LblNuevaVenta.Location = new System.Drawing.Point(16, 61);
-            this.LblNuevaVenta.Name = "LblNuevaVenta";
-            this.LblNuevaVenta.Size = new System.Drawing.Size(44, 19);
-            this.LblNuevaVenta.TabIndex = 8;
-            this.LblNuevaVenta.Text = "nueva";
-            // 
-            // BtnNuevaVenta
-            // 
-            this.BtnNuevaVenta.CheckedState.Parent = this.BtnNuevaVenta;
-            this.BtnNuevaVenta.CustomImages.Parent = this.BtnNuevaVenta;
-            this.BtnNuevaVenta.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.BtnNuevaVenta.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnNuevaVenta.ForeColor = System.Drawing.Color.White;
-            this.BtnNuevaVenta.HoverState.Parent = this.BtnNuevaVenta;
-            this.BtnNuevaVenta.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.agregar_archivo;
-            this.BtnNuevaVenta.ImageSize = new System.Drawing.Size(35, 35);
-            this.BtnNuevaVenta.Location = new System.Drawing.Point(10, 6);
-            this.BtnNuevaVenta.Name = "BtnNuevaVenta";
-            this.BtnNuevaVenta.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BtnNuevaVenta.ShadowDecoration.Parent = this.BtnNuevaVenta;
-            this.BtnNuevaVenta.Size = new System.Drawing.Size(58, 52);
-            this.BtnNuevaVenta.TabIndex = 6;
-            this.BtnNuevaVenta.Click += new System.EventHandler(this.BtnNuevaVenta_Click);
-            // 
-            // LblVentas
-            // 
-            this.LblVentas.BackColor = System.Drawing.Color.Transparent;
-            this.LblVentas.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
-            this.LblVentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.LblVentas.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblVentas.ForeColor = System.Drawing.Color.Black;
-            this.LblVentas.Location = new System.Drawing.Point(14, 61);
-            this.LblVentas.Name = "LblVentas";
-            this.LblVentas.Size = new System.Drawing.Size(47, 19);
-            this.LblVentas.TabIndex = 8;
-            this.LblVentas.Text = "Ventas";
-            // 
-            // BtnVentas
-            // 
-            this.BtnVentas.CheckedState.Parent = this.BtnVentas;
-            this.BtnVentas.CustomImages.Parent = this.BtnVentas;
-            this.BtnVentas.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.BtnVentas.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnVentas.ForeColor = System.Drawing.Color.White;
-            this.BtnVentas.HoverState.Parent = this.BtnVentas;
-            this.BtnVentas.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.comprar;
-            this.BtnVentas.ImageSize = new System.Drawing.Size(35, 35);
-            this.BtnVentas.Location = new System.Drawing.Point(10, 6);
-            this.BtnVentas.Name = "BtnVentas";
-            this.BtnVentas.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BtnVentas.ShadowDecoration.Parent = this.BtnVentas;
-            this.BtnVentas.Size = new System.Drawing.Size(58, 52);
-            this.BtnVentas.TabIndex = 6;
-            this.BtnVentas.Click += new System.EventHandler(this.BtnVentas_Click);
-            this.BtnVentas.MouseEnter += new System.EventHandler(this.BtnVentas_MouseEnter);
-            this.BtnVentas.MouseLeave += new System.EventHandler(this.BtnVentas_MouseLeave);
-            // 
-            // LblMostrarInventario
-            // 
-            this.LblMostrarInventario.BackColor = System.Drawing.Color.Transparent;
-            this.LblMostrarInventario.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
-            this.LblMostrarInventario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.LblMostrarInventario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMostrarInventario.ForeColor = System.Drawing.Color.Black;
-            this.LblMostrarInventario.Location = new System.Drawing.Point(4, 61);
-            this.LblMostrarInventario.Name = "LblMostrarInventario";
-            this.LblMostrarInventario.Size = new System.Drawing.Size(68, 19);
-            this.LblMostrarInventario.TabIndex = 8;
-            this.LblMostrarInventario.Text = "Productos";
-            // 
-            // BtnMostarInventario
-            // 
-            this.BtnMostarInventario.CheckedState.Parent = this.BtnMostarInventario;
-            this.BtnMostarInventario.CustomImages.Parent = this.BtnMostarInventario;
-            this.BtnMostarInventario.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.BtnMostarInventario.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnMostarInventario.ForeColor = System.Drawing.Color.White;
-            this.BtnMostarInventario.HoverState.Parent = this.BtnMostarInventario;
-            this.BtnMostarInventario.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.historial_medico;
-            this.BtnMostarInventario.ImageSize = new System.Drawing.Size(35, 35);
-            this.BtnMostarInventario.Location = new System.Drawing.Point(10, 6);
-            this.BtnMostarInventario.Name = "BtnMostarInventario";
-            this.BtnMostarInventario.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BtnMostarInventario.ShadowDecoration.Parent = this.BtnMostarInventario;
-            this.BtnMostarInventario.Size = new System.Drawing.Size(58, 52);
-            this.BtnMostarInventario.TabIndex = 6;
-            this.BtnMostarInventario.Click += new System.EventHandler(this.BtnMostarInventario_Click);
-            // 
-            // LblAgregarInventario
-            // 
-            this.LblAgregarInventario.BackColor = System.Drawing.Color.Transparent;
-            this.LblAgregarInventario.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
-            this.LblAgregarInventario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.LblAgregarInventario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblAgregarInventario.ForeColor = System.Drawing.Color.Black;
-            this.LblAgregarInventario.Location = new System.Drawing.Point(11, 61);
-            this.LblAgregarInventario.Name = "LblAgregarInventario";
-            this.LblAgregarInventario.Size = new System.Drawing.Size(55, 19);
-            this.LblAgregarInventario.TabIndex = 8;
-            this.LblAgregarInventario.Text = "Agregar";
-            // 
-            // BtnAgregarInventario
-            // 
-            this.BtnAgregarInventario.CheckedState.Parent = this.BtnAgregarInventario;
-            this.BtnAgregarInventario.CustomImages.Parent = this.BtnAgregarInventario;
-            this.BtnAgregarInventario.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.BtnAgregarInventario.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnAgregarInventario.ForeColor = System.Drawing.Color.White;
-            this.BtnAgregarInventario.HoverState.Parent = this.BtnAgregarInventario;
-            this.BtnAgregarInventario.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.agregar_archivo;
-            this.BtnAgregarInventario.ImageSize = new System.Drawing.Size(35, 35);
-            this.BtnAgregarInventario.Location = new System.Drawing.Point(10, 6);
-            this.BtnAgregarInventario.Name = "BtnAgregarInventario";
-            this.BtnAgregarInventario.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BtnAgregarInventario.ShadowDecoration.Parent = this.BtnAgregarInventario;
-            this.BtnAgregarInventario.Size = new System.Drawing.Size(58, 52);
-            this.BtnAgregarInventario.TabIndex = 6;
-            // 
-            // LblInventario
-            // 
-            this.LblInventario.BackColor = System.Drawing.Color.Transparent;
-            this.LblInventario.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
-            this.LblInventario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.LblInventario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblInventario.ForeColor = System.Drawing.Color.Black;
-            this.LblInventario.Location = new System.Drawing.Point(4, 61);
-            this.LblInventario.Name = "LblInventario";
-            this.LblInventario.Size = new System.Drawing.Size(68, 19);
-            this.LblInventario.TabIndex = 8;
-            this.LblInventario.Text = "Inventario";
-            // 
-            // BtnInventario
-            // 
-            this.BtnInventario.CheckedState.Parent = this.BtnInventario;
-            this.BtnInventario.CustomImages.Parent = this.BtnInventario;
-            this.BtnInventario.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.BtnInventario.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnInventario.ForeColor = System.Drawing.Color.White;
-            this.BtnInventario.HoverState.Parent = this.BtnInventario;
-            this.BtnInventario.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.inventario;
-            this.BtnInventario.ImageSize = new System.Drawing.Size(35, 35);
-            this.BtnInventario.Location = new System.Drawing.Point(10, 6);
-            this.BtnInventario.Name = "BtnInventario";
-            this.BtnInventario.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BtnInventario.ShadowDecoration.Parent = this.BtnInventario;
-            this.BtnInventario.Size = new System.Drawing.Size(58, 52);
-            this.BtnInventario.TabIndex = 6;
-            this.BtnInventario.Click += new System.EventHandler(this.BtnInventario_Click);
-            this.BtnInventario.MouseEnter += new System.EventHandler(this.BtnInventario_MouseEnter);
-            this.BtnInventario.MouseLeave += new System.EventHandler(this.BtnInventario_MouseLeave);
-            // 
-            // LblDevolucionesCompra
-            // 
-            this.LblDevolucionesCompra.BackColor = System.Drawing.Color.Transparent;
-            this.LblDevolucionesCompra.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
-            this.LblDevolucionesCompra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.LblDevolucionesCompra.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblDevolucionesCompra.ForeColor = System.Drawing.Color.Black;
-            this.LblDevolucionesCompra.Location = new System.Drawing.Point(0, 61);
-            this.LblDevolucionesCompra.Name = "LblDevolucionesCompra";
-            this.LblDevolucionesCompra.Size = new System.Drawing.Size(77, 19);
-            this.LblDevolucionesCompra.TabIndex = 8;
-            this.LblDevolucionesCompra.Text = "Devolución";
-            // 
-            // BtnDevolucionCompra
-            // 
-            this.BtnDevolucionCompra.CheckedState.Parent = this.BtnDevolucionCompra;
-            this.BtnDevolucionCompra.CustomImages.Parent = this.BtnDevolucionCompra;
-            this.BtnDevolucionCompra.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.BtnDevolucionCompra.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnDevolucionCompra.ForeColor = System.Drawing.Color.White;
-            this.BtnDevolucionCompra.HoverState.Parent = this.BtnDevolucionCompra;
-            this.BtnDevolucionCompra.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.devolucion_de_producto;
-            this.BtnDevolucionCompra.ImageSize = new System.Drawing.Size(35, 35);
-            this.BtnDevolucionCompra.Location = new System.Drawing.Point(10, 6);
-            this.BtnDevolucionCompra.Name = "BtnDevolucionCompra";
-            this.BtnDevolucionCompra.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BtnDevolucionCompra.ShadowDecoration.Parent = this.BtnDevolucionCompra;
-            this.BtnDevolucionCompra.Size = new System.Drawing.Size(58, 52);
-            this.BtnDevolucionCompra.TabIndex = 6;
-            this.BtnDevolucionCompra.Click += new System.EventHandler(this.BtnDevolucionCompra_Click);
-            // 
-            // LblHistorialCompra
-            // 
-            this.LblHistorialCompra.BackColor = System.Drawing.Color.Transparent;
-            this.LblHistorialCompra.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
-            this.LblHistorialCompra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.LblHistorialCompra.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblHistorialCompra.ForeColor = System.Drawing.Color.Black;
-            this.LblHistorialCompra.Location = new System.Drawing.Point(12, 61);
-            this.LblHistorialCompra.Name = "LblHistorialCompra";
-            this.LblHistorialCompra.Size = new System.Drawing.Size(53, 19);
-            this.LblHistorialCompra.TabIndex = 8;
-            this.LblHistorialCompra.Text = "Historial";
-            // 
-            // BtnHistorialCompra
-            // 
-            this.BtnHistorialCompra.CheckedState.Parent = this.BtnHistorialCompra;
-            this.BtnHistorialCompra.CustomImages.Parent = this.BtnHistorialCompra;
-            this.BtnHistorialCompra.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.BtnHistorialCompra.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnHistorialCompra.ForeColor = System.Drawing.Color.White;
-            this.BtnHistorialCompra.HoverState.Parent = this.BtnHistorialCompra;
-            this.BtnHistorialCompra.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.historial_medico_1_;
-            this.BtnHistorialCompra.ImageSize = new System.Drawing.Size(35, 35);
-            this.BtnHistorialCompra.Location = new System.Drawing.Point(10, 6);
-            this.BtnHistorialCompra.Name = "BtnHistorialCompra";
-            this.BtnHistorialCompra.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BtnHistorialCompra.ShadowDecoration.Parent = this.BtnHistorialCompra;
-            this.BtnHistorialCompra.Size = new System.Drawing.Size(58, 52);
-            this.BtnHistorialCompra.TabIndex = 6;
-            // 
-            // LblAgregarCompra
-            // 
-            this.LblAgregarCompra.BackColor = System.Drawing.Color.Transparent;
-            this.LblAgregarCompra.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
-            this.LblAgregarCompra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.LblAgregarCompra.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblAgregarCompra.ForeColor = System.Drawing.Color.Black;
-            this.LblAgregarCompra.Location = new System.Drawing.Point(11, 61);
-            this.LblAgregarCompra.Name = "LblAgregarCompra";
-            this.LblAgregarCompra.Size = new System.Drawing.Size(55, 19);
-            this.LblAgregarCompra.TabIndex = 8;
-            this.LblAgregarCompra.Text = "Agregar";
-            // 
-            // BtnAgregarProducto
-            // 
-            this.BtnAgregarProducto.CheckedState.Parent = this.BtnAgregarProducto;
-            this.BtnAgregarProducto.CustomImages.Parent = this.BtnAgregarProducto;
-            this.BtnAgregarProducto.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.BtnAgregarProducto.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnAgregarProducto.ForeColor = System.Drawing.Color.White;
-            this.BtnAgregarProducto.HoverState.Parent = this.BtnAgregarProducto;
-            this.BtnAgregarProducto.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.agregar_archivo;
-            this.BtnAgregarProducto.ImageSize = new System.Drawing.Size(35, 35);
-            this.BtnAgregarProducto.Location = new System.Drawing.Point(10, 6);
-            this.BtnAgregarProducto.Name = "BtnAgregarProducto";
-            this.BtnAgregarProducto.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BtnAgregarProducto.ShadowDecoration.Parent = this.BtnAgregarProducto;
-            this.BtnAgregarProducto.Size = new System.Drawing.Size(58, 52);
-            this.BtnAgregarProducto.TabIndex = 6;
-            this.BtnAgregarProducto.Click += new System.EventHandler(this.BtnAgregarProducto_Click);
-            // 
-            // LblCompra
-            // 
-            this.LblCompra.BackColor = System.Drawing.Color.Transparent;
-            this.LblCompra.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
-            this.LblCompra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.LblCompra.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblCompra.ForeColor = System.Drawing.Color.Black;
-            this.LblCompra.Location = new System.Drawing.Point(10, 61);
-            this.LblCompra.Name = "LblCompra";
-            this.LblCompra.Size = new System.Drawing.Size(58, 19);
-            this.LblCompra.TabIndex = 8;
-            this.LblCompra.Text = "Compra";
-            // 
-            // BtnCompra
-            // 
-            this.BtnCompra.CheckedState.Parent = this.BtnCompra;
-            this.BtnCompra.CustomImages.Parent = this.BtnCompra;
-            this.BtnCompra.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.BtnCompra.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.BtnCompra.ForeColor = System.Drawing.Color.White;
-            this.BtnCompra.HoverState.Parent = this.BtnCompra;
-            this.BtnCompra.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
-            this.BtnCompra.ImageSize = new System.Drawing.Size(35, 35);
-            this.BtnCompra.Location = new System.Drawing.Point(10, 6);
-            this.BtnCompra.Name = "BtnCompra";
-            this.BtnCompra.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.BtnCompra.ShadowDecoration.Parent = this.BtnCompra;
-            this.BtnCompra.Size = new System.Drawing.Size(58, 52);
-            this.BtnCompra.TabIndex = 6;
-            this.BtnCompra.Click += new System.EventHandler(this.BtnCompra_Click);
-            this.BtnCompra.MouseEnter += new System.EventHandler(this.BtnCompra_MouseEnter);
-            this.BtnCompra.MouseLeave += new System.EventHandler(this.BtnCompra_MouseLeave);
-            // 
-            // PbLogoPequeño
-            // 
-            this.PbLogoPequeño.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.Logo;
-            this.PbLogoPequeño.Location = new System.Drawing.Point(0, 0);
-            this.PbLogoPequeño.Name = "PbLogoPequeño";
-            this.PbLogoPequeño.ShadowDecoration.Parent = this.PbLogoPequeño;
-            this.PbLogoPequeño.Size = new System.Drawing.Size(89, 84);
-            this.PbLogoPequeño.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbLogoPequeño.TabIndex = 0;
-            this.PbLogoPequeño.TabStop = false;
-            // 
-            // PbUsuario
-            // 
-            this.PbUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.PbUsuario.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.gente;
-            this.PbUsuario.Location = new System.Drawing.Point(13, 4);
-            this.PbUsuario.Name = "PbUsuario";
-            this.PbUsuario.ShadowDecoration.Parent = this.PbUsuario;
-            this.PbUsuario.Size = new System.Drawing.Size(28, 21);
-            this.PbUsuario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PbUsuario.TabIndex = 3;
-            this.PbUsuario.TabStop = false;
-            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1568, 837);
+            this.ClientSize = new System.Drawing.Size(1568, 878);
             this.Controls.Add(this.PnlPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPrincipal";
@@ -1476,6 +1476,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.PnlPrincipal.ResumeLayout(false);
             this.PnlMostarFrames.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureLogoPrincipal)).EndInit();
             this.PnlMenu.ResumeLayout(false);
             this.PnlSubPersona.ResumeLayout(false);
             this.PnlEmpleado.ResumeLayout(false);
@@ -1530,10 +1531,9 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlCompra.ResumeLayout(false);
             this.PnlCompra.PerformLayout();
             this.PnlLogo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PbLogoPequeño)).EndInit();
             this.PnlBarraSuperior.ResumeLayout(false);
             this.PnlBarraSuperior.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureLogoPrincipal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PbLogoPequeño)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbUsuario)).EndInit();
             this.ResumeLayout(false);
 

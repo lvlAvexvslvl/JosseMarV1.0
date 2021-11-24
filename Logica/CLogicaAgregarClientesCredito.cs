@@ -44,6 +44,36 @@ namespace Logica
             }
         }
 
+        public string AddClientes2(string Nombre, string Apellido, string NumeroTelefono, int Tipotel, string Direccion, string Cedula)
+        {
+            // string IP = ip.ObtenerIp();
+
+            string result = add.AgregarClientes(Nombre, Apellido, NumeroTelefono, Tipotel, Direccion, Cedula);
+
+
+            if (result.Trim() == "G")
+            {
+                //MessageBox.Show("El cliente se agregó correctamente. :)");
+                return result;
+            }
+            else
+            {
+                if (result.Trim() == "N")
+                {
+                    //MessageBox.Show("Lo sentimos. EL Cliente no se puedo agregar. :(");
+                    return result;
+                }
+                else if (result.Trim() == "C")
+                {
+                    //MessageBox.Show("Lo sentimos. La cedula que intenta agregar ya existe. :(");
+                    return result;
+                }
+
+
+                return result;
+
+            }
+        }
         public string EditarCCC(int ID, string Nombre, string Apellido, string NumeroTelefono, int Tipotel, string Direccion, string Cedula)
         {
             // string IP = ip.ObtenerIp();

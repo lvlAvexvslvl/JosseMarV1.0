@@ -758,6 +758,7 @@
             this.TxtTotalArt.ShadowDecoration.Parent = this.TxtTotalArt;
             this.TxtTotalArt.Size = new System.Drawing.Size(150, 36);
             this.TxtTotalArt.TabIndex = 22;
+            this.TxtTotalArt.TextChanged += new System.EventHandler(this.TxtTotalArt_TextChanged);
             this.TxtTotalArt.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.guna2TextBox2_KeyPress);
             // 
             // guna2HtmlLabel10
