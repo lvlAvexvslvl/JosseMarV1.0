@@ -88,6 +88,12 @@
     <Compile Include="FormProveedor.designer.cs">
       <DependentUpon>FormProveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmActividades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmActividades.Designer.cs">
+      <DependentUpon>FrmActividades.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,12 @@
     </Compile>
     <Compile Include="FrmProductosVentas.Designer.cs">
       <DependentUpon>FrmProductosVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSaldos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSaldos.Designer.cs">
+      <DependentUpon>FrmSaldos.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmVentas.cs">
       <SubType>Form</SubType>
@@ -151,6 +163,9 @@
     <EmbeddedResource Include="FormProveedor.resx">
       <DependentUpon>FormProveedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmActividades.resx">
+      <DependentUpon>FrmActividades.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmInventario.resx">
       <DependentUpon>FrmInventario.cs</DependentUpon>
     </EmbeddedResource>
@@ -162,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProductosVentas.resx">
       <DependentUpon>FrmProductosVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSaldos.resx">
+      <DependentUpon>FrmSaldos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmVentas.resx">
       <DependentUpon>FrmVentas.cs</DependentUpon>
