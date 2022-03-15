@@ -159,7 +159,7 @@ namespace Datos
                 comando.CommandText = "JSMSaldoDiario";
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.AddWithValue("@Monto", Total);
-                comando.Parameters.AddWithValue("@Tipo", Total);
+                comando.Parameters.AddWithValue("@Tipo", tipo);
                 comando.ExecuteNonQuery();
                 comando.Parameters.Clear();
 

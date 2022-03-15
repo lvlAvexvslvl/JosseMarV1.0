@@ -22,9 +22,18 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
         CLogicaLlenarCmb fill = new CLogicaLlenarCmb();
         CLogicaConsultas sql = new CLogicaConsultas();
         CLogicaAgregarCompra buy = new CLogicaAgregarCompra();
-       
+        CLogicaObtenerFecha fcz = new CLogicaObtenerFecha();
+
+
+        public double interes;
+        public double MontoInt;
+        public double Subtotal;
+        public double TotalConIva;
+        public string fecha;
+        public int factura;
+
         int contador = 0, contadorAdd = 0;
-        string id;
+        string id, IdProducto;
         double totalCompra=0, totalCompra2;
         int idcategoria, UnidadM, IdProv;
         string categoria, unidadMedida, proveedor, IdEstante;
@@ -63,11 +72,11 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             }
             else if (CmbUnidadMedida.SelectedValue.ToString() == "3")
             {
-                Validaciones.SoloNumeros(e);
+                Validaciones.SoloNumerosPuntosyComas(e);
             }
             else if (CmbUnidadMedida.SelectedValue.ToString() == "4")
             {
-                Validaciones.SoloNumeros(e);
+                Validaciones.SoloNumerosPuntosyComas(e);
             }
             else if (CmbUnidadMedida.SelectedValue.ToString() == "5")
             {
@@ -75,11 +84,11 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             }
             else if (CmbUnidadMedida.SelectedValue.ToString() == "6")
             {
-                Validaciones.SoloNumeros(e);
+                Validaciones.SoloNumerosPuntosyComas(e);
             }
             else if (CmbUnidadMedida.SelectedValue.ToString() == "7")
             {
-                Validaciones.SoloNumeros(e);
+                Validaciones.SoloNumerosPuntosyComas(e);
             }
             else if (CmbUnidadMedida.SelectedValue.ToString() == "8")
             {
@@ -98,22 +107,9 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
 
         private void TxtEmpresa_KeyPress(object sender, KeyPressEventArgs e)
         {
-            //
+            
         }
-        //private Form activarfrm = null;
-        //private void ActivarFrm(Form frmVarios)
-        //{
-        //    if (activarfrm != null)
-        //        activarfrm.Close();
-        //    activarfrm = frmVarios;
-        //    frmVarios.TopLevel = false;
-        //    frmVarios.FormBorderStyle = FormBorderStyle.None;
-        //    frmVarios.Dock = DockStyle.Fill;
-        //    PnlMostarFrames.Controls.Add(frmVarios);
-        //    PnlMostarFrames.Tag = frmVarios;
-        //    frmVarios.BringToFront();
-        //    frmVarios.Show();
-        //}
+        
         //METODOS PARA LLENAR COMBOBOX
         void cmbCategorias()
         {
@@ -139,13 +135,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
 
         }
 
-        //METODO PARA LLAMAR LA VISTA DE PRODUCTOS EN EXISTENCIA
-        //void ProductosE(string a)
-        //{
-           
-        //    DgvSave.DataSource = sql.ConsultaTab("SELECT vs_ProductosExistentes.Descripcion, vs_ProductosExistentes.DescripcionTipoUM, vs_ProductosExistentes.IdCompra AS ID, vs_ProductosExistentes.NombreProducto AS Nombre, vs_ProductosExistentes.Marca AS Marca,vs_ProductosExistentes.DescripcionC AS Categoria FROM vs_ProductosExistentes where vs_ProductosExistentes.NombreProducto LIKE'%" + a+"%' AND vs_ProductosExistentes.Marca LIKE '%"+a+"%'");
-           
-        //}
+        
         void ProductosE(string a)
         {
 
@@ -153,13 +143,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
 
         }
 
-        //void ProductosE2()
-        //{
-
-        //    DgvSave.DataSource = sql.ConsultaTab("SELECT vs_ProductosExistentes.Descripcion, vs_ProductosExistentes.DescripcionTipoUM,vs_ProductosExistentes.NombreProducto AS Nombre, vs_ProductosExistentes.Marca AS Marca,vs_ProductosExistentes.DescripcionC AS Categoria FROM vs_ProductosExistentes GROUP BY vs_ProductosExistentes.Descripcion, vs_ProductosExistentes.DescripcionTipoUM, vs_ProductosExistentes.NombreProducto, vs_ProductosExistentes.Marca,vs_ProductosExistentes.DescripcionC");
-
-        //}
-
+        
         void DgvNomProducts()
         {
             DgvProductos.DataSource = sql.ConsultaTab("SELECT vs_ProductosExistentes.NombreProducto AS Nombre FROM vs_ProductosExistentes");
@@ -171,7 +155,6 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
             TxtTotalCompra.Text = "0";
             LblIdUsuario.Text = id;
             DgvCarrito.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
@@ -179,7 +162,12 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
 
             DgvSave.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             DgvSave.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            DgvEditProducts.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            DgvEditProducts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
             ProductosE("");
+            EditsProd("");
             int con = DgvSave.RowCount;
             //MessageBox.Show("con= "+con);
             //ProductosE2();
@@ -205,6 +193,9 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             }
 
             //MessageBox.Show(CmbUnidadMedida.SelectedValue.ToString()); /*retorna uno*/
+
+            DtpFecha.Enabled = false;
+            DtpCaducidad.Enabled = false;
         }
 
         private void guna2TextBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -218,6 +209,17 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
         }
 
         //METODO PARA HABILITAR CUANDO UN PRODUCTO ES NUEVO
+
+        void ActivarFormarDate()
+        {
+
+            DtpCaducidad.MaxDate = DateTime.Today.AddDays(999999);
+            DtpCaducidad.MinDate = DateTime.Now.AddDays(1);
+
+            DtpFecha.MaxDate = DateTime.Today;
+            DtpFecha.MinDate = DateTime.Today.AddDays(-5);
+        }
+
         void HabilitarProNew()
         {
             Delete();
@@ -229,7 +231,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
 
             CmbCategoria.Visible = true;
             CmbCategoria.Enabled = true;
-
+            
             CLogicaObtenerFecha fc = new CLogicaObtenerFecha();
             string fecha = fc.ObtenerFechaSinHora();
             //DtpFecha.MinDate = Convert.ToDateTime(fecha);
@@ -241,6 +243,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             TxtDescripcion.Enabled = true;
             CmbCategoria.Enabled = true;
             CmbUnidadMedida.Enabled = true;
+            CmbUnidadMedida.Visible = true;
             TxtPrecioUnitario.Enabled = true;
             CmbEmpresa.Enabled = true;
             TxtTotalArt.Enabled = true;
@@ -250,9 +253,21 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             TxtMarca.Enabled = true;
             TxtPrecioVenta.Enabled = true;
             TxtUnidadMedida.Visible = false;
+            ActivarFormarDate();
         }
         private void guna2RadioButton1_CheckedChanged(object sender, EventArgs e)
         {
+            if (CmbCategoria.SelectedValue.ToString()=="6")
+            {
+                DtpFecha.Enabled = false;
+                DtpCaducidad.Enabled = false;
+            }
+            else
+            {
+                DtpFecha.Enabled = true;
+                DtpCaducidad.Enabled = true;
+            }
+
             int data = DgvCarrito.RowCount;
             if (data > 0) { 
             DialogResult result = MessageBox.Show("¿Se eliminará lo que tienes en el carrito, estás seguro de hacerlo?", "Salir", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
@@ -261,19 +276,49 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             {
                     DgvCarrito.Rows.Clear();
                     HabilitarProNew();
+                    TxtNFactura.Text = "";
+                    if (CmbCategoria.SelectedValue.ToString() == "6")
+                    {
+                        DtpFecha.Enabled = false;
+                        DtpCaducidad.Enabled = false;
+                    }
+                    else
+                    {
+                        DtpFecha.Enabled = true;
+                        DtpCaducidad.Enabled = true;
+                    }
                     contador = 0;
                     TxtTotalCompra.Text = "0";
                 }
             else if (result == DialogResult.Cancel)
             {
-                    
-            }
-            else if (result == DialogResult.Cancel)
-            {
-            }
+                    if (CmbCategoria.SelectedValue.ToString() == "6")
+                    {
+                        DtpFecha.Enabled = false;
+                        DtpCaducidad.Enabled = false;
+
+                        
+                    }
+                    else
+                    {
+                        DtpFecha.Enabled = true;
+                        DtpCaducidad.Enabled = true;
+                    }
+                }
+            
             }
             HabilitarProNew();
-            
+            if (CmbCategoria.SelectedValue.ToString() == "6")
+            {
+                DtpFecha.Enabled = false;
+                DtpCaducidad.Enabled = false;
+               
+            }
+            else
+            {
+                DtpFecha.Enabled = true;
+                DtpCaducidad.Enabled = true;
+            }
         }
 
         private void TxtPrecioVenta_KeyPress(object sender, KeyPressEventArgs e)
@@ -298,7 +343,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
                     contadorAdd = 0;
 
                 HabilitarProNew();
-
+                
                 TxtNombreProducto.Text = Convert.ToString(DgvCarrito.CurrentRow.Cells[0].Value).Trim();
                 TxtDescripcion.Text = Convert.ToString(DgvCarrito.CurrentRow.Cells[1].Value).Trim();
                 CmbCategoria.SelectedItem = Convert.ToString(DgvCarrito.CurrentRow.Cells[2].Value).Trim();
@@ -306,12 +351,38 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
                 TxtPrecioUnitario.Text = Convert.ToString(DgvCarrito.CurrentRow.Cells[4].Value).Trim();
                 CmbEmpresa.SelectedItem = Convert.ToString(DgvCarrito.CurrentRow.Cells[5].Value).Trim();
                 TxtTotalArt.Text = Convert.ToString(DgvCarrito.CurrentRow.Cells[6].Value).Trim();
-                DtpFecha.Text = Convert.ToString(DgvCarrito.CurrentRow.Cells[7].Value).Trim();
+               // DtpFecha.Text = Convert.ToString(DgvCarrito.CurrentRow.Cells[7].Value).Trim();
                 TxtNFactura.Text = Convert.ToString(DgvCarrito.CurrentRow.Cells[8].Value).Trim();
                 TxtMarca.Text = Convert.ToString(DgvCarrito.CurrentRow.Cells[9].Value).Trim();
                 TxtPrecioVenta.Text = Convert.ToString(DgvCarrito.CurrentRow.Cells[16].Value).Trim();
-                DtpCaducidad.Text = Convert.ToString(DgvCarrito.CurrentRow.Cells[10].Value).Trim();
+                //DtpCaducidad.Text = Convert.ToString(DgvCarrito.CurrentRow.Cells[10].Value).Trim();
 
+                CmbCategoria.SelectedValue = DgvCarrito.Rows[e.RowIndex].Cells[14].Value.ToString();
+                CmbEmpresa.SelectedValue = DgvCarrito.Rows[e.RowIndex].Cells[11].Value.ToString();
+                CmbUnidadMedida.SelectedValue = DgvCarrito.Rows[e.RowIndex].Cells[12].Value.ToString();
+
+                DtpFecha.Value = Convert.ToDateTime(DgvCarrito.Rows[e.RowIndex].Cells[7].Value);
+                
+                if (CmbCategoria.SelectedValue.ToString() == "6")
+                {
+                    DtpCaducidad.Enabled = false;
+                    DtpFecha.Enabled = true;
+                }
+                else
+                {
+                    DtpCaducidad.Enabled = true;
+                    try
+                    {
+                        DtpCaducidad.Value = Convert.ToDateTime(DgvCarrito.Rows[e.RowIndex].Cells[10].Value.ToString());
+                    }
+                    catch (Exception ex)
+                    {
+                      // MessageBox.Show("Ha ocurrido un error con la fecha a editar, intentarlo nuevamente.", "Avíso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    }
+                    
+
+                }
                 double totalcompra = Convert.ToDouble(TxtTotalCompra.Text);
                 double TotalArt = Convert.ToDouble(TxtTotalArt.Text);
                 double precioU = Convert.ToDouble(TxtPrecioUnitario.Text);
@@ -339,12 +410,30 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
                 TxtPrecioUnitario.Text = Convert.ToString(DgvCarrito.CurrentRow.Cells[4].Value).Trim();
                 CmbEmpresa.SelectedItem = Convert.ToString(DgvCarrito.CurrentRow.Cells[5].Value).Trim();
                 TxtTotalArt.Text = Convert.ToString(DgvCarrito.CurrentRow.Cells[6].Value).Trim();
-                DtpFecha.Text = Convert.ToString(DgvCarrito.CurrentRow.Cells[7].Value).Trim();
+               // DtpFecha.Text = Convert.ToString(DgvCarrito.CurrentRow.Cells[7].Value).Trim();
                 TxtNFactura.Text = Convert.ToString(DgvCarrito.CurrentRow.Cells[8].Value).Trim();
                 TxtMarca.Text = Convert.ToString(DgvCarrito.CurrentRow.Cells[9].Value).Trim();
                 TxtPrecioVenta.Text = Convert.ToString(DgvCarrito.CurrentRow.Cells[16].Value).Trim();
-                DtpCaducidad.Text = Convert.ToString(DgvCarrito.CurrentRow.Cells[10].Value).Trim();
-                
+               TxtUnidadMedida.Text = Convert.ToString(DgvCarrito.CurrentRow.Cells[3].Value).Trim();
+                //DtpCaducidad.Text = Convert.ToString(DgvCarrito.CurrentRow.Cells[10].Value).Trim();
+                try
+                {
+                    DtpFecha.Value = Convert.ToDateTime(DgvCarrito.Rows[e.RowIndex].Cells[7].Value);
+                }
+                catch (Exception)
+                {
+
+                   
+                }
+                try
+                {
+                    DtpCaducidad.Value = Convert.ToDateTime(DgvCarrito.Rows[e.RowIndex].Cells[10].Value.ToString());
+                }
+                catch (Exception ex)
+                {
+                    // MessageBox.Show("Ha ocurrido un error con la fecha a editar, intentarlo nuevamente.", "Avíso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
 
                 double totalcompra = Convert.ToDouble(TxtTotalCompra.Text);
                 double TotalArt = Convert.ToDouble(TxtTotalArt.Text);
@@ -380,6 +469,9 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             CmbCategoria.Visible = false;
             CmbCategoria.Enabled = false;
 
+            CmbUnidadMedida.Visible = false;
+            CmbUnidadMedida.Enabled = false;
+
             TxtCategoria.Visible = true;
 
             //TxtCategoria.Top = 528;
@@ -401,6 +493,8 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             //DtpCaducidad.MinDate = Convert.ToDateTime(fecha);
 
             DtpCaducidad.Enabled = true;
+            DtpFecha.Enabled = true;
+
             TxtNFactura.Enabled = true;
             TxtMarca.Enabled = true;
             TxtPrecioVenta.Enabled = true;
@@ -410,6 +504,8 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             BtnBuscar.Enabled = true;
             TxtUnidadMedida.Visible = true;
             TxtMarca.Enabled = false;
+
+            ActivarFormarDate();
         }
 
         private void ChxExistente_CheckedChanged(object sender, EventArgs e)
@@ -425,6 +521,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
                     HabilitarProdExis();
                     contador = 0;
                     TxtTotalCompra.Text = "0";
+                    TxtNFactura.Text = "";
 
                 }
                 else if (result == DialogResult.Cancel)
@@ -449,9 +546,17 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             TxtNombreProducto.Text = Convert.ToString(DgvSave.CurrentRow.Cells[2].Value).Trim();
             TxtMarca.Text = Convert.ToString(DgvSave.CurrentRow.Cells[3].Value).Trim();
             TxtCategoria.Text = Convert.ToString(DgvSave.CurrentRow.Cells[4].Value).Trim();
-            //TxtDescripcion.Text = Convert.ToString(DgvSave.CurrentRow.Cells[1].Value).Trim();
-                
-            //}
+
+            if (TxtCategoria.Text == "Repuesto")
+            {
+                DtpCaducidad.Enabled = false;
+                DtpFecha.Enabled = false;
+            }
+            else
+            {
+                DtpCaducidad.Enabled = true;
+                DtpFecha.Enabled = true;
+            }
             
         }
 
@@ -468,6 +573,57 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
         private void BtnLimpiar_Click(object sender, EventArgs e)
         {
             Delete();
+            TxtNFactura.Text = "";
+        }
+
+        private void ChxEditar_CheckedChanged(object sender, EventArgs e)
+        {
+            if (ChxEditar.Checked == true)
+            {
+                ChxNuevo.Checked = false;
+                ChxExistente.Checked = false;
+
+                ChxNuevo.Enabled = false;
+                ChxExistente.Enabled = false;
+                HabilitarProNew();
+
+                DtpCaducidad.MaxDate = DateTime.Today.AddDays(999999);
+                DtpCaducidad.MinDate = DateTime.Now.AddDays(-999);
+
+                DtpFecha.MaxDate = DateTime.Today.AddDays(999999);
+                DtpFecha.MinDate = DateTime.Now.AddDays(-999);
+
+                if (CmbCategoria.SelectedValue.ToString() == "6")
+                {
+                    DtpFecha.Enabled = false;
+                    DtpCaducidad.Enabled = false;
+                }
+                else
+                {
+                    DtpFecha.Enabled = true;
+                    DtpCaducidad.Enabled = true;
+                }
+
+            }
+            else
+            {
+                ActivarFormarDate();
+                TxtNFactura.Enabled = false;
+                TxtNombreProducto.Enabled = false;
+                TxtDescripcion.Enabled = false;
+                CmbEmpresa.Enabled = false;
+                CmbCategoria.Enabled = false;
+                CmbUnidadMedida.Enabled = false;
+                TxtMarca.Enabled = false;
+                TxtTotalArt.Enabled = false;
+                TxtPrecioUnitario.Enabled = false;
+                TxtPrecioVenta.Enabled = false;
+                DtpFecha.Enabled = false;
+                DtpCaducidad.Enabled = false;
+
+                ChxNuevo.Enabled = true;
+                ChxExistente.Enabled = true;
+            }
         }
 
         //METODO PARA LIMPIAR TODOS LOS CAMPOS
@@ -481,11 +637,234 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             CmbEmpresa.Text = "";
             TxtTotalArt.Text = ""; 
             DtpFecha.Text = "";
-            TxtNFactura.Text= "";
+            //TxtNFactura.Text= "";
             TxtMarca.Text = "";
             TxtPrecioVenta.Text = "";
             TxtCategoria.Text = "";
             TxtUnidadMedida.Text = "";
+        }
+
+        void CapturarDatEditar()
+        {
+            if (MetodoValidar() == 7)
+            {
+                if (DtpCaducidad.Value > DtpFecha.Value && DtpFecha.Value < DtpCaducidad.Value)
+                {
+                    string nom = TxtNombreProducto.Text.Trim();
+                    string des = TxtDescripcion.Text.Trim();
+                    int idcategoria = Convert.ToInt32(CmbCategoria.SelectedValue.ToString());
+                    int UnidadM = Convert.ToInt16(CmbUnidadMedida.SelectedValue.ToString());
+                    double PrecioU = Convert.ToDouble(TxtPrecioUnitario.Text);
+                    double PrecioV = Convert.ToDouble(TxtPrecioVenta.Text);
+                    int IdProv = Convert.ToInt16(CmbEmpresa.SelectedValue.ToString());
+                    double Stock = Convert.ToDouble(TxtTotalArt.Text);
+                    string fechaI = DtpFecha.Value.ToString("yyy/MM/dd");
+                    int NF = Convert.ToInt32(TxtNFactura.Text);
+                    string marca = TxtMarca.Text.Trim();
+                    string FCadu = DtpCaducidad.Value.ToString("yyy/MM/dd");
+                    double taux = Convert.ToDouble(TxtTotalCompra.Text);
+                    double totalCompra = (taux + (totalart * PrecioU));
+                    TxtTotalCompra.Text = Convert.ToString(totalCompra);
+                    double TotalC = (Stock * PrecioU);
+                    int idprod = Convert.ToInt32(IdProducto);
+                    int idU = Convert.ToInt16(id);
+
+                    buy.EditCompra(idprod, nom, IdProv, fechaI, des, UnidadM, NF, TotalC, idcategoria, idU, Stock, PrecioU, FCadu,
+                        marca, PrecioV);
+
+                    MessageBox.Show("Producto editado con éxito :)", "Avíso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Error. La fecha de caducidad debe ser mayor a la de ingreso :)", "Avíso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+               
+            }
+            else
+            {
+                MessageBox.Show("Error. Uno o más campos están vacíos :)", "Avíso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+          
+        }
+
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+            if(ChxEditar.Checked == true)
+            CapturarDatEditar();
+
+            EditsProd("");
+            Delete();
+
+            
+        }
+
+        private void CmbUnidadMedida_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (CmbUnidadMedida.SelectedValue.ToString() == "1")
+            {
+                TxtTotalArt.Text = "";
+            }
+            else if (CmbUnidadMedida.SelectedValue.ToString() == "2")
+            {
+                TxtTotalArt.Text = "";
+            }
+            else if (CmbUnidadMedida.SelectedValue.ToString() == "3")
+            {
+                TxtTotalArt.Text = "";
+            }
+            else if (CmbUnidadMedida.SelectedValue.ToString() == "4")
+            {
+                TxtTotalArt.Text = "";
+            }
+            else if (CmbUnidadMedida.SelectedValue.ToString() == "5")
+            {
+                TxtTotalArt.Text = "";
+            }
+            else if (CmbUnidadMedida.SelectedValue.ToString() == "6")
+            {
+                TxtTotalArt.Text = "";
+            }
+            else if (CmbUnidadMedida.SelectedValue.ToString() == "7")
+            {
+                TxtTotalArt.Text = "";
+            }
+            else if (CmbUnidadMedida.SelectedValue.ToString() == "8")
+            {
+                TxtTotalArt.Text = "";
+            }
+            else if (CmbUnidadMedida.SelectedValue.ToString() == "9")
+            {
+                TxtTotalArt.Text = "";
+            }
+            else if (CmbUnidadMedida.SelectedValue.ToString() == "10")
+            {
+                TxtTotalArt.Text = "";
+            }
+        }
+
+        private void CmbCategoria_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (CmbCategoria.SelectedValue.ToString() == "6")
+            {
+                DtpCaducidad.Enabled = false;
+                DtpFecha.Enabled = false;
+                CmbUnidadMedida.Enabled = false;
+                CmbUnidadMedida.SelectedValue = 1;
+            }
+            else
+            {
+                DtpCaducidad.Enabled = true;
+                DtpFecha.Enabled = true;
+                CmbUnidadMedida.Enabled = true;
+            }
+
+        }
+
+        private void TxtBuscarCompras_TextChanged(object sender, EventArgs e)
+        {
+            EditsProd(TxtBuscarCompras.Text);
+        }
+
+        private void guna2RadioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void guna2RadioButton1_CheckedChanged_1(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void TxtInteres_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+    if (Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+      if (Char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void BtnEditar_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ChxEditarnfact_CheckedChanged(object sender, EventArgs e)
+        {
+            int a = DgvCarrito.RowCount;
+            if (a > 0)
+            {
+                if (ChxEditarnfact.Checked == true)
+                {
+
+                    DialogResult result = MessageBox.Show("¿Deseas editar el numero de factura?", "Avíso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.OK)
+                    {
+                        TxtNFactura.Enabled = true;
+                       // DgvCarrito.Rows.Clear();
+                        Delete();
+                        TxtNFactura.Text = "";
+
+                    }
+                    else if (result == DialogResult.Cancel)
+                    {
+
+                    }
+                }
+                else
+                {
+                    TxtNFactura.Enabled = false;
+                }
+            }
+            
+            
+        }
+
+        private void DgvEditProducts_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(ChxEditar.Checked == true)
+            {
+                IdProducto = Convert.ToString(DgvEditProducts.CurrentRow.Cells[17].Value).Trim();
+                TxtNFactura.Text = Convert.ToString(DgvEditProducts.CurrentRow.Cells[8].Value).Trim();
+                TxtNombreProducto.Text = Convert.ToString(DgvEditProducts.CurrentRow.Cells[0].Value).Trim();
+                TxtDescripcion.Text = Convert.ToString(DgvEditProducts.CurrentRow.Cells[1].Value).Trim();
+                TxtMarca.Text = Convert.ToString(DgvEditProducts.CurrentRow.Cells[9].Value).Trim();
+                TxtTotalArt.Text = Convert.ToString(DgvEditProducts.CurrentRow.Cells[6].Value).Trim();
+                TxtPrecioUnitario.Text = Convert.ToString(DgvEditProducts.CurrentRow.Cells[4].Value).Trim();
+                TxtPrecioVenta.Text = Convert.ToString(DgvEditProducts.CurrentRow.Cells[16].Value).Trim();
+
+                CmbCategoria.SelectedValue = DgvEditProducts.Rows[e.RowIndex].Cells[14].Value.ToString();
+                CmbEmpresa.SelectedValue = DgvEditProducts.Rows[e.RowIndex].Cells[11].Value.ToString();
+                CmbUnidadMedida.SelectedValue = DgvEditProducts.Rows[e.RowIndex].Cells[12].Value.ToString();
+                DtpFecha.Value = Convert.ToDateTime(DgvEditProducts.Rows[e.RowIndex].Cells[7].Value);
+
+                if (CmbCategoria.SelectedValue.ToString() == "6")
+                {
+                    DtpCaducidad.Enabled = false;
+                    DtpFecha.Enabled = true;
+                }
+                else
+                {
+                    DtpCaducidad.Enabled = true;
+                    DtpCaducidad.Value = Convert.ToDateTime(DgvEditProducts.Rows[e.RowIndex].Cells[10].Value);
+                    
+                }
+            }
+           
         }
 
 
@@ -526,15 +905,48 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
                 validation++;
             else
                 validation--;
+            if (TxtPrecioVenta.Text != "")
+                validation++;
+            else
+                validation--;
 
             if (validation < 0)
                 validation = 0;
             return validation;
         }
-//***************************************************************************************************************************************************************************
+
+        private void RbnCredito_CheckedChanged(object sender, EventArgs e)
+        {
+            LblInteres.Visible = true;
+            TxtInteres.Visible = true;
+            LblInteres22.Visible = true;
+            LblSubtotal.Visible = true;
+            LblTotalPagar.Visible = true;
+            TxtMontoInteres.Visible = true;
+            TxtSubTotal.Visible = true;
+            TxtTotalConIVA.Visible = true;
+            LblFechaFinalPago.Visible = true;
+            DtpFechaFinalPago.Visible = true;
+        }
+
+        private void RbnContado_CheckedChanged(object sender, EventArgs e)
+        {
+            LblInteres.Visible = false;
+            TxtInteres.Visible = false;
+            LblInteres22.Visible = false;
+            LblSubtotal.Visible = false;
+            LblTotalPagar.Visible = false;
+            TxtMontoInteres.Visible = false;
+            TxtSubTotal.Visible = false;
+            TxtTotalConIVA.Visible = false;
+            LblFechaFinalPago.Visible = false;
+            DtpFechaFinalPago.Visible = false;
+        }
+
+        //***************************************************************************************************************************************************************************
         void CapturarCompra()
         {
-            if (MetodoValidar() == 6)
+            if (MetodoValidar() == 7)
             {
                 if (ChxNuevo.Checked==true) {
 
@@ -610,20 +1022,6 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
                     DgvCarrito.Rows[filas].Cells[16].Value = TxtPrecioVenta.Text;
                 //**********************************
 
-                //DgvSave.Rows[filas].Cells[0].Value = TxtNombreProducto.Text;
-                //DgvSave.Rows[filas].Cells[1].Value = IdProv;
-                //DgvSave.Rows[filas].Cells[2].Value = DtpFecha.Value.ToString("yyy/MM/dd");
-                //DgvSave.Rows[filas].Cells[3].Value = TxtDescripcion.Text;
-                //DgvSave.Rows[filas].Cells[4].Value = UnidadM;
-                //DgvSave.Rows[filas].Cells[5].Value = TxtNFactura.Text;
-                //DgvSave.Rows[filas].Cells[6].Value = TxtTotalCompra.Text;
-                //DgvSave.Rows[filas].Cells[7].Value = idcategoria;
-                //DgvSave.Rows[filas].Cells[8].Value = id;
-                //DgvSave.Rows[filas].Cells[9].Value = TxtTotalArt.Text;
-                //DgvSave.Rows[filas].Cells[10].Value = TxtPrecioUnitario.Text;
-                //DgvSave.Rows[filas].Cells[11].Value = DtpCaducidad.Value.ToString("yyy/MM/dd");
-                //DgvSave.Rows[filas].Cells[12].Value = TxtMarca.Text;
-                //DgvSave.Rows[filas].Cells[13].Value = TxtPrecioVenta.Text;
                 contador++;
                     }
                 }
@@ -687,6 +1085,27 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
 
         }
 
+        void CapturarParteCreditoCompra()
+        {
+            if (RbnCredito.Checked == true)
+            {
+                string mensaje;
+                CLogicaCompraCreditoo AddCreditoCompra = new CLogicaCompraCreditoo();
+                mensaje = AddCreditoCompra.LogicaAddCompraCredito(interes, MontoInt, fecha, TotalConIva, TotalConIva);
+                fecha = TxtNFactura.Text;
+
+            }
+
+        }
+        public void EnviarDatos()
+        {
+            FormCompraCredito PasarDatos = new FormCompraCredito();
+
+            PasarDatos.TxtNFactura.Text = TxtNFactura.Text;
+            PasarDatos.TxtMontoTotal.Text = TxtTotalConIVA.Text;
+            PasarDatos.Show();
+
+        }
 
 
         private void BtnNuevo_Click(object sender, EventArgs e)
@@ -697,6 +1116,8 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
                 TxtTotalCompra.Text = "0";
                 contador = 0;
                 Delete();
+                TxtNFactura.Text = "";
+                TxtNFactura.Enabled = true;
             }
         }
 
@@ -739,6 +1160,11 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
                     
                 }
             }
+            if (RbnCredito.Checked == true)
+            {
+                CapturarParteCreditoCompra();
+                EnviarDatos();
+            }
         }
 
         private void BtnGuardar_Click(object sender, EventArgs e)
@@ -750,14 +1176,13 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
                
                 if (result == DialogResult.OK)
                 {
+                    Movimiento();
                     Save();
                     Delete();
                     ProductosE("");
-                    //DgvCarrito.DataSource = "";
-                    //TxtTotalCompra.Text = "";
-                    //contadorAdd = 0;
-                    //contador = 0;
-                    Movimiento();
+                   
+                    EditsProd("");
+                    TxtNFactura.Text = "";
                     if (ChxNuevo.Checked == true || ChxExistente.Checked == true)
                     {
                         contadorAdd = 0;
@@ -765,6 +1190,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
                         TxtTotalCompra.Text = "0";
                         contador = 0;
                         Delete();
+                        TxtNFactura.Text = "";
                     }
 
                 }
@@ -789,14 +1215,72 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
         }
         private void BtnAñadir_Click(object sender, EventArgs e)
         {
+            double precioU = 0, precioV=0;
+            if(TxtPrecioUnitario.Text!= "" && TxtPrecioVenta.Text != "")
+            {
+                precioU = Convert.ToDouble(TxtPrecioUnitario.Text);
+                precioV = Convert.ToDouble(TxtPrecioVenta.Text);
+            }
+            if (precioU > precioV)
+            {
+                DialogResult result = MessageBox.Show("El precio de compra es menor al de venta, desea añairlo de todos modos?", "Avíso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
 
-            contadorAdd++;
-            CapturarCompra();
+                if (result == DialogResult.OK)
+                {
+                    contadorAdd++;
+                    CapturarCompra();
+                    int a = DgvCarrito.RowCount;
+                    if (a > 0)
+                    {
+                        TxtNFactura.Enabled = false;
+                    }
 
-            int aux = DgvCarrito.ColumnCount;
-            if (aux == 0)
-                contador = 0;
-            Delete();
+                    int aux = DgvCarrito.ColumnCount;
+                    if (aux == 0)
+                        contador = 0;
+                    Delete();
+                }
+                else if (result == DialogResult.Cancel)
+                {
+
+                }
+            }
+            else 
+            {
+                contadorAdd++;
+                CapturarCompra();
+                int a = DgvCarrito.RowCount;
+                if (a > 0)
+                {
+                    TxtNFactura.Enabled = false;
+                }
+
+                int aux = DgvCarrito.ColumnCount;
+                if (aux == 0)
+                    contador = 0;
+                Delete();
+            }
+
+            if (RbnCredito.Checked == true)
+            {
+                interes = Convert.ToDouble(TxtInteres.Text) / 100;
+                MontoInt = Convert.ToDouble(TxtTotalCompra.Text) * interes;
+                Subtotal = MontoInt + Convert.ToDouble(TxtTotalCompra.Text);
+                TotalConIva = Subtotal;
+                fecha = DtpFechaFinalPago.Value.ToString("yyy/MM/dd");
+
+                TxtMontoInteres.Text = Convert.ToString(MontoInt);
+                TxtSubTotal.Text = Convert.ToString(Subtotal);
+                TxtTotalConIVA.Text = Convert.ToString(TotalConIva);
+            }
+
+
+
+        }
+
+        void EditsProd(string a)
+        {
+            DgvEditProducts.DataSource = sql.ConsultaTab("SELECT vs_EditarCompra.NombreProducto AS Producto, vs_EditarCompra.Descripcion as Descripcion, vs_EditarCompra.DescripcionC AS Categoría, vs_EditarCompra.DescripcionTipoUM as UMedida, vs_EditarCompra.PrecioUnitario AS PrecioU, vs_EditarCompra.NombreEmpresa AS Proveedor, vs_EditarCompra.Stock  AS Cantidad, vs_EditarCompra.FechaIngreso AS Ingreso,vs_EditarCompra.NumeroFactura AS NFactura, vs_EditarCompra.Marca as Marca, vs_EditarCompra.FechaCaducidad as Caducidad, vs_EditarCompra.IdProveedor as IdProv, vs_EditarCompra.IdUnidadMedida as IDUM,vs_EditarCompra.TotalCompra as TC, vs_EditarCompra.IdCategoria as IDC, vs_EditarCompra.IdUsuario as IDU, vs_EditarCompra.PrecioVenta as PVenta,vs_EditarCompra.IdCompra as ID FROM vs_EditarCompra WHERE vs_EditarCompra.NombreProducto LIKE'%"+a+"%' OR vs_EditarCompra.Marca LIKE'%"+a+"%' OR vs_EditarCompra.DescripcionC LIKE '%"+a+"%'");
         }
 
     }

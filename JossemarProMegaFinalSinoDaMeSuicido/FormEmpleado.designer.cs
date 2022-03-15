@@ -29,22 +29,22 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PnlBarraSuperior = new Guna.UI2.WinForms.Guna2Panel();
             this.BtnSalir = new Guna.UI2.WinForms.Guna2ControlBox();
             this.PnlBuscarEmpleado = new Guna.UI2.WinForms.Guna2Panel();
             this.PnlAgregarEmpleado = new Guna.UI2.WinForms.Guna2Panel();
             this.GbAgregarEmpleado = new Guna.UI2.WinForms.Guna2GroupBox();
+            this.TxtCedulaCliente = new Guna.UI2.WinForms.Guna2TextBox();
             this.BtnAgregarEmpleado = new Guna.UI2.WinForms.Guna2Button();
             this.BtnLimpiar = new Guna.UI2.WinForms.Guna2Button();
             this.CbxTipoE = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.TxtCedulaCliente = new System.Windows.Forms.MaskedTextBox();
             this.CbTipoTelefono = new Guna.UI2.WinForms.Guna2ComboBox();
             this.TxtDireccion = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblDireccion = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -121,16 +121,16 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlAgregarEmpleado.Location = new System.Drawing.Point(0, 143);
             this.PnlAgregarEmpleado.Name = "PnlAgregarEmpleado";
             this.PnlAgregarEmpleado.ShadowDecoration.Parent = this.PnlAgregarEmpleado;
-            this.PnlAgregarEmpleado.Size = new System.Drawing.Size(350, 352);
+            this.PnlAgregarEmpleado.Size = new System.Drawing.Size(350, 386);
             this.PnlAgregarEmpleado.TabIndex = 1;
             // 
             // GbAgregarEmpleado
             // 
+            this.GbAgregarEmpleado.Controls.Add(this.TxtCedulaCliente);
             this.GbAgregarEmpleado.Controls.Add(this.BtnAgregarEmpleado);
             this.GbAgregarEmpleado.Controls.Add(this.BtnLimpiar);
             this.GbAgregarEmpleado.Controls.Add(this.CbxTipoE);
             this.GbAgregarEmpleado.Controls.Add(this.guna2HtmlLabel1);
-            this.GbAgregarEmpleado.Controls.Add(this.TxtCedulaCliente);
             this.GbAgregarEmpleado.Controls.Add(this.CbTipoTelefono);
             this.GbAgregarEmpleado.Controls.Add(this.TxtDireccion);
             this.GbAgregarEmpleado.Controls.Add(this.lblDireccion);
@@ -153,6 +153,34 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.GbAgregarEmpleado.TabIndex = 2;
             this.GbAgregarEmpleado.Text = "Agregar Empleado";
             this.GbAgregarEmpleado.TextTransform = Guna.UI2.WinForms.Enums.TextTransform.UpperCase;
+            // 
+            // TxtCedulaCliente
+            // 
+            this.TxtCedulaCliente.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TxtCedulaCliente.DefaultText = "0000000000000A";
+            this.TxtCedulaCliente.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TxtCedulaCliente.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TxtCedulaCliente.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtCedulaCliente.DisabledState.Parent = this.TxtCedulaCliente;
+            this.TxtCedulaCliente.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TxtCedulaCliente.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtCedulaCliente.FocusedState.Parent = this.TxtCedulaCliente;
+            this.TxtCedulaCliente.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtCedulaCliente.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TxtCedulaCliente.HoverState.Parent = this.TxtCedulaCliente;
+            this.TxtCedulaCliente.Location = new System.Drawing.Point(147, 109);
+            this.TxtCedulaCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtCedulaCliente.MaxLength = 30;
+            this.TxtCedulaCliente.Name = "TxtCedulaCliente";
+            this.TxtCedulaCliente.PasswordChar = '\0';
+            this.TxtCedulaCliente.PlaceholderText = "";
+            this.TxtCedulaCliente.SelectedText = "";
+            this.TxtCedulaCliente.SelectionStart = 14;
+            this.TxtCedulaCliente.ShadowDecoration.Parent = this.TxtCedulaCliente;
+            this.TxtCedulaCliente.Size = new System.Drawing.Size(194, 25);
+            this.TxtCedulaCliente.TabIndex = 26;
+            this.TxtCedulaCliente.Enter += new System.EventHandler(this.TxtCedulaCliente_Enter);
+            this.TxtCedulaCliente.Leave += new System.EventHandler(this.TxtCedulaCliente_Leave);
             // 
             // BtnAgregarEmpleado
             // 
@@ -220,16 +248,6 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.guna2HtmlLabel1.TabIndex = 24;
             this.guna2HtmlLabel1.Text = "Tipo de Empleado:";
             // 
-            // TxtCedulaCliente
-            // 
-            this.TxtCedulaCliente.ForeColor = System.Drawing.Color.Gray;
-            this.TxtCedulaCliente.Location = new System.Drawing.Point(149, 110);
-            this.TxtCedulaCliente.Mask = "###-######-####&";
-            this.TxtCedulaCliente.Name = "TxtCedulaCliente";
-            this.TxtCedulaCliente.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.TxtCedulaCliente.Size = new System.Drawing.Size(194, 23);
-            this.TxtCedulaCliente.TabIndex = 23;
-            // 
             // CbTipoTelefono
             // 
             this.CbTipoTelefono.BackColor = System.Drawing.Color.Transparent;
@@ -268,6 +286,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.TxtDireccion.HoverState.Parent = this.TxtDireccion;
             this.TxtDireccion.Location = new System.Drawing.Point(147, 268);
             this.TxtDireccion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtDireccion.MaxLength = 60;
             this.TxtDireccion.Multiline = true;
             this.TxtDireccion.Name = "TxtDireccion";
             this.TxtDireccion.PasswordChar = '\0';
@@ -315,6 +334,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.TxtTelefono.HoverState.Parent = this.TxtTelefono;
             this.TxtTelefono.Location = new System.Drawing.Point(149, 148);
             this.TxtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtTelefono.MaxLength = 30;
             this.TxtTelefono.Name = "TxtTelefono";
             this.TxtTelefono.PasswordChar = '\0';
             this.TxtTelefono.PlaceholderText = "";
@@ -378,6 +398,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.TxtApellidoEmpleado.HoverState.Parent = this.TxtApellidoEmpleado;
             this.TxtApellidoEmpleado.Location = new System.Drawing.Point(149, 76);
             this.TxtApellidoEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtApellidoEmpleado.MaxLength = 30;
             this.TxtApellidoEmpleado.Name = "TxtApellidoEmpleado";
             this.TxtApellidoEmpleado.PasswordChar = '\0';
             this.TxtApellidoEmpleado.PlaceholderText = "";
@@ -414,6 +435,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.TxtNombreEmpleado.HoverState.Parent = this.TxtNombreEmpleado;
             this.TxtNombreEmpleado.Location = new System.Drawing.Point(149, 40);
             this.TxtNombreEmpleado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TxtNombreEmpleado.MaxLength = 30;
             this.TxtNombreEmpleado.Name = "TxtNombreEmpleado";
             this.TxtNombreEmpleado.PasswordChar = '\0';
             this.TxtNombreEmpleado.PlaceholderText = "";
@@ -450,8 +472,8 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             // 
             // DgvBucarEmpleado
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.DgvBucarEmpleado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.DgvBucarEmpleado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.DgvBucarEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -460,23 +482,23 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.DgvBucarEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvBucarEmpleado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DgvBucarEmpleado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvBucarEmpleado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvBucarEmpleado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.DgvBucarEmpleado.ColumnHeadersHeight = 19;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvBucarEmpleado.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvBucarEmpleado.DefaultCellStyle = dataGridViewCellStyle3;
             this.DgvBucarEmpleado.EnableHeadersVisualStyles = false;
             this.DgvBucarEmpleado.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DgvBucarEmpleado.Location = new System.Drawing.Point(0, 40);
@@ -519,9 +541,12 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.TxtBuscar.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.TxtBuscar.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtBuscar.FocusedState.Parent = this.TxtBuscar;
+            this.TxtBuscar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TxtBuscar.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TxtBuscar.HoverState.Parent = this.TxtBuscar;
             this.TxtBuscar.Location = new System.Drawing.Point(75, 7);
+            this.TxtBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.TxtBuscar.MaxLength = 30;
             this.TxtBuscar.Name = "TxtBuscar";
             this.TxtBuscar.PasswordChar = '\0';
             this.TxtBuscar.PlaceholderText = "";
@@ -608,8 +633,8 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             // 
             // DgvEmpleado
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.DgvEmpleado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.DgvEmpleado.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DgvEmpleado.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -618,23 +643,23 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.DgvEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DgvEmpleado.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DgvEmpleado.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvEmpleado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvEmpleado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.DgvEmpleado.ColumnHeadersHeight = 36;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DgvEmpleado.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DgvEmpleado.DefaultCellStyle = dataGridViewCellStyle6;
             this.DgvEmpleado.EnableHeadersVisualStyles = false;
             this.DgvEmpleado.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DgvEmpleado.Location = new System.Drawing.Point(3, 40);
@@ -667,6 +692,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.DgvEmpleado.ThemeStyle.RowsStyle.Height = 22;
             this.DgvEmpleado.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DgvEmpleado.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.DgvEmpleado.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvEmpleado_CellContentClick);
             this.DgvEmpleado.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvEmpleado_CellDoubleClick);
             // 
             // FormEmpleado
@@ -725,8 +751,8 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
         private Guna.UI2.WinForms.Guna2TextBox TxtTelefono;
         private Guna.UI2.WinForms.Guna2HtmlLabel LblTelefono;
         private Guna.UI2.WinForms.Guna2HtmlLabel LblCedula;
-        private System.Windows.Forms.MaskedTextBox TxtCedulaCliente;
         private Guna.UI2.WinForms.Guna2ComboBox CbxTipoE;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2TextBox TxtCedulaCliente;
     }
 }

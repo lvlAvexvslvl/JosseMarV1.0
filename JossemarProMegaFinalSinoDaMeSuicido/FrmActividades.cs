@@ -33,19 +33,22 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             dgvVerMov.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             Existir();
             CargarVista();
+            this.dgvVerMov.Columns["idMovimientos"].Visible = false;
+            this.dgvDetalles.Columns["idMovimientos"].Visible = false;
+            this.dgvCompras.Columns["idMovimientos"].Visible = false;
         }
         
         private void Existir()
         {
            string id = lc.ConsultaSimple("SELECT MAX(idMovimientos) FROM Movimientos WHERE Movimientos.Fecha = '" + fecha + "' AND Movimientos.tipoMovimiento = 4;");
             string val = lc.ConsultaSimple("SELECT COUNT(*) FROM Movimientos WHERE Movimientos.Fecha = '" + fecha + "' AND Movimientos.tipoMovimiento = 3 AND idMovimientos >'"+id+"';");
-            MessageBox.Show(val);
+          //  MessageBox.Show(val);
             if (val != null || val != "")
             {
                int valor = Convert.ToInt32(val.Trim());
                 if(valor > 0)
                 {
-                    gbAbrir.Enabled = false;
+                    gbAbrir.Enabled = true;
                 }
                 else
                 {
@@ -62,11 +65,15 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
         }
         private void btnAbrir_Click(object sender, EventArgs e)
         {
-           log.AbrirCaja(txtMonto.Text.ToString().Trim());
-            gbAbrir.Enabled = false;
-            gbCerrar.Enabled = true;
-            CargarVista();
-            lblMonto.Text = "C$ 0";
+            if(txtMonto.Text != "")
+            {
+                log.AbrirCaja(txtMonto.Text.ToString().Trim());
+                gbAbrir.Enabled = false;
+                gbCerrar.Enabled = true;
+                CargarVista();
+                lblMonto.Text = "C$ 0";
+            }
+           
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -77,6 +84,11 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             gbAbrir.Enabled =true;
             gbCerrar.Enabled = false;
             CargarVista();
+        }
+
+        private void txtMonto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloNumerosPuntosyComas(e);
         }
     }
 }

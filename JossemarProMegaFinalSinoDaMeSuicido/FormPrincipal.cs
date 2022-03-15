@@ -120,7 +120,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
         String idp2 = "", a;
 
         private Form activarfrm = null;
-        private void ActivarFrm(Form frmVarios)
+        public void ActivarFrm(Form frmVarios)
         {
             if (activarfrm != null)
                 activarfrm.Close();
@@ -307,10 +307,34 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             CLogicaConsultas sql = new CLogicaConsultas();
             //sql.ConsultaSimple("UPDATE dbo.Usuario set Usuario.IdEstadoUsser = 2 WHERE Usuario.IdUsser ="+idp2+"");
             sql.ConsultaSimple("Delete from IpMaquina where IpMaquina.IdUsuario ='" + idp2 + "'");
-
+            sql.ConsultaSimple("UPDATE dbo.Usuarios SET Usuarios.IdEstadoUsuario = 1 WHERE Usuarios.IdUsuario ='" + idp2 + "'");
             Inicio a = new Inicio();
             a.Show();
             this.Close();
+        }
+        void LimitarAdmins()
+        {
+            BtnPanelAdmin.Enabled = false;
+            BtnPanelAdmin.Visible = false;
+            guna2HtmlLabel2.Visible = false;
+        }
+
+        void LimitarAsistente()
+        {
+            BtnAgregarProducto.Enabled = false;
+            BtnAgregarInventario.Enabled = false;
+            BtnDevolucionCompra.Enabled = false;
+            BtnAgregarInventario.Enabled = false;
+            BtnNuevaVenta.Enabled = false;
+            BtnDevoluciones.Enabled = false;
+            BtnNuevoCredito.Enabled = false;
+            BtnMovimientos.Enabled = false;
+            BtnSaldo.Enabled = false;
+            BtnNuevoCredito.Enabled = false;
+            btnCreditoPendiente.Enabled = false;
+            BtnCliente.Enabled = false;
+            BtnProveedor.Enabled = false;
+            BtnPersonal.Enabled = false;
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)
@@ -320,9 +344,25 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             CLogicaObtenerIP ip = new CLogicaObtenerIP();
             CLogicarecibirId recibirId = new CLogicarecibirId();
             string localIP = ip.ObtenerIp();
-
+           // MessageBox.Show("Ip = "+localIP);
             idp2 = c.ConsultaSimple("SELECT IpMaquina.IdUsuario FROM IpMaquina WHERE IpMaquina ='" + localIP + "'");
+            string idU = c.ConsultaSimple("SELECT IpMaquina.IdUsuario FROM IpMaquina WHERE IpMaquina.IpMaquina = '"+localIP + "'");
+            string NomU = c.ConsultaSimple("SELECT Usuarios.NombreUsuario FROM Usuarios WHERE Usuarios.IdUsuario ='" + idU + "'");
+            string TipoU = c.ConsultaSimple("SELECT Usuarios.IdTipoUsuario FROM Usuarios WHERE Usuarios.IdUsuario ='" + idU + "'");
 
+            if (TipoU == "3")
+            {
+               //BtnCompra.Enabled = false;
+                //BtnAgregarInventario.Enabled = false;
+                LimitarAdmins();
+            }
+            else if (TipoU == "4")
+            {
+                LimitarAdmins();
+                LimitarAsistente();
+            }
+
+            LblUsuario.Text = NomU;
             a = LbliUser.Text = idp2;
 
             recibirId.recibirId((idp2));
@@ -345,7 +385,9 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
 
         private void BtnDevolucionCompra_Click(object sender, EventArgs e)
         {
-            ActivarFrm(new AñadirEstante());
+            // ActivarFrm(new AñadirEstante());
+            AñadirEstante a = new AñadirEstante();
+            a.ShowDialog();
         }
 
         private void BtnMostarInventario_Click(object sender, EventArgs e)
@@ -355,7 +397,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
 
         private void BtnNuevaVenta_Click(object sender, EventArgs e)
         {
-            ActivarFrm(new FrmVentas(a));
+            ActivarFrm(new FormVentas(a));
         }
 
         private void BtnMovimientos_Click(object sender, EventArgs e)
@@ -367,6 +409,55 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
         {
             FrmSaldos s = new FrmSaldos();
             s.ShowDialog();
+        }
+
+        private void BtnAgregarInventario_Click(object sender, EventArgs e)
+        {
+            //ActivarFrm(new AñadirSinFactura());
+            AñadirSinFactura sf = new AñadirSinFactura();
+            sf.ShowDialog();
+        }
+
+        private void BtnHistorialCompra_Click(object sender, EventArgs e)
+        {
+            ActivarFrm(new FormEditarCompra(a));
+        }
+
+        private void BtnDevoluciones_Click(object sender, EventArgs e)
+        {
+            ActivarFrm(new FrmDevolverVenta());
+        }
+
+        private void BtnHistorialVentas_Click(object sender, EventArgs e)
+        {
+            ActivarFrm(new FrmHistorialVentas(a));
+        }
+
+        private void BtnProductosSinfactura_Click(object sender, EventArgs e)
+        {
+            ActivarFrm(new FrmInventarioSinFactura());
+        }
+
+        private void PnlMostarFrames_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void guna2CircleButton1_Click(object sender, EventArgs e)
+        {
+            // ActivarFrm(new FormAdmin());
+            FormAdmin sa = new FormAdmin();
+            sa.ShowDialog();
+        }
+
+        private void BtnNuevoCredito_Click(object sender, EventArgs e)
+        {
+            ActivarFrm(new FrmAgregarCV(a));
+        }
+
+        private void BtnHistorialCredito_Click(object sender, EventArgs e)
+        {
+            ActivarFrm(new FrmHistorialVentasCreditos());
         }
 
         private void BtnCliente_Click(object sender, EventArgs e)

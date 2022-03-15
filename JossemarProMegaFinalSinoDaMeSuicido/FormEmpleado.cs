@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Logica;
+using Datos;
 namespace JossemarProMegaFinalSinoDaMeSuicido
 {
     public partial class FormEmpleado : Form
@@ -25,6 +26,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
         CLogicaAgregarEmpleados add = new CLogicaAgregarEmpleados();
         CLogicaConsultas sql = new CLogicaConsultas();
         CLogicaContadorCedula contCedula = new CLogicaContadorCedula();
+        CDatosValidarCedula validation = new CDatosValidarCedula();
         private void Diseño()
         {
             PnlAgregarEmpleado.Visible = false;
@@ -154,6 +156,11 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             else
                 validation--;
 
+            if (TxtDireccion.Text != "")
+                validation++;
+            else
+                validation--;
+
             return validation;
         }
 
@@ -167,11 +174,20 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             cmbTipoE();
             MostrarProvAlls("");
             buscarE("");
+            DgvEmpleado.Columns["ID"].Visible = false;
         }
 
+        void Delete()
+        {
+            TxtNombreEmpleado.Text = "";
+            TxtApellidoEmpleado.Text = "";
+            TxtCedulaCliente.Text = "";
+            TxtTelefono.Text = "";
+            TxtDireccion.Text = "";
+        }
         private void BtnLimpiar_Click(object sender, EventArgs e)
         {
-
+            Delete();
         }
 
         //METODO PARA LLENAR COMBOBOX
@@ -185,7 +201,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
 
         private void BtnAgregarEmpleado_Click(object sender, EventArgs e)
         {
-            if (MetodoValidarAll() > 0)
+            if (MetodoValidarAll() == 5)
             {
                 int a = CbTipoTelefono.SelectedIndex;
                 a = a + 1;
@@ -199,7 +215,21 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
                 }
                 else { 
                     if (a > 0)
-                    add.AddEmpleados(b, TxtCedulaCliente.Text, TxtNombreEmpleado.Text, TxtApellidoEmpleado.Text, TxtTelefono.Text, a, TxtDireccion.Text);
+                    {
+                        string z = Convert.ToString(validation.ValidarCedula(TxtCedulaCliente.Text));
+                        if (z == "OK")
+                        {
+                            
+                            add.AddEmpleados(b, TxtCedulaCliente.Text, TxtNombreEmpleado.Text, TxtApellidoEmpleado.Text, TxtTelefono.Text, a, TxtDireccion.Text);
+                            Delete();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Su cédula no es válida. :(", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        
+                    }
+                    
                 else
                     MessageBox.Show("Seleccione un campo del ComboBox <Tipo Telefono>. :)", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
@@ -269,14 +299,14 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
                     }
                     contT = Convert.ToInt16(contCedula.ContadorTelefonos(TxtTelefono.Text));
                        if (contT > 1) {
-                            MessageBox.Show("La Teléfono que intenta actualizar ya pertenece a otro Empleado. :(", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("El Teléfono que intenta actualizar ya pertenece a otro Empleado. :(", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
                             MessageBox.Show("Se actualizó este campo con la información que tenía anteriormente. :)", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             add.EditarE(IDEmpleado, b, cedula, TxtNombreEmpleado.Text, TxtApellidoEmpleado.Text, telefono.Trim(), a, TxtDireccion.Text);
 
                         MostrarProvAlls("");
                         buscarE("");
-
-                        }
+                        Delete();
+                         }
 
                         MostrarProvAlls("");
                         buscarE("");
@@ -296,6 +326,27 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             {
                 MessageBox.Show("Uno o mas campos están vacíos. :(", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void TxtCedulaCliente_Enter(object sender, EventArgs e)
+        {
+            if (TxtCedulaCliente.Text == "0000000000000A")
+            {
+                TxtCedulaCliente.Text = "";
+            }
+        }
+
+        private void TxtCedulaCliente_Leave(object sender, EventArgs e)
+        {
+            if (TxtCedulaCliente.Text == "")
+            {
+                TxtCedulaCliente.Text = "0000000000000A";
+            }
+        }
+
+        private void DgvEmpleado_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
         private void BtnEliminar_Click(object sender, EventArgs e)

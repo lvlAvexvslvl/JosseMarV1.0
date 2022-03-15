@@ -44,6 +44,8 @@
   <ItemGroup>
     <Compile Include="CConexion.cs" />
     <Compile Include="CDatosAddEstanteyCategoria.cs" />
+    <Compile Include="CDatosAddSinFactura.cs" />
+    <Compile Include="CDatosAdmin.cs" />
     <Compile Include="CDatosAgregarClientes.cs" />
     <Compile Include="CDatosAgregarClientesCredito.cs" />
     <Compile Include="CDatosAgregarCompra.cs" />
@@ -52,12 +54,15 @@
     <Compile Include="CDatosAgregarProveedor.cs" />
     <Compile Include="CDatosConsulta.cs" />
     <Compile Include="CDatosContadorCedula.cs" />
+    <Compile Include="CDatosControlInventario.cs" />
     <Compile Include="CDatosHistorialU.cs" />
     <Compile Include="CDatosInicarSesion.cs" />
     <Compile Include="CDatosMovimientos.cs" />
     <Compile Include="CDatosRegistrar.cs" />
     <Compile Include="CDatosValidarCedula.cs" />
     <Compile Include="CDatosVentas.cs" />
+    <Compile Include="CDatosVentasCredito.cs" />
+    <Compile Include="CDatosVerSaldosDiariosMensuales.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

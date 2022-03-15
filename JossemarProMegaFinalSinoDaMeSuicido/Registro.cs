@@ -49,6 +49,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
         private void BtnIniciarSesion_Click(object sender, EventArgs e)
         {
             capturarDatos();
+            this.Close();
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)

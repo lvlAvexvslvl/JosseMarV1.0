@@ -25,14 +25,14 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
         FormPrincipal p = new  FormPrincipal();
         CLogicaConsultas sql = new CLogicaConsultas();
         CLogicaObtenerIP ip = new CLogicaObtenerIP();
-        private void BtnRegistrarse_Click(object sender, EventArgs e)
+        /*private void BtnRegistrarse_Click(object sender, EventArgs e)
         {
             this.Visible = false;
             Registro r = new Registro();
             r.Show();
             this.Close();
            
-        }
+        }*/
 
         private void Inicio_Load(object sender, EventArgs e)
         {
@@ -41,7 +41,12 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             
         }
 
-        private void BtnCerrar_Click(object sender, EventArgs e)
+        /*private void BtnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }*/
+
+        private void guna2Button2_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -57,12 +62,26 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             string IpM = ip.ObtenerIp();
             result = log.IniciarS(nombreU, passU, IpM);
 
+            if (result.Trim() == Convert.ToString("R"))
+            {
+                MessageBox.Show("Error, Ya tiene una sesión abierta. :(", "ERROR Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (result.Trim() == Convert.ToString("Q"))
+            {
+                localIP = ip.ObtenerIp();
+                idp2 = sql.ConsultaSimple("SELECT IpMaquina.IdUsuario FROM IpMaquina WHERE IpMaquina ='" + localIP + "'");
+
+                //MessageBox.Show("Bienvenido. :)");
+                p.Show();
+                this.Close();
+            }
+
             if (result.Trim() == Convert.ToString("S"))
             {
                 localIP = ip.ObtenerIp();
                 idp2 = sql.ConsultaSimple("SELECT IpMaquina.IdUsuario FROM IpMaquina WHERE IpMaquina ='" + localIP + "'");
 
-                MessageBox.Show("Bienvenido Sr. :)");
+                //MessageBox.Show("Bienvenido Sr. :)");
                 p.Show();
                 this.Close();
             }
@@ -72,7 +91,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
                 localIP = ip.ObtenerIp();
                 idp2 = sql.ConsultaSimple("SELECT IpMaquina.IdUsuario FROM IpMaquina WHERE IpMaquina ='" + localIP + "'");
 
-                MessageBox.Show("Bienvenido. :)");
+               // MessageBox.Show("Bienvenido. :)");
                 p.Show();
                 this.Close();
             }
@@ -150,5 +169,68 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             
             
         }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Registro r = new Registro();
+            r.Show();
+            this.Close();
+        }
+
+
+        private void guna2Button3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void guna2CircleButton1_Click(object sender, EventArgs e)
+        {
+            if (TxtContraseña2.UseSystemPasswordChar == true)
+            {
+                TxtContraseña2.UseSystemPasswordChar = false;
+                guna2CircleButton1.FillColor = System.Drawing.Color.Gray;
+            }
+            else
+            {
+                TxtContraseña2.UseSystemPasswordChar = true;
+                guna2CircleButton1.FillColor = System.Drawing.Color.White;
+            }
+        }
+
+        private void TxtContraseña2_Enter(object sender, EventArgs e)
+        {
+            if (TxtContraseña2.Text == "CONTRASEÑA")
+            {
+                TxtContraseña2.Text = "";
+                TxtContraseña2.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void TxtContraseña2_Leave(object sender, EventArgs e)
+        {
+            if (TxtContraseña2.Text == "")
+            {
+                TxtContraseña2.UseSystemPasswordChar = false;
+                TxtContraseña2.Text = "CONTRASEÑA";
+            }
+        }
+
+        private void TxtUsuario2_Enter(object sender, EventArgs e)
+        {
+            if (TxtUsuario2.Text == "USUARIO")
+            {
+                TxtUsuario2.Text = "";
+            }
+        }
+
+        private void TxtUsuario2_Leave(object sender, EventArgs e)
+        {
+            if (TxtUsuario2.Text == "")
+            {
+                TxtUsuario2.Text = "USUARIO";
+            }
+        }
+
     }
 }

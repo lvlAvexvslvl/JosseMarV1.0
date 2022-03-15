@@ -21,22 +21,22 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
         CLogicaAddEstanteyCategoria add = new CLogicaAddEstanteyCategoria();
         CLogicaConsultas sql = new CLogicaConsultas();
         //METODO PARA LLENAR COMBOBOX DE CATEGORIA
-        void cmbCategorias()
-        {
-            CbxCategoria.DataSource = fill.cmbCategoria();
-            CbxCategoria.DisplayMember = "DescripcionC";
-            CbxCategoria.ValueMember = "IdCategoria";
+        //void cmbCategorias()
+        //{
+        //    CbxCategoria.DataSource = fill.cmbCategoria();
+        //    CbxCategoria.DisplayMember = "DescripcionC";
+        //    CbxCategoria.ValueMember = "IdCategoria";
 
-        }
+        //}
 
         //METODO PARA CAPTURAR DATOS
-        void CapturarDatosE()
-        {
-            int IdCategoria = Convert.ToInt32(CbxCategoria.SelectedValue.ToString());
-            string descripcionE = TxtDescripcionE.Text;
-            add.AddEstante(IdCategoria, descripcionE);
+        //void CapturarDatosE()
+        //{
+        //    int IdCategoria = Convert.ToInt32(CbxCategoria.SelectedValue.ToString());
+        //    string descripcionE = TxtDescripcionE.Text;
+        //    add.AddEstante(IdCategoria, descripcionE);
 
-        }
+        //}
         void CapturarDatosC()
         {
             string descripcionC = TxtCategoria.Text;
@@ -59,10 +59,10 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
-            CapturarDatosE();
+            //CapturarDatosE();
             LlenarGridCategoria();
             LlenarGridEstante();
-            cmbCategorias();
+            //cmbCategorias();
         }
 
         private void AñadirEstante_Load(object sender, EventArgs e)
@@ -72,7 +72,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
 
             DgvEstante.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             DgvEstante.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            cmbCategorias();
+            //cmbCategorias();
             LlenarGridEstante();
             LlenarGridCategoria();
         }
@@ -80,9 +80,36 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
         private void BtnGuardarC_Click(object sender, EventArgs e)
         {
             CapturarDatosC();
+            // CapturarDatosC();
             LlenarGridCategoria();
             LlenarGridEstante();
-            cmbCategorias();
+            //cmbCategorias();
+        }
+
+        private void BtnDeleteC_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Seguro que quieres eliminar esta categoria?", "Avíso", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            if (result == DialogResult.OK)
+            {
+                foreach (DataGridViewRow row in DgvCategoria.SelectedRows)
+                {
+                    add.EliminarCategoria(Convert.ToInt32(DgvCategoria.CurrentRow.Cells[0].Value));
+                    LlenarGridCategoria();
+                    LlenarGridEstante();
+                }
+            }
+            else if (result == DialogResult.Cancel)
+            {
+
+            }
+        }
+
+        private void TxtCategoria_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            Validaciones.SoloLetrasONumeros(e);
         }
     }
+   
 }
+

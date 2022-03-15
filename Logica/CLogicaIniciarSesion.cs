@@ -27,8 +27,8 @@ namespace Logica
 
             else if (result.Trim() == "S")
             {
-                info = "Bienvenido Sr. :)";
-                MessageBox.Show(info);
+                //info = "Bienvenido Sr. :)";
+                //MessageBox.Show(info);
 
                 return result;
             }

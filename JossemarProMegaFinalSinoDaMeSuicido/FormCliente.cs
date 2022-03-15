@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Logica;
+using Datos;
 namespace JossemarProMegaFinalSinoDaMeSuicido
 {
     public partial class FormCliente : Form
@@ -27,6 +28,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
         CLogicaAgregarClientesCredito add2 = new CLogicaAgregarClientesCredito();
         CLogicaConsultas sql = new CLogicaConsultas();
         CLogicaContadorCedula contCedula = new CLogicaContadorCedula();
+        CDatosValidarCedula validation = new CDatosValidarCedula();
         private void Diseño()
         {
             PnlAgregarCliente.Visible = false;
@@ -62,7 +64,8 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             BtnEditar.Enabled = true;
             MostrarMenu(PnlAgregarCliente);
             
-            //BtnEditar.Enabled = true;
+            BtnEditarCC.Enabled = true;
+            BtnEditar.Enabled = true;
             
         }
 
@@ -72,6 +75,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
                 PnlAgregarCliente.Visible = false;
 
             BtnEditar.Enabled = false;
+            BtnEditarCC.Enabled = false;
         }
 
         private void TxtNombreCliente_KeyPress(object sender, KeyPressEventArgs e)
@@ -237,7 +241,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             else
                 validation--;
 
-            if(TxtCedulaCliente.Text != "")
+            if(TxtCedulaCliente2.Text != "")
                 validation++;
             else
                 validation--;
@@ -266,7 +270,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
                     contador = 0;
 
                
-                if (MetodoValidar() > 0)
+                if (TxtNombreCliente.Text!="" && TxtApellidoCliente.Text!="")
                 {
 
                     contador3++;
@@ -293,7 +297,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
                 contador = 0;
 
                
-                if (MetodoValidarAll() > 0)
+                if (MetodoValidarAll() == 5)
                 {
 
                     //MessageBox.Show("si" + contador);
@@ -302,14 +306,23 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
                     {
                         MessageBox.Show("El Teléfono que intenta actualizar ya pertenece a otro Proveedor. :(", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    else { 
-                        int filas = 0 + contador;
-                    contador++;
+                    else {
+                        string b = Convert.ToString(validation.ValidarCedula(TxtCedulaCliente.Text));
+                        if (b == "OK")
+                        {
+                            int filas = 0 + contador;
+                            contador++;
 
-                    int a = CbxTipoTel.SelectedIndex;
-                    a = a + 1;
-                   // MessageBox.Show("a" + a);
-                    add2.AddClientes(TxtNombreCliente.Text.Trim(), TxtApellidoCliente.Text.Trim(),TxtTelefonoCliente.Text.Trim(),a,txtDireccionCliente.Text.Trim(),TxtCedulaCliente.Text.Trim());
+                            int a = CbxTipoTel.SelectedIndex;
+                            a = a + 1;
+                            // MessageBox.Show("a" + a);
+                            add2.AddClientes(TxtNombreCliente.Text.Trim(), TxtApellidoCliente.Text.Trim(), TxtTelefonoCliente.Text.Trim(), a, txtDireccionCliente.Text.Trim(), TxtCedulaCliente.Text.Trim());
+                        }
+                        else
+                        {
+                            MessageBox.Show("Su Cédula no es válida. :(", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                       
                     }
                 }
                 else
@@ -365,6 +378,10 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             CapturarClientesg("");
             CapturarClientesCredito("");
             CapturarClientesSinCredito("");
+
+            DgvClientesCredito.Columns["Cliente"].Visible = false;
+            DgvClientes.Columns["ID"].Visible = false;
+
         }
 
         private void TxtBuscar_TextChanged(object sender, EventArgs e)
@@ -447,12 +464,12 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
                     //MessageBox.Show("a" + contC);
                     
                         add2.EditarCCC(IDClienteCC, TxtNombreCliente.Text, TxtApellidoCliente.Text, TxtTelefonoCliente.Text, a, txtDireccionCliente.Text, TxtCedulaCliente.Text);
-                        int contC = Convert.ToInt16(contCedula.ContadorCedula(TxtCedulaCliente.Text));
+                        int contC = Convert.ToInt16(contCedula.ContadorCedula(TxtCedulaCliente2.Text));
                     int contT = Convert.ToInt16(contCedula.ContadorTelefonos(TxtTelefonoCliente.Text));
                     if (contC > 1)
                     {
                         MessageBox.Show("La cédula que intenta actualizar ya pertenece a otro cliente. :(", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        MessageBox.Show("Se actualizó este campo con la información que tenía anteriormente. :)", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //MessageBox.Show("Se actualizó este campo con la información que tenía anteriormente. :)", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         //----------------------------------------
 
                        // MessageBox.Show(cedula);
@@ -494,14 +511,30 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             }
         }
 
+        private void TxtCedulaCliente_Enter(object sender, EventArgs e)
+        {
+            if (TxtCedulaCliente.Text == "0000000000000A")
+            {
+                TxtCedulaCliente.Text = "";
+            }
+        }
+
+        private void TxtCedulaCliente_Leave(object sender, EventArgs e)
+        {
+            if (TxtCedulaCliente.Text == "")
+            {
+                TxtCedulaCliente.Text = "0000000000000A";
+            }
+        }
+
         //METODO PARA VALIDAR QUE LOS CAMPOS NO ESTEN VACIOS
-        
+
 
         private void BtnEditar_Click(object sender, EventArgs e)
         {
             MostrarMenu(PnlAgregarCliente);
             if (MetodoValidar() > 0){
-                add.EditarCC(IDCliente, TxtNombreCliente.Text, TxtApellidoCliente.Text);
+                add.EditarCC(IDCliente, TxtNombreCliente.Text.Trim(), TxtApellidoCliente.Text.Trim());
                 CapturarClientesCredito("");
                 CapturarClientesSinCredito("");
                 CapturarClientesg("");

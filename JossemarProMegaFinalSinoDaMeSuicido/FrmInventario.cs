@@ -17,18 +17,30 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             InitializeComponent();
         }
         CLogicaConsultas sql = new CLogicaConsultas();
-
+        CLogicaLlenarCmb Fil = new CLogicaLlenarCmb();
+        CLogicaObtenerFecha zzz = new CLogicaObtenerFecha();
          void InventarioUnificado(string a)
          {
-            DgvInventario.DataSource = sql.ConsultaTab("SELECT vs_ProductosExistentes.NombreProducto AS Producto, vs_ProductosExistentes.Marca AS Marca, vs_ProductosExistentes.DescripcionC AS Categoria,vs_ProductosExistentes.DescripcionTipoUM as UMedida, vs_ProductosExistentes.Descripcion FROM vs_ProductosExistentes WHERE vs_ProductosExistentes.NombreProducto LIKE '%"+a+"%' OR vs_ProductosExistentes.Marca LIKE '%"+a+ "%' OR vs_ProductosExistentes.DescripcionC LIKE'%"+a+"%' GROUP BY vs_ProductosExistentes.NombreProducto,vs_ProductosExistentes.Marca,vs_ProductosExistentes.DescripcionC,vs_ProductosExistentes.DescripcionTipoUM,vs_ProductosExistentes.Descripcion");
-            //DataGridViewTextBoxColumn Imagen = new DataGridViewTextBoxColumn();
-            //Imagen.HeaderText = "Imagen";
-            //DgvInventario.Columns.Insert(DgvInventario.Columns.Count , Imagen);
-            //DgvInventario.Columns["Imagen"].Visible=false;
+            DgvInventario.DataSource = sql.ConsultaTab("SELECT vs_ProductosExistentes.NombreProducto AS Producto, vs_ProductosExistentes.Marca AS Marca, vs_ProductosExistentes.DescripcionC AS Categoria,vs_ProductosExistentes.DescripcionTipoUM as UMedida, vs_ProductosExistentes.Descripcion, vs_ProductosExistentes.FechaCaducidad FROM vs_ProductosExistentes WHERE vs_ProductosExistentes.NombreProducto LIKE '%" + a+"%' OR vs_ProductosExistentes.Marca LIKE '%"+a+ "%' OR vs_ProductosExistentes.DescripcionC LIKE'%"+a+ "%' AND vs_ProductosExistentes.IdEstado =1 GROUP BY vs_ProductosExistentes.NombreProducto,vs_ProductosExistentes.Marca,vs_ProductosExistentes.DescripcionC,vs_ProductosExistentes.DescripcionTipoUM,vs_ProductosExistentes.Descripcion,vs_ProductosExistentes.FechaCaducidad");
+            
+        }
 
-           
-            //DgvInventario.Name = "Imagen";
-            //DgvInventarioColumns.Insert(TABLAEMPACADORES.Columns.Count, col);
+        void MostrarISF()
+        {
+            DgvPsf.DataSource = sql.ConsultaTab("SELECT vs_InventarioProductosSF.NombreProducto AS Producto, vs_InventarioProductosSF.DescripcionPSNF as Descripcion, vs_InventarioProductosSF.DescripcionC as Categoria, vs_InventarioProductosSF.DescripcionTipoUM AS UMedida, vs_InventarioProductosSF.DescripcionEstante AS Estante, vs_InventarioProductosSF.FechaCaducidad AS Caducidad, vs_InventarioProductosSF.PrecioVenta as PVenta,vs_InventarioProductosSF.Stock as Existencia FROM vs_InventarioProductosSF");
+        }
+        //METODO PARA CAPTURAR TODAS LAS FECHAS DE CADUCIDAD
+        void FechasCaducidad()
+        {
+            DgvCaducidad.DataSource = sql.ConsultaTab("SELECT Compra.FechaCaducidad FROM Compra WHERE Compra.Stock <> '.00' AND Compra.FechaCaducidad <> '0000-00-00'");
+        }
+        void ViewProdAndCantInventario()
+        {
+            LblTotalProductos.Text = sql.ConsultaSimple("SELECT COUNT(*) FROM Compra WHERE Compra.Stock <> '.00'");
+            string precioInv = sql.ConsultaSimple("SELECT SUM(Compra.PrecioVenta) FROM Compra WHERE Compra.Stock <> '.00'");
+            double PreInv = Convert.ToDouble(precioInv);
+            string format = String.Format("{0:#,##0.00}", PreInv);
+            LblTotalInventario.Text = format;
         }
 
         private void FrmInventario_Load(object sender, EventArgs e)
@@ -36,15 +48,22 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             DgvInventario.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             DgvInventario.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
+            DgvPsf.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            DgvPsf.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
             //DgvInventario.DataSource = sql.ConsultaTab("SELECT vs_ProductosExistentes.NombreProducto AS Producto, vs_ProductosExistentes.Marca AS Marca, vs_ProductosExistentes.DescripcionC AS Categoria,vs_ProductosExistentes.DescripcionTipoUM, vs_ProductosExistentes.Descripcion FROM vs_ProductosExistentes WHERE vs_ProductosExistentes.NombreProducto LIKE '%%' AND vs_ProductosExistentes.Marca LIKE '%%' GROUP BY vs_ProductosExistentes.NombreProducto,vs_ProductosExistentes.Marca,vs_ProductosExistentes.DescripcionC,vs_ProductosExistentes.DescripcionTipoUM,vs_ProductosExistentes.Descripcion");
             InventarioUnificado("");
-
+            MostrarISF();
+            
             DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
             btn.Name = "Add";
             DgvInventario.Columns.Add(btn);
 
             int conteo = DgvInventario.Rows.Count;
-            MessageBox.Show("Cantidad de Productos = "+conteo);
+            //MessageBox.Show("Cantidad de Productos = "+conteo);
+            ViewProdAndCantInventario();
+            FechasCaducidad();
+            this.DgvInventario.Columns["FechaCaducidad"].Visible = false;
         }
 
         
@@ -85,10 +104,24 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
                 //{
                     string nomProd = Convert.ToString(DgvInventario.CurrentRow.Cells[1].Value).Trim();
                 FrmProductosAlls prod = new FrmProductosAlls(nomProd);
-                prod.Show();
+                prod.ShowDialog();
                 //}
                
             }
+        }
+
+        private void DgvInventario_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+
+            
+ 
+        }
+
+        private void IBtnProductosCaducados_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FrmProductosVencidos vc = new FrmProductosVencidos();
+            vc.ShowDialog();
         }
     }
 }

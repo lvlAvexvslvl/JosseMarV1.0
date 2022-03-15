@@ -40,7 +40,7 @@ namespace Logica
         public string MovDevolucion(string idMovDevolucion, string total)
         {
             int id = Convert.ToInt32(idMovDevolucion.Trim());
-            int tot = Convert.ToInt32(total.Trim());
+            double tot = Convert.ToDouble(total.Trim());
             return Mov.MovimientoDevolucion(id, tot);
 
         }

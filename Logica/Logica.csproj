@@ -44,23 +44,29 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="CLogicaAddEstanteyCategoria.cs" />
+    <Compile Include="CLogicaAddSinFactura.cs" />
+    <Compile Include="CLogicaAdmin.cs" />
     <Compile Include="CLogicaAgregarClientes.cs" />
     <Compile Include="CLogicaAgregarClientesCredito.cs" />
     <Compile Include="CLogicaAgregarCompra.cs" />
     <Compile Include="CLogicaAgregarEmpleados.cs" />
     <Compile Include="CLogicaAgregarProveedor.cs" />
+    <Compile Include="CLogicaCompraCreditoo.cs" />
     <Compile Include="CLogicaConsultas.cs" />
     <Compile Include="CLogicaContadorCedula.cs" />
     <Compile Include="CLogicaHistorialU.cs" />
     <Compile Include="CLogicaIniciarSesion.cs" />
     <Compile Include="CLogicaLlenarCmb.cs" />
     <Compile Include="CLogicaMessageRes.cs" />
+    <Compile Include="CLogicaMostrarProductosCaducados.cs" />
     <Compile Include="CLogicaMovimientos.cs" />
     <Compile Include="CLogicaObtenerFecha.cs" />
     <Compile Include="CLogicaObtenerIP.cs" />
     <Compile Include="CLogicarecibirId.cs" />
     <Compile Include="CLogicaRegistrar.cs" />
     <Compile Include="CLogicaVentas.cs" />
+    <Compile Include="CLogicaVentasCredito.cs" />
+    <Compile Include="CLogicaVerSaldosAnuales.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Prueba.cs" />
   </ItemGroup>

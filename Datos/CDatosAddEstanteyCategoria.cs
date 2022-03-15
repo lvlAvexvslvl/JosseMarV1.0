@@ -65,5 +65,32 @@ namespace Datos
             }
 
         }
+        public string EliminarCategoria(int Idcategoria)
+        {
+            //SqlParameter x;
+            try
+            {
+                comando.Connection = conexion.AbrirConexion();
+                comando.CommandText = "JSMEditarCategoria";
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@IdCategoria", Idcategoria);
+               
+
+
+                res = comando.Parameters.AddWithValue("@Result", "");
+                comando.Parameters["@Result"].Direction = ParameterDirection.Output;
+
+                comando.ExecuteNonQuery();
+                comando.Parameters.Clear();
+
+                return res.Value.ToString();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex + "Eroror");
+                return "ERROR3";
+            }
+
+        }
     }
 }

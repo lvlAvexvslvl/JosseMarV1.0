@@ -55,5 +55,26 @@ namespace Logica
             return result;
 
         }
+
+        public string EliminarCategoria(int idc)
+        {
+            // string IP = ip.ObtenerIp();
+
+            string result = add.EliminarCategoria(idc);
+
+            if (result.Trim() == "G")
+            {
+                MessageBox.Show("La Categoria se eliminó correctamente. :)", "Avíso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return result;
+            }
+            else
+            {
+                MessageBox.Show("La Categoria no se puedo eliminar. x.x", "Avíso", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return result;
+            }
+
+            return result;
+
+        }
     }
 }

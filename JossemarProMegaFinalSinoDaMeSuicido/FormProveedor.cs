@@ -164,6 +164,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             DgvBucarProveedor.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             MostrarProvAlls("");
             BuscarProv("");
+            DgvProveedores.Columns["ID"].Visible = false;
 
         }
 

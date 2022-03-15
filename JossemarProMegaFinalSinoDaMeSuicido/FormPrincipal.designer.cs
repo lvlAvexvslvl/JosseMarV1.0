@@ -33,6 +33,9 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlMostarFrames = new Guna.UI2.WinForms.Guna2Panel();
             this.pictureLogoPrincipal = new Guna.UI2.WinForms.Guna2PictureBox();
             this.PnlMenu = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.BtnPanelAdmin = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PnlSubPersona = new Guna.UI2.WinForms.Guna2Panel();
             this.PnlEmpleado = new Guna.UI2.WinForms.Guna2Panel();
             this.LblEmpleado = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -90,6 +93,9 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.LblVentas = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.BtnVentas = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PnlSubInventario = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.BtnProductosSinfactura = new Guna.UI2.WinForms.Guna2CircleButton();
             this.PnlMostarInventario = new Guna.UI2.WinForms.Guna2Panel();
             this.LblMostrarInventario = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.BtnMostarInventario = new Guna.UI2.WinForms.Guna2CircleButton();
@@ -129,6 +135,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlMostarFrames.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogoPrincipal)).BeginInit();
             this.PnlMenu.SuspendLayout();
+            this.guna2Panel2.SuspendLayout();
             this.PnlSubPersona.SuspendLayout();
             this.PnlEmpleado.SuspendLayout();
             this.PnlProveedor.SuspendLayout();
@@ -150,6 +157,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlNuevaVenta.SuspendLayout();
             this.PnlVentas.SuspendLayout();
             this.PnlSubInventario.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
             this.PnlMostarInventario.SuspendLayout();
             this.PnlAgregarInventario.SuspendLayout();
             this.PnlInventario.SuspendLayout();
@@ -173,25 +181,31 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlPrincipal.Location = new System.Drawing.Point(0, 0);
             this.PnlPrincipal.Name = "PnlPrincipal";
             this.PnlPrincipal.ShadowDecoration.Parent = this.PnlPrincipal;
-            this.PnlPrincipal.Size = new System.Drawing.Size(1568, 878);
+            this.PnlPrincipal.Size = new System.Drawing.Size(1386, 788);
             this.PnlPrincipal.TabIndex = 0;
             // 
             // PnlMostarFrames
             // 
+            this.PnlMostarFrames.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.PnlMostarFrames.Controls.Add(this.pictureLogoPrincipal);
-            this.PnlMostarFrames.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PnlMostarFrames.FillColor = System.Drawing.Color.White;
             this.PnlMostarFrames.Location = new System.Drawing.Point(0, 115);
             this.PnlMostarFrames.Name = "PnlMostarFrames";
             this.PnlMostarFrames.ShadowDecoration.Parent = this.PnlMostarFrames;
-            this.PnlMostarFrames.Size = new System.Drawing.Size(1568, 763);
+            this.PnlMostarFrames.Size = new System.Drawing.Size(1386, 673);
             this.PnlMostarFrames.TabIndex = 4;
+            this.PnlMostarFrames.Paint += new System.Windows.Forms.PaintEventHandler(this.PnlMostarFrames_Paint);
             // 
             // pictureLogoPrincipal
             // 
+            this.pictureLogoPrincipal.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureLogoPrincipal.BackColor = System.Drawing.Color.White;
             this.pictureLogoPrincipal.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.Logo;
-            this.pictureLogoPrincipal.Location = new System.Drawing.Point(622, 96);
+            this.pictureLogoPrincipal.Location = new System.Drawing.Point(420, 121);
             this.pictureLogoPrincipal.Name = "pictureLogoPrincipal";
             this.pictureLogoPrincipal.ShadowDecoration.Parent = this.pictureLogoPrincipal;
             this.pictureLogoPrincipal.Size = new System.Drawing.Size(376, 332);
@@ -202,6 +216,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             // PnlMenu
             // 
             this.PnlMenu.AutoScroll = true;
+            this.PnlMenu.Controls.Add(this.guna2Panel2);
             this.PnlMenu.Controls.Add(this.PnlSubPersona);
             this.PnlMenu.Controls.Add(this.PnlPersona);
             this.PnlMenu.Controls.Add(this.PnlSubCredito);
@@ -222,13 +237,55 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlMenu.Size = new System.Drawing.Size(1386, 84);
             this.PnlMenu.TabIndex = 3;
             // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.Controls.Add(this.guna2HtmlLabel2);
+            this.guna2Panel2.Controls.Add(this.BtnPanelAdmin);
+            this.guna2Panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2Panel2.Location = new System.Drawing.Point(1980, 0);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
+            this.guna2Panel2.Size = new System.Drawing.Size(78, 67);
+            this.guna2Panel2.TabIndex = 27;
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
+            this.guna2HtmlLabel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(12, 61);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(45, 19);
+            this.guna2HtmlLabel2.TabIndex = 8;
+            this.guna2HtmlLabel2.Text = "Admin";
+            // 
+            // BtnPanelAdmin
+            // 
+            this.BtnPanelAdmin.CheckedState.Parent = this.BtnPanelAdmin;
+            this.BtnPanelAdmin.CustomImages.Parent = this.BtnPanelAdmin;
+            this.BtnPanelAdmin.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.BtnPanelAdmin.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnPanelAdmin.ForeColor = System.Drawing.Color.White;
+            this.BtnPanelAdmin.HoverState.Parent = this.BtnPanelAdmin;
+            this.BtnPanelAdmin.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.user;
+            this.BtnPanelAdmin.ImageSize = new System.Drawing.Size(40, 40);
+            this.BtnPanelAdmin.Location = new System.Drawing.Point(10, 6);
+            this.BtnPanelAdmin.Name = "BtnPanelAdmin";
+            this.BtnPanelAdmin.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.BtnPanelAdmin.ShadowDecoration.Parent = this.BtnPanelAdmin;
+            this.BtnPanelAdmin.Size = new System.Drawing.Size(58, 52);
+            this.BtnPanelAdmin.TabIndex = 6;
+            this.BtnPanelAdmin.Click += new System.EventHandler(this.guna2CircleButton1_Click);
+            // 
             // PnlSubPersona
             // 
             this.PnlSubPersona.Controls.Add(this.PnlEmpleado);
             this.PnlSubPersona.Controls.Add(this.PnlProveedor);
             this.PnlSubPersona.Controls.Add(this.PnlCliente);
             this.PnlSubPersona.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PnlSubPersona.Location = new System.Drawing.Point(1670, 0);
+            this.PnlSubPersona.Location = new System.Drawing.Point(1742, 0);
             this.PnlSubPersona.Name = "PnlSubPersona";
             this.PnlSubPersona.ShadowDecoration.Parent = this.PnlSubPersona;
             this.PnlSubPersona.Size = new System.Drawing.Size(238, 67);
@@ -366,7 +423,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlPersona.Controls.Add(this.LblPersona);
             this.PnlPersona.Controls.Add(this.BtnPersona);
             this.PnlPersona.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PnlPersona.Location = new System.Drawing.Point(1592, 0);
+            this.PnlPersona.Location = new System.Drawing.Point(1664, 0);
             this.PnlPersona.Name = "PnlPersona";
             this.PnlPersona.ShadowDecoration.Parent = this.PnlPersona;
             this.PnlPersona.Size = new System.Drawing.Size(78, 67);
@@ -421,7 +478,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlSubCredito.Controls.Add(this.PnlHistorialCredito);
             this.PnlSubCredito.Controls.Add(this.PnlNuevoCredito);
             this.PnlSubCredito.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PnlSubCredito.Location = new System.Drawing.Point(1354, 0);
+            this.PnlSubCredito.Location = new System.Drawing.Point(1426, 0);
             this.PnlSubCredito.Name = "PnlSubCredito";
             this.PnlSubCredito.ShadowDecoration.Parent = this.PnlSubCredito;
             this.PnlSubCredito.Size = new System.Drawing.Size(238, 67);
@@ -508,6 +565,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.BtnHistorialCredito.ShadowDecoration.Parent = this.BtnHistorialCredito;
             this.BtnHistorialCredito.Size = new System.Drawing.Size(58, 52);
             this.BtnHistorialCredito.TabIndex = 6;
+            this.BtnHistorialCredito.Click += new System.EventHandler(this.BtnHistorialCredito_Click);
             // 
             // PnlNuevoCredito
             // 
@@ -549,6 +607,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.BtnNuevoCredito.ShadowDecoration.Parent = this.BtnNuevoCredito;
             this.BtnNuevoCredito.Size = new System.Drawing.Size(58, 52);
             this.BtnNuevoCredito.TabIndex = 6;
+            this.BtnNuevoCredito.Click += new System.EventHandler(this.BtnNuevoCredito_Click);
             // 
             // PnlCredito
             // 
@@ -556,7 +615,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlCredito.Controls.Add(this.LblCredito);
             this.PnlCredito.Controls.Add(this.BtnCredito);
             this.PnlCredito.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PnlCredito.Location = new System.Drawing.Point(1276, 0);
+            this.PnlCredito.Location = new System.Drawing.Point(1348, 0);
             this.PnlCredito.Name = "PnlCredito";
             this.PnlCredito.ShadowDecoration.Parent = this.PnlCredito;
             this.PnlCredito.Size = new System.Drawing.Size(78, 67);
@@ -611,7 +670,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlSubCaja.Controls.Add(this.PnlSaldo);
             this.PnlSubCaja.Controls.Add(this.PnlMovimientos);
             this.PnlSubCaja.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PnlSubCaja.Location = new System.Drawing.Point(1038, 0);
+            this.PnlSubCaja.Location = new System.Drawing.Point(1110, 0);
             this.PnlSubCaja.Name = "PnlSubCaja";
             this.PnlSubCaja.ShadowDecoration.Parent = this.PnlSubCaja;
             this.PnlSubCaja.Size = new System.Drawing.Size(238, 67);
@@ -702,8 +761,6 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             // 
             // PnlMovimientos
             // 
-            // PnlMovimientos
-            // 
             this.PnlMovimientos.Controls.Add(this.LblMovimientos);
             this.PnlMovimientos.Controls.Add(this.BtnMovimientos);
             this.PnlMovimientos.Dock = System.Windows.Forms.DockStyle.Left;
@@ -750,21 +807,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlCaja.Controls.Add(this.LblCaja);
             this.PnlCaja.Controls.Add(this.BtnCaja);
             this.PnlCaja.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PnlCaja.Location = new System.Drawing.Point(960, 0);
-            this.PnlCaja.Name = "PnlCaja";
-            this.PnlCaja.ShadowDecoration.Parent = this.PnlCaja;
-            this.PnlCaja.Size = new System.Drawing.Size(78, 67);
-            this.PnlCaja.TabIndex = 17;
-            // 
-            // PnlPressCaja
-            // 
-            // PnlCaja
-            // 
-            this.PnlCaja.Controls.Add(this.PnlPressCaja);
-            this.PnlCaja.Controls.Add(this.LblCaja);
-            this.PnlCaja.Controls.Add(this.BtnCaja);
-            this.PnlCaja.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PnlCaja.Location = new System.Drawing.Point(960, 0);
+            this.PnlCaja.Location = new System.Drawing.Point(1032, 0);
             this.PnlCaja.Name = "PnlCaja";
             this.PnlCaja.ShadowDecoration.Parent = this.PnlCaja;
             this.PnlCaja.Size = new System.Drawing.Size(78, 67);
@@ -819,7 +862,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlSubVentas.Controls.Add(this.PnlHistorialVentas);
             this.PnlSubVentas.Controls.Add(this.PnlNuevaVenta);
             this.PnlSubVentas.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PnlSubVentas.Location = new System.Drawing.Point(722, 0);
+            this.PnlSubVentas.Location = new System.Drawing.Point(794, 0);
             this.PnlSubVentas.Name = "PnlSubVentas";
             this.PnlSubVentas.ShadowDecoration.Parent = this.PnlSubVentas;
             this.PnlSubVentas.Size = new System.Drawing.Size(238, 67);
@@ -865,6 +908,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.BtnDevoluciones.ShadowDecoration.Parent = this.BtnDevoluciones;
             this.BtnDevoluciones.Size = new System.Drawing.Size(58, 52);
             this.BtnDevoluciones.TabIndex = 6;
+            this.BtnDevoluciones.Click += new System.EventHandler(this.BtnDevoluciones_Click);
             // 
             // PnlHistorialVentas
             // 
@@ -906,6 +950,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.BtnHistorialVentas.ShadowDecoration.Parent = this.BtnHistorialVentas;
             this.BtnHistorialVentas.Size = new System.Drawing.Size(58, 52);
             this.BtnHistorialVentas.TabIndex = 6;
+            this.BtnHistorialVentas.Click += new System.EventHandler(this.BtnHistorialVentas_Click);
             // 
             // PnlNuevaVenta
             // 
@@ -955,7 +1000,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlVentas.Controls.Add(this.LblVentas);
             this.PnlVentas.Controls.Add(this.BtnVentas);
             this.PnlVentas.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PnlVentas.Location = new System.Drawing.Point(644, 0);
+            this.PnlVentas.Location = new System.Drawing.Point(716, 0);
             this.PnlVentas.Name = "PnlVentas";
             this.PnlVentas.ShadowDecoration.Parent = this.PnlVentas;
             this.PnlVentas.Size = new System.Drawing.Size(78, 67);
@@ -1006,14 +1051,57 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             // 
             // PnlSubInventario
             // 
+            this.PnlSubInventario.Controls.Add(this.guna2Panel1);
             this.PnlSubInventario.Controls.Add(this.PnlMostarInventario);
             this.PnlSubInventario.Controls.Add(this.PnlAgregarInventario);
             this.PnlSubInventario.Dock = System.Windows.Forms.DockStyle.Left;
             this.PnlSubInventario.Location = new System.Drawing.Point(485, 0);
             this.PnlSubInventario.Name = "PnlSubInventario";
             this.PnlSubInventario.ShadowDecoration.Parent = this.PnlSubInventario;
-            this.PnlSubInventario.Size = new System.Drawing.Size(159, 67);
+            this.PnlSubInventario.Size = new System.Drawing.Size(231, 67);
             this.PnlSubInventario.TabIndex = 14;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
+            this.guna2Panel1.Controls.Add(this.BtnProductosSinfactura);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.guna2Panel1.Location = new System.Drawing.Point(156, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
+            this.guna2Panel1.Size = new System.Drawing.Size(78, 67);
+            this.guna2Panel1.TabIndex = 11;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.BackgroundImage = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.compras;
+            this.guna2HtmlLabel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(4, 61);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(68, 19);
+            this.guna2HtmlLabel1.TabIndex = 8;
+            this.guna2HtmlLabel1.Text = "Productos";
+            // 
+            // BtnProductosSinfactura
+            // 
+            this.BtnProductosSinfactura.CheckedState.Parent = this.BtnProductosSinfactura;
+            this.BtnProductosSinfactura.CustomImages.Parent = this.BtnProductosSinfactura;
+            this.BtnProductosSinfactura.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BtnProductosSinfactura.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.BtnProductosSinfactura.ForeColor = System.Drawing.Color.White;
+            this.BtnProductosSinfactura.HoverState.Parent = this.BtnProductosSinfactura;
+            this.BtnProductosSinfactura.Image = global::JossemarProMegaFinalSinoDaMeSuicido.Properties.Resources.historial_medico;
+            this.BtnProductosSinfactura.ImageSize = new System.Drawing.Size(35, 35);
+            this.BtnProductosSinfactura.Location = new System.Drawing.Point(10, 6);
+            this.BtnProductosSinfactura.Name = "BtnProductosSinfactura";
+            this.BtnProductosSinfactura.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.BtnProductosSinfactura.ShadowDecoration.Parent = this.BtnProductosSinfactura;
+            this.BtnProductosSinfactura.Size = new System.Drawing.Size(58, 52);
+            this.BtnProductosSinfactura.TabIndex = 6;
+            this.BtnProductosSinfactura.Click += new System.EventHandler(this.BtnProductosSinfactura_Click);
             // 
             // PnlMostarInventario
             // 
@@ -1097,6 +1185,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.BtnAgregarInventario.ShadowDecoration.Parent = this.BtnAgregarInventario;
             this.BtnAgregarInventario.Size = new System.Drawing.Size(58, 52);
             this.BtnAgregarInventario.TabIndex = 6;
+            this.BtnAgregarInventario.Click += new System.EventHandler(this.BtnAgregarInventario_Click);
             // 
             // PnlInventario
             // 
@@ -1185,9 +1274,9 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.LblDevolucionesCompra.ForeColor = System.Drawing.Color.Black;
             this.LblDevolucionesCompra.Location = new System.Drawing.Point(0, 61);
             this.LblDevolucionesCompra.Name = "LblDevolucionesCompra";
-            this.LblDevolucionesCompra.Size = new System.Drawing.Size(77, 19);
+            this.LblDevolucionesCompra.Size = new System.Drawing.Size(75, 19);
             this.LblDevolucionesCompra.TabIndex = 8;
-            this.LblDevolucionesCompra.Text = "Devolución";
+            this.LblDevolucionesCompra.Text = "Categorias";
             // 
             // BtnDevolucionCompra
             // 
@@ -1227,9 +1316,9 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.LblHistorialCompra.ForeColor = System.Drawing.Color.Black;
             this.LblHistorialCompra.Location = new System.Drawing.Point(12, 61);
             this.LblHistorialCompra.Name = "LblHistorialCompra";
-            this.LblHistorialCompra.Size = new System.Drawing.Size(53, 19);
+            this.LblHistorialCompra.Size = new System.Drawing.Size(40, 19);
             this.LblHistorialCompra.TabIndex = 8;
-            this.LblHistorialCompra.Text = "Historial";
+            this.LblHistorialCompra.Text = "Editar";
             // 
             // BtnHistorialCompra
             // 
@@ -1247,6 +1336,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.BtnHistorialCompra.ShadowDecoration.Parent = this.BtnHistorialCompra;
             this.BtnHistorialCompra.Size = new System.Drawing.Size(58, 52);
             this.BtnHistorialCompra.TabIndex = 6;
+            this.BtnHistorialCompra.Click += new System.EventHandler(this.BtnHistorialCompra_Click);
             // 
             // PnlAgregarCompra
             // 
@@ -1381,7 +1471,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlBarraSuperior.Location = new System.Drawing.Point(0, 0);
             this.PnlBarraSuperior.Name = "PnlBarraSuperior";
             this.PnlBarraSuperior.ShadowDecoration.Parent = this.PnlBarraSuperior;
-            this.PnlBarraSuperior.Size = new System.Drawing.Size(1568, 31);
+            this.PnlBarraSuperior.Size = new System.Drawing.Size(1386, 31);
             this.PnlBarraSuperior.TabIndex = 2;
             this.PnlBarraSuperior.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PnlBarraSuperior_MouseDown);
             // 
@@ -1399,7 +1489,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             // 
             this.LblSeparador.BackColor = System.Drawing.Color.Transparent;
             this.LblSeparador.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblSeparador.Location = new System.Drawing.Point(111, 2);
+            this.LblSeparador.Location = new System.Drawing.Point(133, 2);
             this.LblSeparador.Name = "LblSeparador";
             this.LblSeparador.Size = new System.Drawing.Size(14, 23);
             this.LblSeparador.TabIndex = 5;
@@ -1413,7 +1503,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.BtnCerrarSesion.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnCerrarSesion.ForeColor = System.Drawing.Color.Black;
             this.BtnCerrarSesion.HoverState.Parent = this.BtnCerrarSesion;
-            this.BtnCerrarSesion.Location = new System.Drawing.Point(127, 3);
+            this.BtnCerrarSesion.Location = new System.Drawing.Point(149, 3);
             this.BtnCerrarSesion.Name = "BtnCerrarSesion";
             this.BtnCerrarSesion.ShadowDecoration.Parent = this.BtnCerrarSesion;
             this.BtnCerrarSesion.Size = new System.Drawing.Size(84, 23);
@@ -1424,12 +1514,12 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             // LblUsuario
             // 
             this.LblUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.LblUsuario.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblUsuario.Location = new System.Drawing.Point(54, 6);
+            this.LblUsuario.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblUsuario.Location = new System.Drawing.Point(47, 6);
             this.LblUsuario.Name = "LblUsuario";
-            this.LblUsuario.Size = new System.Drawing.Size(46, 19);
+            this.LblUsuario.Size = new System.Drawing.Size(3, 2);
             this.LblUsuario.TabIndex = 4;
-            this.LblUsuario.Text = "Usuario";
+            this.LblUsuario.Text = null;
             // 
             // PbUsuario
             // 
@@ -1450,7 +1540,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.BtnMinimizar.FillColor = System.Drawing.Color.Gray;
             this.BtnMinimizar.HoverState.Parent = this.BtnMinimizar;
             this.BtnMinimizar.IconColor = System.Drawing.Color.White;
-            this.BtnMinimizar.Location = new System.Drawing.Point(1433, 0);
+            this.BtnMinimizar.Location = new System.Drawing.Point(1251, 0);
             this.BtnMinimizar.Name = "BtnMinimizar";
             this.BtnMinimizar.ShadowDecoration.Parent = this.BtnMinimizar;
             this.BtnMinimizar.Size = new System.Drawing.Size(45, 31);
@@ -1463,7 +1553,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.BtnMazimizar.FillColor = System.Drawing.Color.Gray;
             this.BtnMazimizar.HoverState.Parent = this.BtnMazimizar;
             this.BtnMazimizar.IconColor = System.Drawing.Color.White;
-            this.BtnMazimizar.Location = new System.Drawing.Point(1478, 0);
+            this.BtnMazimizar.Location = new System.Drawing.Point(1296, 0);
             this.BtnMazimizar.Name = "BtnMazimizar";
             this.BtnMazimizar.ShadowDecoration.Parent = this.BtnMazimizar;
             this.BtnMazimizar.Size = new System.Drawing.Size(45, 31);
@@ -1475,7 +1565,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.BtnSalir.FillColor = System.Drawing.Color.Gray;
             this.BtnSalir.HoverState.Parent = this.BtnSalir;
             this.BtnSalir.IconColor = System.Drawing.Color.White;
-            this.BtnSalir.Location = new System.Drawing.Point(1523, 0);
+            this.BtnSalir.Location = new System.Drawing.Point(1341, 0);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.ShadowDecoration.Parent = this.BtnSalir;
             this.BtnSalir.Size = new System.Drawing.Size(45, 31);
@@ -1485,17 +1575,20 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1568, 878);
+            this.ClientSize = new System.Drawing.Size(1386, 788);
             this.Controls.Add(this.PnlPrincipal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormPrincipal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.PnlPrincipal.ResumeLayout(false);
             this.PnlMostarFrames.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureLogoPrincipal)).EndInit();
             this.PnlMenu.ResumeLayout(false);
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
             this.PnlSubPersona.ResumeLayout(false);
             this.PnlEmpleado.ResumeLayout(false);
             this.PnlEmpleado.PerformLayout();
@@ -1533,6 +1626,8 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             this.PnlVentas.ResumeLayout(false);
             this.PnlVentas.PerformLayout();
             this.PnlSubInventario.ResumeLayout(false);
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.PnlMostarInventario.ResumeLayout(false);
             this.PnlMostarInventario.PerformLayout();
             this.PnlAgregarInventario.ResumeLayout(false);
@@ -1655,5 +1750,11 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
         private Guna.UI2.WinForms.Guna2HtmlLabel LblDevolucionesCompra;
         private Guna.UI2.WinForms.Guna2CircleButton BtnDevolucionCompra;
         private System.Windows.Forms.Label LbliUser;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2CircleButton BtnProductosSinfactura;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2CircleButton BtnPanelAdmin;
     }
 }

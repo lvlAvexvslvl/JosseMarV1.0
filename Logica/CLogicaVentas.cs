@@ -9,21 +9,51 @@ namespace Logica
 {
     public class CLogicaVentas
     {
-        
-            CDatosVentas add = new CDatosVentas();
-            // CLogicaObtenerIP ip = new CLogicaObtenerIP();
-            public string AddVenta(int IdProducto, int IdCliente, double descuento, double cantidadVendida, string FVenta, double SubT, double Total, int IdUsuario)
-            {
-                // string IP = ip.ObtenerIp();
 
-                string result = add.AgregarVenta(IdProducto,IdCliente, descuento, cantidadVendida, FVenta,  SubT,
-               Total, IdUsuario);
+        CDatosVentas add = new CDatosVentas();
+        // CLogicaObtenerIP ip = new CLogicaObtenerIP();
+        public string AddVenta(string NomCli, string ApeCli, double descuento, double SubT,
+         double Total, int IdUsuario)
+        {
+            // string IP = ip.ObtenerIp();
+
+            string result = add.AgregarVenta(NomCli, ApeCli, descuento, SubT,
+         Total, IdUsuario);
 
 
-               
-                return result;
 
-                
-            }
+            return result;
+
+
+        }
+
+        public string AddVentasProd(int idV, int idProd, double cantidad)
+        {
+            string result = add.AgregarVentaProducto(idV, idProd, cantidad);
+            return result;
+        }
+        public string RestInventario(int idProd, double stock, double cantidad)
+        {
+            string result = add.RestarInventario(idProd, stock, cantidad);
+            return result;
+        }
+
+        public string DevolucionProdV(int nf, int idp, string estado, int idU,int idvp)
+        {
+            string result = add.DevolucionProdV( nf,  idp, estado,idU, idvp);
+            return result;
+        }
+
+        public string RetirarDev(int idvp)
+        {
+            string result = add.RetirarDevolucion(idvp);
+            return result;
+        }
+
+        public string CancelarAllNFact(int idV, int idvp, int idU, int Tipo)
+        {
+            string result = add.CancelarAllFactura(idV,idvp,idU,Tipo);
+            return result;
+        }
     }
 }

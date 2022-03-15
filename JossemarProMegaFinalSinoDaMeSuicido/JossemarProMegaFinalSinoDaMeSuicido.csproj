@@ -33,14 +33,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI">
       <HintPath>..\..\..\..\Desktop\FRMRespaldosJosseMar\Jossemar\Jossemar\bin\Debug\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2">
       <HintPath>..\..\..\..\Desktop\FRMRespaldosJosseMar\Jossemar\Jossemar\bin\Debug\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -58,17 +66,47 @@
     <Compile Include="AñadirEstante.designer.cs">
       <DependentUpon>AñadirEstante.cs</DependentUpon>
     </Compile>
+    <Compile Include="AñadirSinFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AñadirSinFactura.designer.cs">
+      <DependentUpon>AñadirSinFactura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdmin.Designer.cs">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCliente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormCliente.designer.cs">
       <DependentUpon>FormCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCompraCredito.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCompraCredito.Designer.cs">
+      <DependentUpon>FormCompraCredito.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreditosCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreditosCompra.Designer.cs">
+      <DependentUpon>FormCreditosCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEditarCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEditarCompra.Designer.cs">
+      <DependentUpon>FormEditarCompra.cs</DependentUpon>
     </Compile>
     <Compile Include="FormEmpleado.cs">
       <SubType>Form</SubType>
@@ -88,17 +126,107 @@
     <Compile Include="FormProveedor.designer.cs">
       <DependentUpon>FormProveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVentas.Designer.cs">
+      <DependentUpon>FormVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmActividades.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmActividades.Designer.cs">
       <DependentUpon>FrmActividades.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAgregarCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgregarCV.Designer.cs">
+      <DependentUpon>FrmAgregarCV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCancelarFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCancelarFactura.Designer.cs">
+      <DependentUpon>FrmCancelarFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCancelarVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCancelarVenta.Designer.cs">
+      <DependentUpon>FrmCancelarVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDevolverProductocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDevolverProductocs.Designer.cs">
+      <DependentUpon>FrmDevolverProductocs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDevolverVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDevolverVenta.Designer.cs">
+      <DependentUpon>FrmDevolverVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEditarDevolucion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEditarDevolucion.Designer.cs">
+      <DependentUpon>FrmEditarDevolucion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHistorialVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHistorialVentas.Designer.cs">
+      <DependentUpon>FrmHistorialVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmHistorialVentasCreditos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHistorialVentasCreditos.Designer.cs">
+      <DependentUpon>FrmHistorialVentasCreditos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInventario.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmInventario.Designer.cs">
       <DependentUpon>FrmInventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInventarioSinFactura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInventarioSinFactura.Designer.cs">
+      <DependentUpon>FrmInventarioSinFactura.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmIp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmIp.Designer.cs">
+      <DependentUpon>FrmIp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMessage.Designer.cs">
+      <DependentUpon>FrmMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMostrarDesperfectosE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMostrarDesperfectosE.Designer.cs">
+      <DependentUpon>FrmMostrarDesperfectosE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMostrarDevolucionesE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMostrarDevolucionesE.Designer.cs">
+      <DependentUpon>FrmMostrarDevolucionesE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMostrarVentasEspecificas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMostrarVentasEspecificas.Designer.cs">
+      <DependentUpon>FrmMostrarVentasEspecificas.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmNuevoProducto.cs">
       <SubType>Form</SubType>
@@ -112,6 +240,12 @@
     <Compile Include="FrmProductosAlls.Designer.cs">
       <DependentUpon>FrmProductosAlls.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmProductosVencidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProductosVencidos.Designer.cs">
+      <DependentUpon>FrmProductosVencidos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmProductosVentas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,11 +258,11 @@
     <Compile Include="FrmSaldos.Designer.cs">
       <DependentUpon>FrmSaldos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmVentas.cs">
+    <Compile Include="FrmVentasCreditoEspecifico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmVentas.Designer.cs">
-      <DependentUpon>FrmVentas.cs</DependentUpon>
+    <Compile Include="FrmVentasCreditoEspecifico.Designer.cs">
+      <DependentUpon>FrmVentasCreditoEspecifico.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
@@ -144,15 +278,36 @@
     <Compile Include="Registro.designer.cs">
       <DependentUpon>Registro.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAgregarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAgregarUsuarios.Designer.cs">
+      <DependentUpon>FrmAgregarUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Validaciones.cs" />
     <EmbeddedResource Include="AñadirEstante.resx">
       <DependentUpon>AñadirEstante.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AñadirSinFactura.resx">
+      <DependentUpon>AñadirSinFactura.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormAdmin.resx">
+      <DependentUpon>FormAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCliente.resx">
       <DependentUpon>FormCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCompraCredito.resx">
+      <DependentUpon>FormCompraCredito.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreditosCompra.resx">
+      <DependentUpon>FormCreditosCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEditarCompra.resx">
+      <DependentUpon>FormEditarCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormEmpleado.resx">
       <DependentUpon>FormEmpleado.cs</DependentUpon>
@@ -163,11 +318,59 @@
     <EmbeddedResource Include="FormProveedor.resx">
       <DependentUpon>FormProveedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmAgregarCV.resx">
+      <DependentUpon>FrmAgregarCV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAgregarUsuarios.resx">
+      <DependentUpon>FrmAgregarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVentas.resx">
+      <DependentUpon>FormVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmActividades.resx">
       <DependentUpon>FrmActividades.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCancelarFactura.resx">
+      <DependentUpon>FrmCancelarFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCancelarVenta.resx">
+      <DependentUpon>FrmCancelarVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDevolverProductocs.resx">
+      <DependentUpon>FrmDevolverProductocs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDevolverVenta.resx">
+      <DependentUpon>FrmDevolverVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEditarDevolucion.resx">
+      <DependentUpon>FrmEditarDevolucion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHistorialVentas.resx">
+      <DependentUpon>FrmHistorialVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmHistorialVentasCreditos.resx">
+      <DependentUpon>FrmHistorialVentasCreditos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmInventario.resx">
       <DependentUpon>FrmInventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInventarioSinFactura.resx">
+      <DependentUpon>FrmInventarioSinFactura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmIp.resx">
+      <DependentUpon>FrmIp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMessage.resx">
+      <DependentUpon>FrmMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMostrarDesperfectosE.resx">
+      <DependentUpon>FrmMostrarDesperfectosE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMostrarDevolucionesE.resx">
+      <DependentUpon>FrmMostrarDevolucionesE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMostrarVentasEspecificas.resx">
+      <DependentUpon>FrmMostrarVentasEspecificas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNuevoProducto.resx">
       <DependentUpon>FrmNuevoProducto.cs</DependentUpon>
@@ -175,14 +378,17 @@
     <EmbeddedResource Include="FrmProductosAlls.resx">
       <DependentUpon>FrmProductosAlls.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmProductosVencidos.resx">
+      <DependentUpon>FrmProductosVencidos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmProductosVentas.resx">
       <DependentUpon>FrmProductosVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSaldos.resx">
       <DependentUpon>FrmSaldos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmVentas.resx">
-      <DependentUpon>FrmVentas.cs</DependentUpon>
+    <EmbeddedResource Include="FrmVentasCreditoEspecifico.resx">
+      <DependentUpon>FrmVentasCreditoEspecifico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
@@ -200,6 +406,7 @@
     <EmbeddedResource Include="Registro.resx">
       <DependentUpon>Registro.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -291,6 +498,45 @@
       <Project>{21d90be0-8d2d-4a07-8b1b-784d57c16c2b}</Project>
       <Name>Logica</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gente2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\contrasena-incorrecta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\volver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8_reset_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_window_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close_window_60px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="FormsParaAdmin\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NavajoColor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\update_64px1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

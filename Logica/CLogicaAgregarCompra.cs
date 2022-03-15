@@ -60,7 +60,18 @@ namespace Logica
 
                 return result;
 
-            
+        }
+
+        public string EditCompra(int IdProd, string Nombreprod, int IdProveedor, string FechaIngreso,
+            string Descripcion, int IdUnidadM, int NFactura, double TotalC, int IdCategoria,
+            int IdUsuario, double CantidadArt, double PrecioU, string caducidad, string marca, double Precioventa)
+        {
+
+            string result = add.EditarProdCompra(IdProd,Nombreprod, IdProveedor, FechaIngreso, Descripcion,
+                IdUnidadM, NFactura, TotalC, IdCategoria, IdUsuario, CantidadArt, PrecioU, caducidad, marca, Precioventa);
+
+            return result;
+
         }
     }
 }
