@@ -16,6 +16,9 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
         {
             InitializeComponent();
         }
+
+        CLogicaConsultas consultas = new CLogicaConsultas();
+
         string result = "";
         void capturarDatos()
         {
@@ -35,7 +38,16 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
                 CLogicaRegistrar a = new CLogicaRegistrar();
                 Inicio i = new Inicio();
                 Registro r = new Registro();
-                string msg = a.register(nombre, apellido, nombreUsuario, pass);
+                CLogicaObtenerIP ip = new CLogicaObtenerIP();
+
+                string localIP = ip.ObtenerIp();
+
+                string idp2 = consultas.ConsultaSimple("SELECT IpMaquina.IdUsuario FROM IpMaquina WHERE IpMaquina ='" + localIP + "'");
+                string idU = consultas.ConsultaSimple("SELECT IpMaquina.IdUsuario FROM IpMaquina WHERE IpMaquina.IpMaquina = '" + localIP + "'");
+                string IdSede = consultas.ConsultaSimple("SELECT Usuarios.IdSede FROM Usuarios WHERE Usuarios.IdUsuario ='" + idU + "'");
+
+                string msg = a.register(nombre, apellido, nombreUsuario, pass, Convert.ToInt32(IdSede));
+
                 result = "Ta bien";
 
                 MessageBox.Show(msg);

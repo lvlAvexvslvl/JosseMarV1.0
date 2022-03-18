@@ -112,7 +112,7 @@ namespace Logica
         public DataTable LlenarDgvUsuarios(string a)
         {
 
-            String sql2 = "SELECT vs_Usuarios.IdUsuario as ID, vs_Usuarios.Nombre, vs_Usuarios.Apellido, vs_Usuarios.NombreUsuario as Nombre_Usuario, vs_Usuarios.Pass as Contraseña, vs_Usuarios.IdEstadoUsuario as IDE, vs_Usuarios.IdTipoUsuario as IDTU, vs_Usuarios.DescripcionTU as Privilegio FROM vs_Usuarios WHERE vs_Usuarios.NombreUsuario LIKE'%" + a + "%'";
+            String sql2 = "SELECT vs_Usuarios.IdUsuario as ID, vs_Usuarios.Nombre, vs_Usuarios.Apellido, vs_Usuarios.NombreUsuario as Nombre_Usuario, vs_Usuarios.Pass as Contraseña, vs_Usuarios.IdSede as Sede, vs_Usuarios.IdEstadoUsuario as IDE, vs_Usuarios.IdTipoUsuario as IDTU, vs_Usuarios.DescripcionTU as Privilegio FROM vs_Usuarios WHERE vs_Usuarios.NombreUsuario LIKE'%" + a + "%'";
             CLogicaConsultas consult = new CLogicaConsultas();
             return consult.ConsultaTab(sql2);
 

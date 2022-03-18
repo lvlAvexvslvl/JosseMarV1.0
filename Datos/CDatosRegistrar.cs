@@ -13,18 +13,19 @@ namespace Datos
         DataTable tabla = new DataTable();
         SqlCommand comando = new SqlCommand();
         SqlParameter res;
-        public string AgregarUsuario(string Nombre, string Apellido, string UserName, string @Password)
+        public string AgregarUsuario(string Nombre, string Apellido, string UserName, string @Password, int IdSede)
         {
             //SqlParameter x;
             try
             {
                 comando.Connection = conexion.AbrirConexion();
-                comando.CommandText = "JSMAgregarUsuario";
+                comando.CommandText = "JSMAgregarUsuarios";
                 comando.CommandType = CommandType.StoredProcedure;
                 comando.Parameters.AddWithValue("@Nombre", Nombre);
                 comando.Parameters.AddWithValue("@Apellido", Apellido);
                 comando.Parameters.AddWithValue("@UserName", UserName);
                 comando.Parameters.AddWithValue("@Password", @Password);
+                comando.Parameters.AddWithValue("Password", IdSede);
 
                 res = comando.Parameters.AddWithValue("@Result", "");
                 comando.Parameters["@Result"].Direction = ParameterDirection.Output;

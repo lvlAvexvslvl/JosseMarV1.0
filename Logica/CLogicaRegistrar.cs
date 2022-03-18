@@ -11,11 +11,11 @@ namespace Logica
     {
         CDatosRegistrar add = new CDatosRegistrar();
         // CLogicaObtenerIP ip = new CLogicaObtenerIP();
-        public string register(string Nombre, string Apellido, string UserName, string Password)
+        public string register(string Nombre, string Apellido, string UserName, string Password, int IdSede)
         {
             // string IP = ip.ObtenerIp();
 
-            string result = add.AgregarUsuario(Nombre, Apellido, UserName, Password);
+            string result = add.AgregarUsuario(Nombre, Apellido, UserName, Password,IdSede);
 
             if (result.Trim() == "S")
             {

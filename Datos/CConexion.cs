@@ -17,7 +17,8 @@ namespace Datos
         //public SqlConnection conexion = new SqlConnection("Data Source =" + server + "; Initial Catalog = BddJossemar1.3; Integrated Security = True");
         //public SqlConnection conexion = new SqlConnection("Data Source =.; Initial Catalog = prueba; Integrated Security = True");
         public SqlConnection conexion = new SqlConnection("Data Source =" + server + "; Initial Catalog = BddJossemar123; User ID = User1; Password = root;");
-        
+       // public SqlConnection conexion = new SqlConnection("Data Source =" + server + "; Initial Catalog = BddJossemar1.3; User ID = User1; Password = root;");
+
         public SqlConnection AbrirConexion()
         {
             if (conexion.State == ConnectionState.Closed)

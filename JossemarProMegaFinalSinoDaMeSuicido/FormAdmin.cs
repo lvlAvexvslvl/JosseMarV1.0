@@ -56,6 +56,7 @@ namespace JossemarProMegaFinalSinoDaMeSuicido
             LlenarCmbPrivilegios();
             this.DgvUsuarios.Columns["IDTU"].Visible = false;
             this.DgvUsuarios.Columns["IDE"].Visible = false;
+            this.DgvUsuarios.Columns["ID"].Visible = false;
         }
 
         private void TxtBuscar_TextChanged(object sender, EventArgs e)
